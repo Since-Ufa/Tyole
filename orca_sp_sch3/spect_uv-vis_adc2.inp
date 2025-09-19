@@ -1,9 +1,18 @@
-! ADC2 def2-SVP def2-SVP/C tightscf
+! ADC2 def2-SVP def2-SVP/C tightscf pmodel
+
 %pal nprocs=16 end
-%geom maxiter=200 end
-%mdci
-  nroots 9
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
 end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
 %base "1_Cu2C2H6S2"
 
 *xyz -1 2
@@ -23,13 +32,23 @@ end
 
 $new_job 
 
-! ADC2 def2-SVP def2-SVP/C tightscf
+! ADC2 def2-SVP def2-SVP/C tightscf pmodel
+
 %pal nprocs=16 end
-%geom maxiter=200 end
-%mdci
-  nroots 9
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
 end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
 %base "2_Cu3C2H6S2"
+
 *xyz 0 2
   Cu  -6.63952991845711      7.01932112884261      4.64526486552835
   Cu  -5.20733761274425      8.02376257598155      6.25531331980730
@@ -46,15 +65,25 @@ end
   H   -5.29716582858476      5.70495912808875      9.62539223774018
 *
 
-#$new_job
+$new_job
 
-! ADC2 def2-SVP def2-SVP/C tightscf
+! ADC2 def2-SVP def2-SVP/C tightscf pmodel
+
 %pal nprocs=16 end
-%geom maxiter=200 end
-%mdci
-  nroots 9
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
 end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
 %base "3_Cu4C3H9S3"
+
 *xyz -1 1
   Cu  -4.40382246285631      6.77302175151228      3.07353531743858
   S   -2.18543257119486      7.88709102131800      6.66573657070610
@@ -79,13 +108,23 @@ end
 
 $new_job
 
-! ADC2 def2-SVP def2-SVP/C tightscf
+! ADC2 def2-SVP def2-SVP/C tightscf pmodel
+
 %pal nprocs=16 end
-%geom maxiter=200 end
-%mdci
-  nroots 9
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
 end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
 %base "4_Cu5C4H12S4"
+
 *xyz 0 2
   Cu  -5.77087768529570      7.74269112618974      3.87202462559389
   Cu  -3.30926652918161      7.95628864529267      3.34837354390935
@@ -113,4 +152,3 @@ end
   H   -4.91129956714635      7.08773182766027      1.00879601743371
   H   -4.70678362341166      8.06644084372654     -0.47603811107762
 *
-

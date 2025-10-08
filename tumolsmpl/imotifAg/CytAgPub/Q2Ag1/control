@@ -1,0 +1,93 @@
+$lastdiag
+$freeze
+implicit core= 1 virt= 0
+$rundimensions
+   natoms=27
+   nbf(CAO)=71
+   nbf(AO)=56
+$energy    file=energy
+$scfdump
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$maxcor    500 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 1,c1,mixed basis set,
+$denconv    1d-7
+$dipole from dscf
+  x    -1.77740147053387    y    -7.03249492095365    z     1.40842525626844    a.u.
+   | dipole | =   18.7813614213  debye
+$ricc2
+mp2 energy only
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$scfconv    7
+$charge from dscf
+          1.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$grad    file=gradient
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+ internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    Q2Ag1opt
+$atoms
+q 2-27 \
+   cbas =  none                     \
+   basis =  none
+ag 1 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -145.88329
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$last MP2 energy change= -.55787944
+$closed shells
+ a       1-9                                    ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.24061367373575E-06
+$end

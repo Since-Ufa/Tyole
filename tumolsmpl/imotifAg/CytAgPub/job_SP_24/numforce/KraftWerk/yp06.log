@@ -1,0 +1,981 @@
+ operating system is UNIX !
+
+ dscf (vap-workplace) : TURBOMOLE rev. V7-6 19 Oct 2021 at 10:10:11 compiled Oct 19th 2021
+ Copyright (C) 2021 TURBOMOLE GmbH, Karlsruhe
+
+
+    2023-12-07 18:11:53.868 
+
+
+
+                             d s c f - program
+
+                   idea & directorship : reinhart ahlrichs
+                   program development : marco haeser
+                                         michael baer
+                           dft version : oliver treutler
+
+
+                          quantum chemistry group
+                          universitaet  karlsruhe
+                                  germany
+
+
+
+   *-----------------------------------------------------------------------*
+   |                     program will use  1 thread(s)                     |
+   *-----------------------------------------------------------------------*
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          7.93837706    3.89499733   -1.78297054    n      7.000     0
+          7.35769359    1.42758065   -2.62125102    c      6.000     0
+          9.07659236   -0.41794974   -2.01692696    n      7.000     0
+         11.12951826    0.15977965   -0.74689872    c      6.000     0
+         11.74032997    2.65414446    0.10882959    c      6.000     0
+         10.04499696    4.68507531   -0.46871061    c      6.000     0
+          5.40745992    1.08548621   -3.79618524    o      8.000     0
+         12.78912094   -1.74167948   -0.28420048    n      7.000     0
+         12.19266114   -3.50811426   -0.68631936    h      1.000     0
+         14.15940069   -1.51524936    1.01329875    h      1.000     0
+         13.44940797    3.07458066    1.14378867    h      1.000     0
+         10.28157824    6.44662808    0.06910871    h      1.000     0
+          6.64711340    5.22948915   -2.23830632    h      1.000     0
+ 
+       center of nuclear mass  :    9.40447996    1.42836741   -1.47090498
+       center of nuclear charge:    9.48713286    1.45031519   -1.41422038
+
+   *************************************************************************
+   job_SP_24                                                                
+   *************************************************************************
+
+
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    o        1     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    n        3     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    h        5      7      5   def2-SVP   [2s1p|4s1p]
+    c        4     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+   ---------------------------------------------------------------------------
+   total:   13    403    273
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   65
+   total number of contracted shells         :  103
+   total number of cartesian basis functions :  313
+   total number of SCF-basis functions       :  273
+
+
+ integral neglect threshold       :  0.11E-10
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ DENSITY CONVERGENCE CHECK SWITCHED ON !
+ SCF CONVERGENCE IF RMS(delta[D]) <     0.1000000000E-06
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+ maximum number of shells which are related by symmetry :  1
+
+
+          ------------------------
+          nuclear repulsion energy  :   355.079767985    
+          ------------------------
+
+
+         -----------------
+         -S,T+V- integrals
+         -----------------
+
+ 1e-integrals will be neglected if expon. factor < 0.106772E-11
+ 
+   Difference densities algorithm switched on.
+   The maximal number of linear combinations of
+   difference densities is                    20 .
+
+Diagonalization of Fock matrix in last SCF iteration activated ...
+
+
+ DIIS switched on: error vector is FDS-SDF
+ Max. Iterations for DIIS is     :   5
+ DIIS matrix (see manual) 
+    Scaling factor of diagonals  :  1.200
+    threshold for scaling factor :  0.000
+
+ scf convergence criterion : increment of total energy < .1000000D-06
+                  and increment of one-electron energy < .1000000D-03
+
+ MOs are in ASCII format !
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a      273       29
+ 
+ number of basis functions   :   273
+ number of occupied orbitals :    29
+ 
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ mo-orthogonalization by Cholesky decomposition
+
+ automatic virtual orbital shift switched on 
+      shift if e(lumo)-e(homo) < 0.10000000    
+
+
+ dump of DSCF restart information has been disabled !
+
+ 
+                                              current damping :  0.700
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   1  -392.73770182615    -1238.8371612     491.01969143    0.000D+00 0.106D-10
+          max. resid. norm for Fia-block=  3.723D-02 for orbital     22a         
+          max. resid. fock norm         =  2.289D+00 for orbital    267a         
+          Delta Eig. =     3.4758314718 eV 
+ 
+                                              current damping :  0.650
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   2  -392.74285475467    -1238.6514847     490.82886192    0.791D-03 0.676D-11
+          Norm of current diis error: 0.14274    
+          max. resid. norm for Fia-block=  1.609D-02 for orbital     14a         
+          max. resid. fock norm         =  9.403D-01 for orbital    267a         
+          Delta Eig. =     0.6638835347 eV 
+ 
+                                              current damping :  0.600
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   3  -392.74432459122    -1238.6650939     490.84100130    0.455D-03 0.536D-11
+          Norm of current diis error: 0.69699E-01
+          max. resid. norm for Fia-block=  8.064D-03 for orbital     14a         
+          max. resid. fock norm         =  3.636D-01 for orbital    267a         
+          Delta Eig. =     0.2654647575 eV 
+ 
+                                              current damping :  0.650
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   4  -392.74473073890    -1238.6551076     490.83060891    0.296D-03 0.452D-11
+          Norm of current diis error: 0.30432E-01
+          max. resid. norm for Fia-block=  3.675D-03 for orbital     16a         
+          max. resid. fock norm         =  1.357D-01 for orbital    267a         
+          Delta Eig. =     0.1328568536 eV 
+ 
+                                              current damping :  0.500
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   5  -392.74481586824    -1238.6519738     490.82738993    0.146D-03 0.405D-11
+          Norm of current diis error: 0.13873E-01
+          max. resid. norm for Fia-block=  1.699D-03 for orbital     16a         
+          max. resid. fock norm         =  5.337D-02 for orbital    267a         
+ mo-orthogonalization: Cholesky decomposition
+          Delta Eig. =     0.0621633407 eV 
+ 
+                                              current damping :  0.350
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   6  -392.74483664812    -1238.6503219     490.82571725    0.757D-04 0.373D-11
+          Norm of current diis error: 0.57475E-02
+          max. resid. norm for Fia-block=  6.737D-04 for orbital     16a         
+          max. resid. fock norm         =  1.778D-02 for orbital    267a         
+          Delta Eig. =     0.0227528317 eV 
+ 
+                                              current damping :  0.200
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   7  -392.74484096347    -1238.6499207     490.82531178    0.328D-04 0.349D-11
+          Norm of current diis error: 0.22793E-02
+          max. resid. norm for Fia-block=  2.883D-04 for orbital     29a         
+          max. resid. fock norm         =  4.608D-03 for orbital    267a         
+          Delta Eig. =     0.0061246680 eV 
+ 
+                                              current damping :  0.100
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   8  -392.74484182849    -1238.6496179     490.82500804    0.115D-04 0.328D-11
+          Norm of current diis error: 0.96222E-03
+          max. resid. norm for Fia-block=  1.507D-04 for orbital     29a         
+          max. resid. fock norm         =  7.679D-04 for orbital    267a         
+          Delta Eig. =     0.0022731498 eV 
+ 
+                                              current damping :  0.100
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+   9  -392.74484202168    -1238.6496008     490.82499077    0.357D-05 0.309D-11
+          Norm of current diis error: 0.43303E-03
+          max. resid. norm for Fia-block=  8.502D-05 for orbital     29a         
+          max. resid. fock norm         =  8.668D-05 for orbital     29a         
+          Delta Eig. =     0.0016752658 eV 
+ 
+                                              current damping :  0.100
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+  10  -392.74484206648    -1238.6494797     490.82486968    0.166D-05 0.303D-11
+          Norm of current diis error: 0.21092E-03
+          max. resid. norm for Fia-block=  3.740D-05 for orbital     29a         
+          max. resid. fock norm         =  3.866D-05 for orbital     30a         
+ mo-orthogonalization: Cholesky decomposition
+          Delta Eig. =     0.0017174444 eV 
+ 
+                                              current damping :  0.150
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+  11  -392.74484207534    -1238.6495313     490.82492126    0.814D-06 0.304D-11
+          Norm of current diis error: 0.96258E-04
+          max. resid. norm for Fia-block=  1.698D-05 for orbital     29a         
+          max. resid. fock norm         =  1.777D-05 for orbital     29a         
+          Delta Eig. =     0.0007365123 eV 
+
+ ENERGY & DENSITY CONVERGED !
+
+ 
+                                              current damping :  0.200
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     RMS[dD(SAO)]   TOL
+  12  -392.74484207703    -1238.6494922     490.82488217    0.320D-06 0.303D-11
+          max. resid. norm for Fia-block=  3.835D-06 for orbital     29a         
+          max. resid. fock norm         =  4.029D-06 for orbital     29a         
+
+ convergence criteria satisfied after    12 iterations
+
+
+   *************************************************************************
+   job_SP_24                                                                
+   *************************************************************************
+
+
+                  ------------------------------------------ 
+                 |  total energy      =   -392.74484207703  |
+                  ------------------------------------------ 
+                 :  kinetic energy    =    392.09016107970  :
+                 :  potential energy  =   -784.83500315673  :
+                 :  virial theorem    =      1.99833306277  :
+                 :  wavefunction norm =      1.00000000000  :
+                  .......................................... 
+
+
+ <geterg> : there is no data group $energy 
+
+
+ orbitals $scfmo  will be written to file mos
+
+    irrep                 25a         26a         27a         28a         29a   
+ eigenvalues H         -0.48553    -0.44238    -0.42099    -0.38501    -0.33577
+            eV         -13.2119    -12.0379    -11.4557    -10.4768     -9.1368
+ occupation              2.0000      2.0000      2.0000      2.0000      2.0000
+
+    irrep                 30a         31a         32a         33a         34a   
+ eigenvalues H          0.08037     0.14690     0.15817     0.16813     0.19544
+            eV           2.1870      3.9974      4.3042      4.5751      5.3183
+ 
+ 
+ 
+ 
+ ==============================================================================
+                           electrostatic moments
+ ==============================================================================
+
+ reference point for electrostatic moments:    0.00000   0.00000   0.00000
+
+ 
+              nuc           elec       ->  total
+ ------------------------------------------------------------------------------
+                          charge      
+ ------------------------------------------------------------------------------
+          58.000000     -58.000000       0.000000
+ 
+ ------------------------------------------------------------------------------
+                       dipole moment  
+ ------------------------------------------------------------------------------
+   x     550.253706    -548.288511       1.965195
+   y      84.118281     -82.793019       1.325262
+   z     -82.024782      83.644957       1.620175
+ 
+   | dipole moment | =     2.8711 a.u. =     7.2976 debye 
+ 
+ ------------------------------------------------------------------------------
+                     quadrupole moment
+ ------------------------------------------------------------------------------
+  xx    5577.038815   -5577.004380       0.034435
+  yy     417.390218    -438.898598     -21.508380
+  zz     220.365358    -261.582444     -41.217087
+  xy     702.110684    -692.476072       9.634612
+  xz    -595.871212     607.876450      12.005238
+  yz    -113.694203     112.107033      -1.587170
+ 
+     1/3  trace=     -20.897011
+     anisotropy=      44.671231
+ 
+ ==============================================================================
+ 
+HOMO-LUMO Separation
+ HOMO         :   -0.33576957 H =     -9.13676 eV
+ LUMO         :    0.08037017 H =     +2.18698 eV
+ HOMO-LUMO gap:    0.41613974 H =    +11.32374 eV
+ 
+ ==============================================================================
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :  2 minutes and 59 seconds
+         total wall-time :  3 minutes and  1 seconds
+    ------------------------------------------------------------------------
+
+   ****  dscf : all done  ****
+
+
+    2023-12-07 18:14:54.367 
+
+
+ ricc2 (vap-workplace) : TURBOMOLE rev. V7-6 19 Oct 2021 at 10:10:11 compiled Oct 19th 2021
+ Copyright (C) 2021 TURBOMOLE GmbH, Karlsruhe
+
+
+    2023-12-07 18:14:54.448 
+
+
+
+                              R I C C 2 - PROGRAM
+
+                          the quantum chemistry groups
+                             at the universities in
+                               Karlsruhe & Bochum
+                                   Germany
+
+
+
+   *-----------------------------------------------------------------------*
+   |                     program will use  1 thread(s)                     |
+   *-----------------------------------------------------------------------*
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          7.93837706    3.89499733   -1.78297054    n      7.000     0
+          7.35769359    1.42758065   -2.62125102    c      6.000     0
+          9.07659236   -0.41794974   -2.01692696    n      7.000     0
+         11.12951826    0.15977965   -0.74689872    c      6.000     0
+         11.74032997    2.65414446    0.10882959    c      6.000     0
+         10.04499696    4.68507531   -0.46871061    c      6.000     0
+          5.40745992    1.08548621   -3.79618524    o      8.000     0
+         12.78912094   -1.74167948   -0.28420048    n      7.000     0
+         12.19266114   -3.50811426   -0.68631936    h      1.000     0
+         14.15940069   -1.51524936    1.01329875    h      1.000     0
+         13.44940797    3.07458066    1.14378867    h      1.000     0
+         10.28157824    6.44662808    0.06910871    h      1.000     0
+          6.64711340    5.22948915   -2.23830632    h      1.000     0
+ 
+       center of nuclear mass  :    9.40447996    1.42836741   -1.47090498
+       center of nuclear charge:    9.48713286    1.45031519   -1.41422038
+
+   *************************************************************************
+   job_SP_24                                                                
+   *************************************************************************
+
+
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    o        1     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    n        3     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    h        5      7      5   def2-SVP   [2s1p|4s1p]
+    c        4     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+   ---------------------------------------------------------------------------
+   total:   13    403    273
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   65
+   total number of contracted shells         :  103
+   total number of cartesian basis functions :  313
+   total number of SCF-basis functions       :  273
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+
+   =========================================================================
+
+
+     restricted closed shell calculation for the wavefunction models:
+               MP2        - Second Order Moeller Plesset PT
+
+
+     global parameters for ricc2 program:
+
+        hard restart (reuse of interm.) :  disabled
+        soft restart (reuse of vectors) :  disabled
+        threshold for vector function   :    0.100000E-05
+        convergence threshold energy    :    0.100000E-06
+        linear dependence threshold     :    0.100000E-13
+        global print level              :      1
+        maximum number of iterations    :   900
+        maximum number DIIS vectors     :    10
+        max. dim. of reduced space      :   100
+        core memory limit (MB)          :   400
+
+
+     this is a ground state geometry optimization run at the MP2 level
+
+     Scratch Directory : 
+
+
+   =========================================================================
+
+    der. integral neglect threshold  :  0.10E-07
+    integral neglect threshold       :  0.11E-10
+    integral storage threshold THIZE :  0.10E-04
+    integral storage threshold THIME :         5
+
+
+                  +------------------------------------------+
+                  |     Auxiliary basis set information      |
+                  +------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    o        1     81     76   def2-TZVP   [8s6p4d3f1g|8s6p5d3f1g]
+    n        3     81     76   def2-TZVP   [8s6p4d3f1g|8s6p5d3f1g]
+    h        5     23     14   def2-SVP   [3s2p1d|4s3p2d]
+    c        4     81     76   def2-TZVP   [8s6p4d3f1g|8s6p5d3f1g]
+   ---------------------------------------------------------------------------
+   total:   13    763    678
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   78
+   total number of contracted shells         :  206
+   total number of cartesian basis functions :  835
+   total number of SCF-basis functions       :  678
+
+
+ maximum number of shells which are related by symmetry :  1
+
+
+ The symmetry information takes   1 MB
+
+*---------------------------------------------------------------------*
+|               simplified C1 algorithm will be applied               |
+*---------------------------------------------------------------------*
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ time elapsed for calculating density matrices :   0.003 sec
+
+
+
+              +--------------------------------------------+
+              | list of orbitals that will be kept frozen: |
+              +--------------------------------------------+
+              |   irrep   index      energy     occ/vir    |
+              +--------------------------------------------+
+              |   a         1      -20.4979     occupied   |
+              |   a         2      -15.6235     occupied   |
+              |   a         3      -15.5908     occupied   |
+              |   a         4      -15.5375     occupied   |
+              |   a         5      -11.3684     occupied   |
+              |   a         6      -11.3491     occupied   |
+              |   a         7      -11.3382     occupied   |
+              |   a         8      -11.2528     occupied   |
+              +--------------------------------------------+
+
+
+
+   Molecular Orbital Statistic:
+   ============================
+
+   -----------------------------
+   orbitals in total:
+   -----------------------------
+    frozen occupied :      8
+    active occupied :     21
+    active virtual  :    244
+    frozen virtual  :      0
+    all together    :    273
+   -----------------------------
+
+
+     time in riccmos       cpu:  0.07 sec    wall:  0.07 sec    ratio:  1.0
+
+     total memory allocated for calculation of (Q|P)**(-1/2) : 6 MiB
+
+
+     calculation of (P|Q) ...
+     time in lp2sym        cpu:  0.01 sec    wall:  0.02 sec    ratio:  1.0
+
+
+     calculation of the Cholesky decomposition of (P|Q)**(-1) ...
+     time in invmetri      cpu:  0.04 sec    wall:  0.04 sec    ratio:  1.0
+
+   threshold for RMS(d[D]) in SCF was     :  0.10E-06
+   integral neglect threshold             :  0.11E-10
+   derivative integral neglect threshold  :  0.10E-07
+
+
+ setting up bound for integral derivative estimation
+
+ increment for numerical differentiation : 0.00050000
+
+   =========================================================================
+
+     Energy of reference wave function is  -392.7448420770000
+     Maximum orbital residual is           0.4029026039894E-05
+
+
+     Number of symmetry-nonredundant auxiliary basis functions:      678
+
+     Block lengths for integral files:
+        frozen occupied (BOI):        1 MiB
+        active occupied (BJI):        1 MiB
+        active virtual  (BAI):        2 MiB
+        frozen virtual  (BGI):        0 MiB
+               general  (BTI):        2 MiB
+
+   =========================================================================
+
+
+
+      A SCF based gradient calculation with 4-index ERIs will be done.
+      Solution of CPHF equation will be preoptimized using RI-CPHF.
+      A "cbas" type auxiliary basis is used for RI-SCF and/or RI-CPHF.
+
+      The semi-canonical algorithm will be used for densities
+
+
+                    ========   CC DENSITY MODULE   ========
+
+                      current wave-function model: MP2     
+
+  calculating CC ground state density
+
+   a semicanonical algorithm will be used when possible
+
+    density nr.      cpu/min        wall/min    L     R
+   ------------------------------------------------------
+         1             0.09            0.09    L0     R0  
+   ------------------------------------------------------
+     time in cc_1den       cpu:  5.15 sec    wall:  5.16 sec    ratio:  1.0
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+
+   EMP2            :     -394.180229832539
+   EMP2 from traces:     -394.180229832539
+   Delta           :       -0.000000000000
+
+   --------------------------------------------------------------------------
+
+        Solving 4-Index ERI based CPHF equations using a RI-CPHF
+        preoptimization with a "cbas" type auxiliary basis
+
+
+ ======== LINEAR CC RESPONSE SOLVER ========
+
+    threshold for convergence: 1.00E-02
+    maximum number of simultaneous Jacobi matrix transformations:  1
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : l0o
+     symmetry                      : a  
+     number of vectors requested   :     1
+     number of vectors generated   :     1
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+      1       1         0.06     0.33E+00  (  1)
+      2       1         0.06     0.15E+00  (  1)
+      3       1         0.06     0.59E-01  (  1)
+      4       1         0.06     0.22E-01  (  1)
+      5       1         0.06     0.81E-02  (  1)
+    --------------------------------------------
+    converged in  5 iterations
+
+         Total time          0.32 minutes
+
+
+ ===========================================
+
+
+
+
+ ======== LINEAR CC RESPONSE SOLVER ========
+
+    threshold for convergence: 1.00E-04
+    maximum number of simultaneous Jacobi matrix transformations:  1
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : l0o
+     symmetry                      : a  
+     number of vectors requested   :     1
+     number of vectors generated   :     1
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+      1       1         0.35     0.81E-02  (  1)
+      2       1         0.35     0.35E-02  (  1)
+      3       1         0.35     0.21E-02  (  1)
+      4       1         0.35     0.70E-03  (  1)
+      5       1         0.35     0.31E-03  (  1)
+      6       1         0.29     0.92E-04  (  1)
+    --------------------------------------------
+    converged in  6 iterations
+
+         Total time          2.04 minutes
+
+
+ ===========================================
+
+
+   --------------------------------------------------------------------------
+
+ 1e-integral 1st. derivatives will be neglected if expon. factor < 0.100000E-11
+
+ 
+
+     +--------------------------------------------------------------------+
+     | MP2 unrelaxed natural orbital occupation numbers                   |
+     +--------------------------------------------------------------------+
+     | natural orb.  |  occupation numbers                                |
+     +---------------+----------------------------------------------------+
+     | a             |                                                    |
+     |     1 -     5 |     2.0000    2.0000    2.0000    2.0000    2.0000 |
+     |     6 -    10 |     2.0000    2.0000    2.0000    1.9844    1.9827 |
+     |    11 -    15 |     1.9813    1.9787    1.9773    1.9728    1.9663 |
+     |    16 -    20 |     1.9645    1.9629    1.9617    1.9591    1.9558 |
+     |    21 -    25 |     1.9552    1.9549    1.9509    1.9495    1.9487 |
+     |    26 -    30 |     1.9458    1.9397    1.9284    1.9157    0.0718 |
+     |    31 -    35 |     0.0645    0.0432    0.0362    0.0325    0.0309 |
+     |    36 -    40 |     0.0296    0.0263    0.0237    0.0231    0.0209 |
+     |    41 -    45 |     0.0203    0.0189    0.0180    0.0163    0.0158 |
+     |    46 -    50 |     0.0145    0.0142    0.0134    0.0132    0.0120 |
+     |    51 -    55 |     0.0118    0.0111    0.0107    0.0107    0.0101 |
+     |    56 -    60 |     0.0101    0.0095    0.0091    0.0089    0.0084 |
+     |    61 -    65 |     0.0082    0.0081    0.0080    0.0076    0.0074 |
+     |    66 -    70 |     0.0071    0.0064    0.0063    0.0062    0.0059 |
+     |    71 -    75 |     0.0057    0.0057    0.0055    0.0049    0.0046 |
+     |    76 -    80 |     0.0043    0.0038    0.0033    0.0032    0.0031 |
+     |    81 -    85 |     0.0030    0.0027    0.0025    0.0023    0.0021 |
+     |    86 -    90 |     0.0020    0.0019    0.0019    0.0018    0.0017 |
+     |    91 -    95 |     0.0017    0.0016    0.0016    0.0016    0.0015 |
+     |    96 -   100 |     0.0014    0.0013    0.0013    0.0013    0.0013 |
+     |   101 -   105 |     0.0012    0.0011    0.0011    0.0011    0.0011 |
+     |   106 -   108 |     0.0011    0.0011    0.0010                     |
+     +---------------+----------------------------------------------------+
+      natural orbitals with occ <   0.10E-02 are not shown
+
+      Maximum change in occupation number:
+        occupied         :    -4.22 % (   29 a    )
+        virtual          :     3.59 % (   30 a    )
+ 
+
+     +--------------------------------------------------------------------+
+     | MP2 relaxed   natural orbital occupation numbers                   |
+     +--------------------------------------------------------------------+
+     | natural orb.  |  occupation numbers                                |
+     +---------------+----------------------------------------------------+
+     | a             |                                                    |
+     |     1 -     5 |     2.0000    2.0000    2.0000    2.0000    2.0000 |
+     |     6 -    10 |     2.0000    2.0000    2.0000    1.9846    1.9829 |
+     |    11 -    15 |     1.9815    1.9789    1.9774    1.9733    1.9666 |
+     |    16 -    20 |     1.9649    1.9636    1.9633    1.9608    1.9600 |
+     |    21 -    25 |     1.9573    1.9564    1.9557    1.9506    1.9500 |
+     |    26 -    30 |     1.9477    1.9470    1.9340    1.9216    0.0597 |
+     |    31 -    35 |     0.0565    0.0400    0.0344    0.0320    0.0302 |
+     |    36 -    40 |     0.0286    0.0261    0.0235    0.0228    0.0208 |
+     |    41 -    45 |     0.0202    0.0186    0.0179    0.0161    0.0157 |
+     |    46 -    50 |     0.0142    0.0140    0.0132    0.0129    0.0118 |
+     |    51 -    55 |     0.0117    0.0107    0.0105    0.0104    0.0099 |
+     |    56 -    60 |     0.0095    0.0092    0.0090    0.0087    0.0081 |
+     |    61 -    65 |     0.0080    0.0080    0.0076    0.0075    0.0073 |
+     |    66 -    70 |     0.0067    0.0063    0.0063    0.0061    0.0058 |
+     |    71 -    75 |     0.0056    0.0054    0.0048    0.0046    0.0044 |
+     |    76 -    80 |     0.0042    0.0033    0.0032    0.0030    0.0029 |
+     |    81 -    85 |     0.0028    0.0027    0.0024    0.0023    0.0021 |
+     |    86 -    90 |     0.0019    0.0019    0.0018    0.0018    0.0017 |
+     |    91 -    95 |     0.0016    0.0016    0.0016    0.0015    0.0015 |
+     |    96 -   100 |     0.0014    0.0013    0.0013    0.0013    0.0012 |
+     |   101 -   105 |     0.0012    0.0011    0.0011    0.0010    0.0010 |
+     +---------------+----------------------------------------------------+
+      natural orbitals with occ <   0.10E-02 are not shown
+
+      Maximum change in occupation number:
+        occupied         :    -3.92 % (   29 a    )
+        virtual          :     2.98 % (   30 a    )
+
+
+ **************************************************************
+ *                                                            *
+ *<<<<<<<<<<  GROUND STATE FIRST-ORDER PROPERTIES  >>>>>>>>>>>*
+ *                                                            *
+ **************************************************************
+
+
+        ------------------------------------------------
+            Method          :  MP2     
+            Total Energy    :   -394.1802298325
+        ------------------------------------------------
+
+
+        ------------------------------------------------
+                      moments of inertia 
+              478.533    890.520   1368.602  in a.u.
+
+                   rotational constants 
+              0.12580    0.06760    0.04399  in cm**(-1)
+        ------------------------------------------------
+
+
+  NOTE: unrelaxed properties printed below refer to the MP1 wavefunction and
+        are only correct through first order in the fluctuation potential!
+
+ +===========================================================================+
+ | OPERATOR         | EXPECTAT. VALUE  | ELECTRONIC CONT. | NUCLEAR CONTRIB. |
+ +==================+==================+==================+==================+
+ |                  |                  |                  |                  |
+ | xdiplen  (unrel) |      1.91724874  |   -548.33645729  |    550.25370603  | 
+ | xdiplen  (relax) |      1.77310853  |   -548.48059750  |    550.25370603  | 
+ |                  |                  |                  |                  |
+ | ydiplen  (unrel) |      1.27540655  |    -82.84287453  |     84.11828109  | 
+ | ydiplen  (relax) |      1.05403367  |    -83.06424742  |     84.11828109  | 
+ |                  |                  |                  |                  |
+ | zdiplen  (unrel) |      1.58076686  |     83.60554870  |    -82.02478184  | 
+ | zdiplen  (relax) |      1.44964442  |     83.47442626  |    -82.02478184  | 
+ |                  |                  |                  |                  |
+ | xxqudlen (unrel) |     -0.81104778  |  -5577.84986282  |   5577.03881503  | 
+ | xxqudlen (relax) |     -2.56828812  |  -5579.60710315  |   5577.03881503  | 
+ |                  |                  |                  |                  |
+ | xyqudlen (unrel) |      9.11786568  |   -692.99281874  |    702.11068442  | 
+ | xyqudlen (relax) |      6.90680979  |   -695.20387462  |    702.11068442  | 
+ |                  |                  |                  |                  |
+ | xzqudlen (unrel) |     11.80611446  |    607.67732615  |   -595.87121169  | 
+ | xzqudlen (relax) |     11.29048654  |    607.16169823  |   -595.87121169  | 
+ |                  |                  |                  |                  |
+ | yyqudlen (unrel) |    -21.92129974  |   -439.31151756  |    417.39021781  | 
+ | yyqudlen (relax) |    -23.36820767  |   -440.75842548  |    417.39021781  | 
+ |                  |                  |                  |                  |
+ | yzqudlen (unrel) |     -1.57256976  |    112.12163336  |   -113.69420312  | 
+ | yzqudlen (relax) |     -1.50306823  |    112.19113490  |   -113.69420312  | 
+ |                  |                  |                  |                  |
+ | zzqudlen (unrel) |    -41.18345206  |   -261.54880961  |    220.36535755  | 
+ | zzqudlen (relax) |    -40.50683392  |   -260.87219147  |    220.36535755  | 
+ |                  |                  |                  |                  |
+ +===========================================================================+
+
+
+     Analysis of relaxed properties:
+     ===============================
+
+
+     dipole moment:
+     --------------
+
+     x      1.77310853
+     y      1.05403367
+     z      1.44964442
+
+     | dipole moment | =      2.52118420 a.u. =      6.40821099 debye
+
+
+     traceless quadrupole tensor:
+     ----------------------------
+
+               x              y              z
+
+     x    29.36923268    10.36021469    16.93572981
+     y                   -1.83064665    -2.25460234
+     z                                 -27.53858603
+
+
+     principal axes of tensor: 
+
+      x' = (   0.9402373,   0.2408609,   0.2407069 )
+      y' = (  -0.1884955,   0.9568462,  -0.2211669 )
+      z' = (  -0.2835900,   0.1625772,   0.9450637 )
+
+     < Q(x'x') > =     36.35887027 a.u.
+     < Q(y'y') > =     -3.35044167 a.u.
+     < Q(z'z') > =    -33.00842859 a.u.
+
+
+     second moment of electron density:
+     ----------------------------------
+
+               x              y              z
+
+     x  5579.60710315   695.20387462  -607.16169823
+     y                  440.75842548  -112.19113490
+     z                                 260.87219147
+
+
+     principal axes of tensor: 
+
+      x' = (   0.9849830,   0.1315522,  -0.1118150 )
+      y' = (  -0.1507878,   0.9709094,  -0.1860053 )
+      z' = (   0.0840928,   0.2000724,   0.9761657 )
+
+     < x'x'> =   5741.38182831 a.u.
+     < y'y'> =    354.28266348 a.u.
+     < z'z'> =    185.57322832 a.u.
+
+     Isotropic second moment:     alpha =   2093.74590670 a.u.
+
+     Anisotropy of second moment:  beta =   5252.22955169 a.u.
+ 
+
+    --------------------------------------------------------------------------
+
+
+     Analysis of unrelaxed properties:
+     =================================
+
+
+     dipole moment:
+     --------------
+
+     x      1.91724874
+     y      1.27540655
+     z      1.58076686
+
+     | dipole moment | =      2.79308583 a.u. =      7.09931601 debye
+
+
+     traceless quadrupole tensor:
+     ----------------------------
+
+               x              y              z
+
+     x    30.74132812    13.67679852    17.70917169
+     y                   -0.92404982    -2.35885464
+     z                                 -29.81727830
+
+
+     principal axes of tensor: 
+
+      x' = (   0.9265766,   0.3002584,   0.2264967 )
+      y' = (  -0.2425245,   0.9372806,  -0.2503737 )
+      z' = (  -0.2874677,   0.1770594,   0.9412822 )
+
+     < Q(x'x') > =     39.50222540 a.u.
+     < Q(y'y') > =     -3.83285211 a.u.
+     < Q(z'z') > =    -35.66937329 a.u.
+
+
+     second moment of electron density:
+     ----------------------------------
+
+               x              y              z
+
+     x  5577.84986282   692.99281874  -607.67732615
+     y                  439.31151756  -112.12163336
+     z                                 261.54880961
+
+
+     principal axes of tensor: 
+
+      x' = (   0.9850180,   0.1311657,  -0.1119603 )
+      y' = (  -0.1506148,   0.9705372,  -0.1880764 )
+      z' = (   0.0839925,   0.2021215,   0.9757521 )
+
+     < x'x'> =   5739.19985195 a.u.
+     < y'y'> =    353.49559776 a.u.
+     < z'z'> =    186.01474028 a.u.
+
+     Isotropic second moment:     alpha =   2092.90339666 a.u.
+
+     Anisotropy of second moment:  beta =   5250.20944823 a.u.
+ 
+
+                  ------------------------------
+                   total gradient of MP2 energy      
+                  ------------------------------
+
+          ------------------------------------------------
+           cartesian gradient of the energy (hartree/bohr)
+          ------------------------------------------------
+
+  ATOM      1 n           2 c           3 n           4 c           5 c 
+dE/dx -0.1016389D-01 -0.4912545D-02  0.1140421D-02  0.3270628D-02  0.2552273D-01
+dE/dy -0.3112514D-01  0.9197294D-03 -0.1869489D-03 -0.8230482D-02 -0.5164014D-01
+dE/dz -0.1025407D-01 -0.2310954D-02  0.5766582D-03  0.1161717D-03  0.6456694D-02
+
+  ATOM      6 c           7 o           8 n           9 h          10 h 
+dE/dx -0.7764485D-02 -0.4027780D-03 -0.1048980D-02  0.2056017D-03  0.4156803D-05
+dE/dy  0.1765925D+00 -0.1173058D-02 -0.1083164D-03 -0.1703521D-03  0.2224416D-04
+dE/dz  0.2768082D-01 -0.6830901D-03 -0.4275216D-03 -0.1098978D-03 -0.4060482D-04
+
+  ATOM     11 h          12 h          13 h 
+dE/dx -0.1797886D-02 -0.8185366D-02  0.4132393D-02
+dE/dy  0.1857724D-02 -0.8914727D-01  0.2389549D-02
+dE/dz -0.5010186D-03 -0.2349370D-01  0.2990506D-02
+ 
+ resulting FORCE  (fx,fy,fz) = (0.829D-11,-.112D-09,-.169D-10)
+ resulting MOMENT (mx,my,mz) = (-.760D-06,-.335D-06,0.278D-05)
+
+
+ **********************************************************************
+  |maximum component of gradient| : 0.17659247      (atom  6 c )       
+   gradient norm                  : 0.21276071    
+ **********************************************************************
+
+   ***  orbital-relaxed dipole moment written to <control>  ***
+
+
+ <getgrd> : data group $grad  is missing 
+
+   ***  cartesian gradients written onto <gradient>  ***
+ 
+ ==============================================================================
+ 
+ Exporting ground state density
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :  3 minutes and 25 seconds
+         total wall-time :  3 minutes and 27 seconds
+    ------------------------------------------------------------------------
+
+   ****  ricc2 : all done  ****
+
+
+    2023-12-07 18:18:21.113 
+
+$dipole from ricc2
+  x     1.77310852856579    y     1.05403366511459    z     1.44964441947924    a.u.
+   | dipole | =    6.4082594694  debye
+/mnt/workspace/wordir/imotifAg/CytAgPub/job_SP_24/numforce/KraftWerk/yp06

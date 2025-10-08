@@ -1,0 +1,98 @@
+$lastdiag
+$freeze
+implicit core= 17 virt= 0
+$maxcor    500 MiB  per_core
+$subtitle
+GEO,MP2/RI,charge 1,c1,def2-TZVP,GEO_OPT
+$denconv    1d-7
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$scfconv    7
+$grad    file=gradient
+$ecp    file=basis
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$symmetry c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    job_GEO_25
+$redundant    file=coord
+$atoms
+o 8,21 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+n 2,4,9,15,17,22 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 10-14,23-27 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 3,5-7,16,18-20 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$cbas    file=auxbasis
+$closed shells
+ a       1-67                                   ( 2 )
+$thize     0.10000000E-04
+$thime        5
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$forceapprox    file=forceapprox
+$rundimensions
+   natoms=27
+   nbf(CAO)=697
+   nbf(AO)=602
+$last step     ricc2
+$last SCF energy change = -.20665526E-05
+$charge from dscf
+          1.000 (not to be modified here)
+$dipole from ricc2
+  x     7.31004336405476    y    -2.48818073471108    z    -3.72258725934341    a.u.
+   | dipole | =   21.7889419026  debye
+$last MP2 energy change= 0.19199079E-05
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$cartesianstep
+  total steps      5
+  forceupdate      on
+$user-defined bonds    file=coord
+$redund_inp
+    metric -3
+$orbital_max_rnorm 0.35664147321926E-03
+$end

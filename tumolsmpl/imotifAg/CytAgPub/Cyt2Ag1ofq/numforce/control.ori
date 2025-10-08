@@ -1,0 +1,97 @@
+$atoms
+o 8,21 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+n 2,4,9,15,17,22 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 10-14,23-27 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 3,5-7,16,18-20 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$denconv 1d-07
+#
+# NumForce insertion:
+#
+$scfconv 7
+$drvopt
+   frequency analysis only nofreeze
+$hessian  file=hessian
+$dipgrad  file=dipgrad
+$grad  file=gradient
+$vibrational normal modes
+$vibrational spectrum
+#
+# end of NumForce insertion.
+#
+$lastdiag
+$freeze
+implicit core= 17 virt= 0
+$rundimensions
+   natoms=27
+   nbf(CAO)=697
+   nbf(AO)=602
+$ricore    100
+$maxcor    400 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 1,c1,mixed basis set,FREQ_NUMERICALLY
+$dipole from ricc2
+  x     7.30603065474565    y    -2.46399186229962    z    -3.72850146785311    a.u.
+   | dipole | =   21.7690119334  debye
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$charge from dscf
+          1.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+basis      off internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    Cyt2Ag1ofq
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -931.54570
+$last MP2 energy change= -3.4924573
+$cartesianstep
+  total steps      5
+  forceupdate      on
+$redund_inp
+    metric -3
+$closed shells
+ a       1-67                                   ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.19392161411583E-04
+$end

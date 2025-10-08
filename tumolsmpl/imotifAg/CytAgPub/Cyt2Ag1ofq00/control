@@ -1,0 +1,126 @@
+$lastdiag
+$freeze
+implicit core= 17 virt= 0
+$rundimensions
+   natoms=27
+   nbf(CAO)=697
+   nbf(AO)=602
+$energy    file=energy
+$scfdump
+$ricore    100
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$maxcor    400 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 1,c1,mixed basis set,FREQ_NUMERICALLY
+$denconv    1d-7
+$dipole from ricc2
+  x    -2.32175645425642    y    -6.05041171144831    z     0.99588580378244    a.u.
+   | dipole | =   16.6654997772  debye
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$scfconv    7
+$charge from dscf
+          1.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$grad    file=gradient
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+ internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    Cyt2Ag1ofq
+$atoms
+o 8,21 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+n 2,4,9,15,17,22 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 10-14,23-27 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 3,5-7,16,18-20 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -931.54572
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$last MP2 energy change= -3.4924413
+$closed shells
+ a       1-67                                   ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.39965563234150E-04
+$hessian (projected)  file=hessian
+$dipgrad  file=dipgrad
+$vibrational spectrum    file=vibspectrum
+$vibrational normal modes    file=vib_normal_modes
+$vibrational reduced masses
+   1.2105144572   3.6321561390   6.5784485171   7.2642229923   7.7068599765
+   7.4003007425  11.7505248106   8.7270886707   8.2673878190   8.4179145889
+   6.2868543769   7.6537148875   7.0198339082   4.0420787984  10.7016366522
+   5.3708887043  10.4039538306   4.5622768219   3.7057601323   1.9236000937
+   8.6460820285   1.3151527889   3.3408436729   3.1042220304   2.6678250079
+   2.1455471627   1.2306819396   4.8030028145   4.9236364656   6.5572454183
+   5.9244015479   7.7699082835   7.6230329405   1.2901269025   1.6692400555
+   1.4694671721   1.8783576841   8.8130224381   9.1128552591   2.4755767242
+   1.8948057973   7.5125204443   7.5045796383   1.3138776654   1.3253011666
+   1.9516622535   2.1395348860   5.0396762997   5.0838418187   1.9827066623
+   1.7193998616   1.6329589564   1.9148461257   1.1836817285   1.2593458607
+   7.8316046283   6.8182482257   1.7631457880   1.6683086184   2.4391569897
+   2.2358841176   1.6794884349   2.1259577537   6.9533474642   6.9386992503
+   2.4055587163   1.8249004903   5.8383483098   6.0794518448   8.5581460253
+  10.1004706045   1.0922549275   1.0930682144   1.1003178702   1.0983450484
+   1.0565740423   1.0475640186   1.0795106625   1.0793581126   1.1051219095
+   1.0967647731
+$nvibro       81
+$end

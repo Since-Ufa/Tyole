@@ -1,0 +1,97 @@
+$title    Cyt2Ag0
+$symmetry    c1
+$coord    file=coord
+$atoms
+o 7,20 \
+   cbas = o def-TZVP                     \
+   basis = o def-TZVP
+n 1,3,8,14,16,21 \
+   cbas = n def-TZVP                     \
+   basis = n def-TZVP
+h 9-13,22-26 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 2,4-6,15,17-19 \
+   cbas = c def-TZVP                     \
+   basis = c def-TZVP
+$freeze
+implicit core= 16 virt= 0
+$basis    file=basis
+$cbas    file=auxbasis
+$scfmo   file=mos
+$subtitle
+SP,ADC(2) (MP2)/RI,charge 0,c1,def2-TZVP,EX-STATE
+$ricc2
+ adc(2)
+$excitations
+ irrep=a nexc=8
+ spectrum states=all operators=diplen,qudlen
+$spectrum    nm
+$anadens
+ calc add_08 from
+ 1d0 adc2-1a-008-approxdiffden.cao
+$pointval fmt=cub
+#$pointval mo 51-60 fmt=cub
+$scfiterlimit    900
+$scfconv    7
+$denconv    1d-7
+$closed shells
+ a       1-58                                   ( 2 )
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$rundimensions
+   natoms=26
+   nbf(CAO)=370
+   nbf(AO)=354
+$last step     ricc2
+$orbital_max_rnorm 0.21718447877325E-05
+$last SCF energy change = -785.46554
+$charge from ricc2
+        116.000 (not to be modified here)
+$dipole from ricc2
+  x  -205.97257678566709    y  -737.93765977321891    z   163.50119205271517    a.u.
+   | dipole | = 1991.2091300574  debye
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$end

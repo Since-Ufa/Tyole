@@ -1,0 +1,98 @@
+$lastdiag
+$freeze
+implicit core= 8 virt= 0
+$rundimensions
+   natoms=13
+   nbf(CAO)=313
+   nbf(AO)=273
+$energy    file=energy
+$scfdump
+$ricore    100
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$maxcor    400 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 0,c1,mixed basis set,FREQ_NUMERICALLY
+$denconv    1d-7
+$dipole from ricc2
+  x     1.77785538372927    y     1.03171279567377    z     1.44576444167777    a.u.
+   | dipole | =    6.3875921194  debye
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$scfconv    7
+$charge from dscf
+         -0.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$grad    file=gradient
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+ internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    job_SP_24
+$atoms
+o 7 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+n 1,3,8 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 9-13 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 2,4-6 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -392.76626
+$last MP2 energy change= -1.4310890
+$closed shells
+ a       1-29                                   ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.85081850975436E-06
+$hessian (projected)  file=hessian
+$dipgrad  file=dipgrad
+$vibrational spectrum    file=vibspectrum
+$vibrational normal modes    file=vib_normal_modes
+$vibrational reduced masses
+   1.1426998223   8.7492558627   8.2549000898   5.6775058693   5.9271343940
+   7.6243970810   5.8707042658   5.6383234360   6.7205452022   3.3491723934
+   2.8365403394   1.9228498153   3.1214455499   2.3931619902   6.0929908698
+   1.3181244026   1.2846404672   5.3962393875  12.1339324366   7.6039233773
+   2.3189689572   1.4524511210   3.7782995474   2.1527029504   1.4316334571
+   1.1148700767   6.6300398271   1.7046134357   2.7603143977   2.4613767320
+   6.9005377325   1.5392836219   6.1885380665  10.5604189217   1.0896425968
+   1.0992467007   1.0787593593   1.0464178566   1.1034176421
+$nvibro       39
+$end

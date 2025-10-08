@@ -1,0 +1,104 @@
+$lastdiag
+$freeze
+implicit core= 14 virt= 0
+$rundimensions
+   natoms=25
+   nbf(CAO)=288
+   nbf(AO)=274
+$energy    file=energy
+$scfdump
+$ricore    260
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$maxcor   1040 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$cdspectrum    nm
+$spectrum    nm
+$subtitle
+SP,ADC(2) (MP2)/RI,charge 0,c1,mixed basis set,EX-STATE
+$dipole from dscf
+  x    -1.88931218205832    y    -0.02167700017634    z    -0.86958729083490    a.u.
+   | dipole | =    5.2867213711  debye
+$denconv    1d-7
+$ricc2
+adc(2)
+$scfiterlimit    100
+$coord    file=coord
+$thime    5
+$scfconv    7
+$charge from dscf
+          0.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$grad    file=gradient
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+ internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$fermi     tmstrt=300.00 tmend=150.00 tmfac=0.98 hlcrt=0.1 stop=0.001
+$basis    file=basis
+$scfmo   file=mos
+$title    job_SP_3
+$atoms
+o 1,20 \
+   cbas = o def2-QZVPP                     \
+   basis = o 6-311G**
+n 2-6 \
+   cbas = n def2-QZVPP                     \
+   basis = n 6-311G**
+h 14-19,21-25 \
+   cbas = h def2-QZVPP                     \
+   basis = h 6-31G*
+c 7-13 \
+   cbas = c def2-QZVPP                     \
+   basis = c 6-311G**
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$excitations
+irrep=a multiplicity=3  nexc=4
+$scfdiis
+$last SCF energy change = -693.60650
+$last MP2 energy change= 0.14550483E-06
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$last step     ricc2
+$closed shells
+ a       1-52                                   ( 2 )
+$orbital_max_rnorm 0.37466366018917E-06
+$excitation_energies_CCS_____3^a___ file=exstates
+$excitation_energies_ADC(2)__3^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__3^a___ file=exstates
+$end

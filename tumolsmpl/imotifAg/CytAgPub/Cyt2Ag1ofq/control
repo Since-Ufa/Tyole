@@ -1,0 +1,117 @@
+$lastdiag
+$freeze
+implicit core= 17 virt= 0
+$rundimensions
+   natoms=27
+   nbf(CAO)=697
+   nbf(AO)=602
+$energy    file=energy
+$scfdump
+$ricore    100
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$maxcor    400 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 1,c1,mixed basis set,FREQ_NUMERICALLY
+$denconv    1d-7
+$dipole from ricc2
+  x     7.30603065474565    y    -2.46399186229962    z    -3.72850146785311    a.u.
+   | dipole | =   21.7690119334  debye
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$scfconv    7
+$charge from dscf
+          1.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$grad    file=gradient
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+basis      off internal off
+ redundant off
+ cartesian on
+ global off
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    Cyt2Ag1ofq
+$atoms
+o 8,21 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+n 2,4,9,15,17,22 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 10-14,23-27 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 3,5-7,16,18-20 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -931.54570
+$last MP2 energy change= -3.4924573
+$cartesianstep
+  total steps      5
+  forceupdate      on
+$redund_inp
+    metric -3
+$closed shells
+ a       1-67                                   ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.19392161411583E-04
+$hessian (projected)  file=hessian
+$dipgrad  file=dipgrad
+$vibrational spectrum    file=vibspectrum
+$vibrational normal modes    file=vib_normal_modes
+$vibrational reduced masses
+   1.2572406973   1.6583148155   7.6079001272   6.6995832965   6.7018566232
+   9.8732185412  11.1041154880  10.1680383819   6.9610443860   8.2139919937
+   5.2758491458   4.5044418887   8.6419749575   6.8398392730   3.5226045076
+   9.1837177340   2.7150115273   9.8798486437   7.4568074657   8.0216152744
+  13.1958862690   3.4226212229   3.2580912027   2.7471794038   2.6337415192
+   1.2473147567   1.1893271021   5.5350619058   5.4256474191   5.3395504624
+   5.1409640581   4.6361840569   5.6726506490   1.4388088553   1.3972199226
+   1.4957514222   1.3210429709   7.1862538740   6.3609780641   4.0956374583
+   4.0756788064   7.5647283733   7.5297406995   1.3228973396   1.3569927561
+   1.9982133012   1.9775230713   5.2488354239   6.3227323613   2.2384881917
+   1.9302999026   1.4799410150   1.6394699305   1.1597084546   1.1429083593
+   7.3494472622   7.1235081529   1.6314101321   1.6880935195   2.5745257898
+   2.4897538104   2.1141604255   2.0901319996   6.5286013520   6.8317494783
+   1.8926653414   1.8765625692   5.9721779736   5.8165883806   9.5006136370
+  10.1255169348   1.0939283785   1.0920704291   1.0975974115   1.0992594314
+   1.0577513996   1.0787588788   1.0481875056   1.0793597088   1.0955818888
+   1.1052078381
+$nvibro       81
+$end

@@ -1,0 +1,87 @@
+$lastdiag
+$freeze
+implicit core= 14 virt= 0
+$maxcor   1500 MiB  per_core
+$subtitle
+GEO,MP2/RI,charge 0,c1,6-311G**,GEO_OPT
+$denconv    1d-7
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    100
+$coord    file=coord
+$scfconv    7
+$grad    file=gradient
+$optimize
+ internal on
+ redundant on
+ cartesian off
+ global off
+$symmetry    c1
+$tmole
+$fermi     tmstrt=300.00 tmend=150.00 tmfac=0.98 hlcrt=0.1 stop=0.001
+$basis    file=basis
+$scfmo   file=mos
+$title    job_GEO_1
+$redundant    file=coord
+$atoms
+o 1,20 \
+   cbas = o def2-QZVP                     \
+   basis = o 6-311G**
+n 2-6 \
+   cbas = n def2-QZVP                     \
+   basis = n 6-311G**
+h 14-19,21-25 \
+   cbas = h def2-QZVP                     \
+   basis = h 6-31G*
+c 7-13 \
+   cbas = c def2-QZVP                     \
+   basis = c 6-311G**
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$cbas    file=auxbasis
+$thize     0.10000000E-04
+$thime        5
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$forceapprox    file=forceapprox
+$rundimensions
+   natoms=25
+   nbf(CAO)=288
+   nbf(AO)=274
+$last step     ricc2
+$last SCF energy change = -.48501317E-06
+$charge from dscf
+          0.000 (not to be modified here)
+$dipole from ricc2
+  x    -1.54186967150363    y    -0.02597027627837    z    -0.69579727198487    a.u.
+   | dipole | =    4.3001465143  debye
+$last MP2 energy change= 0.14550483E-06
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$closed shells
+ a       1-52                                   ( 2 )
+$orbital_max_rnorm 0.64872230646609E-05
+$end

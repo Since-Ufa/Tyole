@@ -1,0 +1,106 @@
+$title
+Cyt2Ag2abs
+$symmetry    c1
+$coord    file=coord
+$atoms
+o 9,22                                    \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1-2                                    \
+   cbas = ag def2-TZVPP                   \
+   basis = ag def2-TZVPP                  \
+   ecp = ag def2-ecp
+n 3,5,10,16,18,23                         \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 11-15,24-28                             \
+   cbas = h def2-SVP                      \
+   basis = h def2-SVP
+c 4,6-8,17,19-21                          \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$freeze
+implicit core= 18 virt= 0
+$basis    file=basis
+$ecp    file=basis
+$cbas    file=auxbasis
+$scfmo   file=mos
+$subtitle
+SP,ADC(2) (MP2)/RI,charge 2,c1,def2-TZVP,EX-STATE
+$ricc2
+ adc(2)
+$excitations
+ irrep=a nexc=8
+ spectrum states=all operators=diplen,qudlen
+$spectrum    nm
+# $pointval mo 51,53,58,61,64,68,71-77,82,85 fmt=cub
+$anadens
+ calc add_01 from
+ 1d0 adc2-1a-001-approxdiffden.cao
+# calc eddS2subS1 from
+#  1d0 CCRE0-1--1---2
+# -1d0 CCRE0-1--1---1
+$pointval fmt=cub
+$scfiterlimit    900
+$scfconv    7
+$denconv    1d-7
+$closed shells
+ a       1-76                                   ( 2 )
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=1.000  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$rundimensions
+   natoms=28
+   nbf(CAO)=768
+   nbf(AO)=658
+$last step     ricc2
+$orbital_max_rnorm 0.63188867959189E-05
+$last SCF energy change = -1077.3814
+$charge from ricc2
+        154.000 (not to be modified here)
+$dipole from ricc2
+  x  -318.14175787639618    y  -830.72798282670158    z   184.97826341684328    a.u.
+   | dipole | = 2309.4289348860  debye
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$end

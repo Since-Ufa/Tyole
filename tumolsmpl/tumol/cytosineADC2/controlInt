@@ -1,0 +1,134 @@
+$operating system unix
+$title
+imotifm
+$maxcor    400 MiB  per_core
+$coord    file=coord
+$scfconv    7
+$atoms
+n  1,4,6                                                                       \
+   basis =n aug-cc-pVDZ                                                        \
+   cbas  =n aug-cc-pVDZ
+c  2,5,7-8                                                                     \
+   basis =c aug-cc-pVDZ                                                        \
+   cbas  =c aug-cc-pVDZ
+o  3                                                                           \
+   basis =o aug-cc-pVDZ                                                        \
+   cbas  =o aug-cc-pVDZ
+h  9-13                                                                        \
+   basis =h cc-pVDZ                                                            \
+   cbas  =h cc-pVDZ
+$basis    file=basis
+$cbas    file=auxbasis
+# $anadens
+# calc cedd08 from
+# 1d0 adcp2-xsdn-1a-008-total.cao
+# -1d0 mp2-gsdn-1a-000-total.cao
+# $pointval fmt=cub
+$pointval mo 22-40 fmt=cub
+$denconv    1d-7
+$excitations
+irrep=a nexc=8
+spectrum states=all operators=diplen,qudlen
+ xgrad states=(a 1-8)
+$response
+ gradient
+$cdspectrum    ev
+$spectrum    ev
+$tmole
+$ricore    100
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$symmetry    c1
+$scfmo   file=mos
+$ricc2
+adc(2)
+$scfdamp     start=0.700 step=0.050 min=0.100
+$freeze
+implicit core= 8  virt= 0
+$subtitle
+SP,CC2/RI,charge 0,c1,mixed basis set,EX-STATE
+$rundimensions
+   dim(fock,dens)=25752
+   natoms=13
+   nshell=87
+   nbf(CAO)=225
+   nbf(AO)=209
+   dim(trafo[SAO<-->AO/CAO])=257
+   rhfshells=1
+$scfiterlimit      120
+$thize     0.10000000E-04
+$thime        5
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$forceinit on
+   diag=default
+$forceapprox    file=forceapprox
+$lock off
+$scfiterlimit      120
+$thize     0.10000000E-04
+$thime        5
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$forceinit on
+   diag=default
+$forceapprox    file=forceapprox
+$lock off
+$charge from ricc2
+         58.000 (not to be modified here)
+$closed shells
+ a       1-29                                   ( 2 )
+$energy    file=energy
+$grad    file=gradient
+$last step     ricctools
+$orbital_max_rnorm 0.79129363699956E-06
+$last SCF energy change = -392.67256
+$dipole from ricc2
+  x   -43.53151294546146    y   -62.01489310696601    z   223.42493330949048    a.u.
+   | dipole | =  599.6603299211  debye
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$exstprop_ADC(2)___1^a_____1 file=exstates
+$exstprop_ADC(2)___1^a_____2 file=exstates
+$exstprop_ADC(2)___1^a_____3 file=exstates
+$exstprop_ADC(2)___1^a_____4 file=exstates
+$exstprop_ADC(2)___1^a_____5 file=exstates
+$exstprop_ADC(2)___1^a_____6 file=exstates
+$exstprop_ADC(2)___1^a_____7 file=exstates
+$exstprop_ADC(2)___1^a_____8 file=exstates
+$end

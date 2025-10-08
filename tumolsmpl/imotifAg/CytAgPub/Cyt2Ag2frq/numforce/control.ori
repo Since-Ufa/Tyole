@@ -1,0 +1,100 @@
+$atoms
+o 9,22 \
+   cbas = o def2-TZVP                     \
+   basis = o def2-TZVP
+ag 1-2 \
+   cbas = ag def2-TZVPP                     \
+   basis = ag def2-TZVPP                     \
+   ecp = ag def2-ecp
+n 3,5,10,16,18,23 \
+   cbas = n def2-TZVP                     \
+   basis = n def2-TZVP
+h 11-15,24-28 \
+   cbas = h def2-SVP                     \
+   basis = h def2-SVP
+c 4,6-8,17,19-21 \
+   cbas = c def2-TZVP                     \
+   basis = c def2-TZVP
+$denconv 1d-07
+#
+# NumForce insertion:
+#
+$scfconv 7
+$drvopt
+   frequency analysis only nofreeze
+$hessian  file=hessian
+$dipgrad  file=dipgrad
+$grad  file=gradient
+$vibrational normal modes
+$vibrational spectrum
+#
+# end of NumForce insertion.
+#
+$freeze
+implicit core= 18 virt= 0
+$rundimensions
+   natoms=28
+   nbf(CAO)=768
+   nbf(AO)=658
+$ricore    100
+$maxcor    400 MiB  per_core
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$subtitle
+SP,MP2/RI,charge 2,c1,mixed basis set,FREQ_NUMERICALLY
+$dipole from ricc2
+  x    -6.14904759868045    y    -6.63126416139994    z     0.97656640619005    a.u.
+   | dipole | =   23.1200287045  debye
+$ricc2
+mp2 geoopt model=mp2
+$scfiterlimit    900
+$coord    file=coord
+$thime    5
+$charge from dscf
+          2.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$symmetry    c1
+$tmole
+$basis    file=basis
+$scfmo   file=mos
+$title    Cyt2Ag2frq
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=1.000 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E-04
+$scfintunit
+unit=30       size=0        file=twoint
+$forceapprox    file=forceapprox
+$cbas    file=auxbasis
+$scfdiis
+$last SCF energy change = -1077.3814
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_ADC(2)__1^a___ file=exstates
+$t2_norm_of_re0_ADC(2)__1^a___ file=exstates
+$<le0|re0>-overlap_ADC(2)__1^a___ file=exstates
+$<le01|re01>-overlap_ADC(2)__1^a___ file=exstates
+$<le02|re02>-overlap_ADC(2)__1^a___ file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____1 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____2 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____3 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____4 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____5 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____6 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____7 file=exstates
+$tranprop_ADC(2)____1^a_____0_to_1^a_____8 file=exstates
+$closed shells
+ a       1-76                                   ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.19171354719746E-05
+$last MP2 energy change= -4.0657705
+$end

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+ulimit -s unlimited &> /dev/null
+if [ $? -ne 0 ]; then
+ulimit -s 1048576 &> /dev/null
+if [ $? -ne 0 ]; then
+echo "WARNING: Could not set stack size!"
+echo "         Some jobs might fail to run, please check size limit."
+echo "         Output of ulimit -s is:"ulimit -s
+fi
+fi
+export PERL_BADLANG=0
+ridft >ridft.out
+escf >escf.out

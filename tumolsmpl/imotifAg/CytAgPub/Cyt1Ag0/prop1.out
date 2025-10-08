@@ -1,0 +1,337 @@
+ operating system is Windows !
+
+ dscf (DESKTOP-H3301KN) : TURBOMOLE V7-7 30 Aug 2022 at 10:13:15 compiled  Apr 2022
+ Copyright (C) 2022 TURBOMOLE GmbH, Karlsruhe
+
+
+    2023-08-22 22:21:36.763 
+
+
+
+                             d s c f - program
+
+                   idea & directorship : reinhart ahlrichs
+                   program development : marco haeser
+                                         michael baer
+                           dft version : oliver treutler
+
+
+                          quantum chemistry group
+                          universitaet  karlsruhe
+                                  germany
+
+
+
+   *-----------------------------------------------------------------------*
+   |                     program will use  1 thread(s)                     |
+   *-----------------------------------------------------------------------*
+no calculation of wave function, analysis of properties only
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          4.04414432   -9.38409463    5.85531265    n      7.000     0
+          1.98862306   -9.10628599    4.25285134    c      6.000     0
+          1.29806989   -6.64365159    3.70907887    n      7.000     0
+          2.52870490   -4.66276695    4.67101183    c      6.000     0
+          4.62826622   -4.99949347    6.32307656    c      6.000     0
+          5.31838476   -7.40655481    6.86198299    c      6.000     0
+          0.86799279  -10.92276256    3.38397605    o      8.000     0
+          1.75014340   -2.34506132    4.05208684    n      7.000     0
+          2.63686716   -0.81033157    4.74940334    h      1.000     0
+          0.25649253   -2.09311169    2.88006924    h      1.000     0
+          5.63423926   -3.41125614    7.11843394    h      1.000     0
+          6.88584456   -7.86350760    8.09620281    h      1.000     0
+          4.54855002  -11.18963158    6.24967770    h      1.000     0
+ 
+       center of nuclear mass  :    2.76388014   -6.94901611    4.85799799
+       center of nuclear charge:    2.81614332   -6.86914137    4.89887035
+
+   *************************************************************************
+   Cyt1Ag0                                                                  
+   *************************************************************************
+
+
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    o        1     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    n        3     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    h        5      7      5   def2-SVP   [2s1p|4s1p]
+    c        4     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+   ---------------------------------------------------------------------------
+   total:   13    403    273
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   65
+   total number of contracted shells         :  103
+   total number of cartesian basis functions :  313
+   total number of SCF-basis functions       :  273
+
+
+ integral neglect threshold       :  0.11E-10
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ DENSITY CONVERGENCE CHECK SWITCHED ON !
+ SCF CONVERGENCE IF RMS(delta[D]) <     0.1000000000E-06
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+ maximum number of shells which are related by symmetry :  1
+
+
+          ------------------------
+          nuclear repulsion energy  :   356.845815751    
+          ------------------------
+
+
+         -----------------
+         -S,T+V- integrals
+         -----------------
+
+ 1e-integrals will be neglected if expon. factor < 0.106772E-11
+ 
+ Difference densities algorithm switched on.
+ The maximal number of linear combinations of
+ difference densities is  20.
+
+Diagonalization of Fock matrix in last SCF iteration activated ...
+
+
+ DIIS switched on: error vector is FDS-SDF
+ Max. Iterations for DIIS is     :   5
+ DIIS matrix (see manual) 
+    Scaling factor of diagonals  :  1.200
+    threshold for scaling factor :  0.000
+
+ scf convergence criterion : increment of total energy < .1000000D-06
+                  and increment of one-electron energy < .1000000D-03
+
+ MOs are in ASCII format !
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a      273       29
+ 
+ number of basis functions   :   273
+ number of occupied orbitals :    29
+ 
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ mo-orthogonalization by Cholesky decomposition
+
+ automatic virtual orbital shift switched on 
+      shift if e(lumo)-e(homo) < 0.10000000    
+
+ 
+ 
+ 
+ ==============================================================================
+                           electrostatic moments
+ ==============================================================================
+
+ reference point for electrostatic moments:    0.00000   0.00000   0.00000
+
+ 
+              nuc           elec       ->  total
+ ------------------------------------------------------------------------------
+                          charge      
+ ------------------------------------------------------------------------------
+          58.000000     -58.000000      -0.000000
+ 
+ ------------------------------------------------------------------------------
+                       dipole moment  
+ ------------------------------------------------------------------------------
+   x     163.336313    -161.480917       1.855396
+   y    -398.410199     400.248380       1.838181
+   z     284.134480    -282.684786       1.449694
+ 
+   | dipole moment | =     2.9871 a.u. =     7.5926 debye 
+ 
+ ------------------------------------------------------------------------------
+                     quadrupole moment
+ ------------------------------------------------------------------------------
+  xx     620.946807    -644.898495     -23.951688
+  yy    3229.168499   -3283.393309     -54.224810
+  zz    1490.809797   -1511.668507     -20.858710
+  xy   -1112.112977    1097.593241     -14.519736
+  xz     926.317121    -911.695809      14.621312
+  yz   -1944.752093    1938.375995      -6.376098
+ 
+     1/3  trace=     -33.011736
+     anisotropy=      49.147156
+ 
+ 
+ ==============================================================================
+                      CALCULATION OF QUANTITIES ON GRID
+ ==============================================================================
+ 
+ 
+     output format: .plv (input for TmoleX)
+ 
+ 
+ quantities to be calculated are 
+ amplitudes of    1 MOs
+ 
+ calculation at a grid of   37*   46*   33 points
+ 
+ origin at            0.00000        0.00000        0.00000
+ 
+ normalised grid vectors:
+                        x              y              z
+  1. vector:         1.00000        0.00000        0.00000
+  2. vector:         0.00000        1.00000        0.00000
+  3. vector:         0.00000        0.00000        1.00000
+ 
+                     minimum       increment       maximum
+  1. vector:        -3.74351        0.40637       10.88584
+  2. vector:       -15.18963        0.40843        3.18967
+  3. vector:        -1.11993        0.41300       12.09620
+ 
+ amplitudes on grid will be calculated for
+  MO   col spin   energy/a.u   output file
+  31a              0.14421     31a.plv                                 
+percent finished:     1
+percent finished:     2
+percent finished:     3
+percent finished:     4
+percent finished:     5
+percent finished:     6
+percent finished:     7
+percent finished:     8
+percent finished:     9
+percent finished:    10
+percent finished:    11
+percent finished:    12
+percent finished:    13
+percent finished:    14
+percent finished:    15
+percent finished:    16
+percent finished:    17
+percent finished:    18
+percent finished:    19
+percent finished:    20
+percent finished:    21
+percent finished:    22
+percent finished:    23
+percent finished:    24
+percent finished:    25
+percent finished:    26
+percent finished:    27
+percent finished:    28
+percent finished:    29
+percent finished:    30
+percent finished:    31
+percent finished:    32
+percent finished:    33
+percent finished:    34
+percent finished:    35
+percent finished:    36
+percent finished:    37
+percent finished:    38
+percent finished:    39
+percent finished:    40
+percent finished:    41
+percent finished:    42
+percent finished:    43
+percent finished:    44
+percent finished:    45
+percent finished:    46
+percent finished:    47
+percent finished:    48
+percent finished:    49
+percent finished:    50
+percent finished:    51
+percent finished:    52
+percent finished:    53
+percent finished:    54
+percent finished:    55
+percent finished:    56
+percent finished:    57
+percent finished:    58
+percent finished:    59
+percent finished:    60
+percent finished:    61
+percent finished:    62
+percent finished:    63
+percent finished:    64
+percent finished:    65
+percent finished:    66
+percent finished:    67
+percent finished:    68
+percent finished:    69
+percent finished:    70
+percent finished:    71
+percent finished:    72
+percent finished:    73
+percent finished:    74
+percent finished:    75
+percent finished:    76
+percent finished:    77
+percent finished:    78
+percent finished:    79
+percent finished:    80
+percent finished:    81
+percent finished:    82
+percent finished:    83
+percent finished:    84
+percent finished:    85
+percent finished:    86
+percent finished:    87
+percent finished:    88
+percent finished:    89
+percent finished:    90
+percent finished:    91
+percent finished:    92
+percent finished:    93
+percent finished:    94
+percent finished:    95
+percent finished:    96
+percent finished:    97
+percent finished:    98
+percent finished:    99
+percent finished:   100
+ 
+ ==============================================================================
+ 
+HOMO-LUMO Separation
+ HOMO         :   -0.34116821 H =     -9.28366 eV
+ LUMO         :    0.09712659 H =     +2.64295 eV
+ HOMO-LUMO gap:    0.43829480 H =    +11.92662 eV
+ 
+ ==============================================================================
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :   0.22 seconds
+         total wall-time :   0.37 seconds
+    ------------------------------------------------------------------------
+
+   ****  dscf : all done  ****
+
+
+    2023-08-22 22:21:37.113 
+
+ dscf ended normally

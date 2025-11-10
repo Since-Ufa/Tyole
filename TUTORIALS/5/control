@@ -1,0 +1,83 @@
+$title
+$symmetry d6h
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$intdef    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+c  1-6                                                                         \
+   basis =c def2-TZVP                                                          \
+   jbas  =c def2-TZVP
+h  7-12                                                                        \
+   basis =h def2-TZVP                                                          \
+   jbas  =h def2-TZVP
+$basis    file=basis
+$scfmo   file=mos
+$scfiterlimit       30
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$rundimensions
+   natoms=12
+   nbf(CAO)=252
+   nbf(AO)=222
+$last SCF energy change = -.25168384E-03
+$charge from ridft
+          0.000 (not to be modified here)
+$dipole from ridft
+  x    -0.00000000000001    y    -0.00000000000001    z     0.00000000000000    a.u.
+   | dipole | =    0.0000000000  debye
+$dft
+    functional   b-p
+    gridsize   m3
+$scfconv   7
+$closed shells
+ a1g     1-3                                    ( 2 )
+ e1g     1                                      ( 2 )
+ e2g     1-3                                    ( 2 )
+ a2u     1                                      ( 2 )
+ b1u     1                                      ( 2 )
+ b2u     1-2                                    ( 2 )
+ e1u     1-3                                    ( 2 )
+$ricore      500
+$rij
+$jbas    file=auxbasis
+$last step     ridft
+$orbital_max_rnorm 0.50475643977498E-06
+$subenergy  Etot         E1                  Ej                Ex                 Ec                 En
+-232.3374656344    -714.9406748381     313.7013227182    -33.33992232741    -1.505108266409     203.7469170793
+$end

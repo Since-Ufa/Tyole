@@ -1,0 +1,81 @@
+$title
+$symmetry c1 1
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+o  1                                                                           \
+   basis =o def2-SV(P)                                                         \
+   cbas  =o def2-SV(P)
+h  2-3                                                                         \
+   basis =h def2-SV(P)                                                         \
+   cbas  =h def2-SV(P)
+o  4                                                                           \
+   basis =o def2-SV(P)                                                         \
+   cbas  =o def2-SV(P)                                                         \
+   charge=  0.00000000
+h  5-6                                                                         \
+   basis =h def2-SV(P)                                                         \
+   cbas  =h def2-SV(P)                                                         \
+   charge=  0.00000000
+$basis    file=basis
+$scfmo   file=mos
+$scfiterlimit       30
+$scfconv        7
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$denconv     0.10000000E-06
+$cbas    file=auxbasis
+$freeze
+ implicit core=    0 virt=    0
+$rundimensions
+   natoms=6
+   nbf(CAO)=38
+   nbf(AO)=36
+$last SCF energy change = -75.938042
+$charge from dscf
+         -0.000 (not to be modified here)
+$dipole from ricc2
+  x     0.39824705558411    y     0.78833027592104    z     0.00000000000001    a.u.
+   | dipole | =    2.2449206899  debye
+$last MP2 energy change= -.19134183
+$closed shells
+ a       1-5                                    ( 2 )
+$last step     ricc2
+$orbital_max_rnorm 0.68753298519210E-05
+$end

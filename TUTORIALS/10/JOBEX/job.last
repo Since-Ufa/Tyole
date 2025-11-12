@@ -1,0 +1,649 @@
+
+OPTIMIZATION CYCLE 4
+Вт 11 ноя 2025 11:25:51 MSK
+
+   OpenMP run-time library returned nthreads = 16
+
+ grad (saturn) : TURBOMOLE rev. V7-7-1 compiled 3 Feb 2023 at 10:13:59
+ Copyright (C) 2023 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-11-11 11:25:51.886 
+
+
+
+                             g r a d - program
+
+                reinhart ahlrichs, hans horn & ansgar schaefer
+                 density functional version : oliver treutler
+
+
+                          quantum chemistry group
+                          universitaet  karlsruhe
+                                   germany
+
+
+
+
+                                                 
+                                 References:     
+                                                 
+          Density Functional:                              
+              O. Treutler and R. Ahlrichs                      
+              Efficient Molecular Numerical Integration Schemes
+              J. Chem. Phys. 102: 346 (1995)                   
+          Parallel Version:                                
+              Performance of parallel TURBOMOLE for Density    
+              Functional Calculations                          
+              M. v. Arnim and R. Ahlrichs                      
+              J. Comp. Chem. 19: 1746 (1998)                   
+                                         
+
+
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          0.00000000    0.00000000    5.00000000    q      0.000     0
+         -1.82833553    1.32836352   -0.00000000    c      6.000     0
+         -1.82833553   -1.32836352   -0.00000000    c      6.000     0
+          0.69836203   -2.14933732   -0.00000000    c      6.000     0
+          2.25994700    0.00000000   -0.00000000    c      6.000     0
+          0.69836203    2.14933732   -0.00000000    c      6.000     0
+         -3.49044071    2.53595362    0.00000000    h      1.000     0
+         -3.49044071   -2.53595362    0.00000000    h      1.000     0
+          1.33322971   -4.10325914    0.00000000    h      1.000     0
+          4.31442199    0.00000000    0.00000000    h      1.000     0
+          1.33322971    4.10325914    0.00000000    h      1.000     0
+          0.00000000    0.00000000   -0.00000000    q      0.000     0
+ 
+       center of nuclear mass  :   -0.00000000    0.00000000   -0.00000000
+       center of nuclear charge:   -0.00000000    0.00000000   -0.00000000
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    no       2      0      0   ne   [|]
+    c        5     24     14   def2-SV(P)   [3s2p1d|7s4p1d]
+    h        5      4      2   def2-SV(P)   [2s|4s]
+   ---------------------------------------------------------------------------
+   total:   12    140     80
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   16
+   total number of contracted shells         :   40
+   total number of cartesian basis functions :   85
+   total number of SCF-basis functions       :   80
+
+
+ integral neglect threshold       :  0.39E-10
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ WARNING : cannot change filename for statistics 
+
+ symmetry group of the molecule :   c5v
+
+ the group has the following generators :
+   c5(z)
+   mirror plane sigma(xz)
+
+   10 symmetry operations found
+
+ there are 4 real representations :   a1   a2   e1   e2  
+
+ maximum number of shells which are related by symmetry :  5
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a1      12        4
+    a2       4        0
+    e1      16        4
+    e2      16        3
+ 
+ number of basis functions   :    80
+ number of occupied orbitals :    18
+ 
+
+ number of off-diagonal lagrangians expected :  0
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ time elapsed for calculating density matrices :   0.016 sec
+
+  grad preliminaries : cpu elapsed         1.190 s
+                       wall                0.091 s
+
+
+
+                    and now featuring
+                             the super-duper gradient    ..... wow .....
+
+
+ ------------------------------------------------------------------------------
+
+            SCF ENERGY GRADIENT with respect to NUCLEAR COORDINATES            
+
+ ------------------------------------------------------------------------------
+
+
+
+    ----------------------------------------
+     S+T+V CONTRIBUTIONS TO ENERGY GRADIENT 
+    ----------------------------------------
+
+ 1e-integral 1st. derivatives will be neglected if expon. factor < 0.100000E-10
+
+  cpu time for 1e-part of gradient :      0.03 sec
+
+
+    -----------------------------------------------
+     TWO ELECTRON CONTRIBUTIONS TO ENERGY GRADIENT 
+    -----------------------------------------------
+
+ biggest 1-particle AO density matrix element is expected to be    2.0897755180
+
+ setting up bound for integral derivative estimation
+
+ increment for numerical differentiation : 0.00050000
+
+ biggest AO integral is expected to be     3.528781981
+ biggest cartesian 1st derivative AO integral is expected to be     5.507249476
+
+ 2e-integral 1st. derivatives will be neglected if expon. factor < 0.100000E-06
+ outer boundary for 2e-integral derivative neglection is 0.763272E-09
+
+  cpu time for 2e-part of gradient :      0.01 min
+
+
+          ------------------------------------------------
+           cartesian gradient of the energy (hartree/bohr)
+          ------------------------------------------------
+
+  ATOM      1 q           2 c           3 c           4 c           5 c 
+dE/dx  0.0000000D+00  0.5016005D-05  0.5016005D-05 -0.1915943D-05 -0.6200123D-05
+dE/dy  0.0000000D+00 -0.3644341D-05  0.3644341D-05  0.5896667D-05  0.0000000D+00
+dE/dz  0.0000000D+00  0.1046536D-10  0.1046536D-10  0.1046536D-10  0.1046536D-10
+
+  ATOM      6 c           7 h           8 h           9 h          10 h 
+dE/dx -0.1915943D-05 -0.2723503D-05 -0.2723503D-05  0.1040286D-05  0.3366435D-05
+dE/dy -0.5896667D-05  0.1978741D-05 -0.1978741D-05 -0.3201670D-05  0.0000000D+00
+dE/dz  0.1046536D-10 -0.9826813D-11 -0.9826813D-11 -0.9826813D-11 -0.9826813D-11
+
+  ATOM     11 h          12 q 
+dE/dx  0.1040286D-05  0.0000000D+00
+dE/dy  0.3201670D-05  0.0000000D+00
+dE/dz -0.9826813D-11  0.0000000D+00
+ 
+ resulting FORCE  (fx,fy,fz) = (0.222D-15,0.124D-14,0.319D-11)
+ resulting MOMENT (mx,my,mz) = (0.123D-24,0.174D-24,0.178D-14)
+
+
+ exx =       0.000001 eyy =       0.000001 ezz =      -0.000000
+ eyz =      -0.000000 exz =       0.000000 exy =       0.000000
+
+
+ **********************************************************************
+  |maximum component of gradient| : 0.62001229E-05  (atom  5 c )       
+   gradient norm                  : 0.15775679E-04
+ **********************************************************************
+   ***  cartesian gradients written onto <gradient>  ***
+
+
+     --- calculation of the energy gradient finished ---
+
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :   1.80 seconds
+         total wall-time :   0.13 seconds
+    ------------------------------------------------------------------------
+
+   ****  grad : all done  ****
+
+
+    2025-11-11 11:25:51.998 
+
+fine, there is no data group "$actual step"
+next step = relax
+
+ statpt (saturn) : TURBOMOLE rev. V7-7-1 compiled 3 Feb 2023 at 10:04:44
+ Copyright (C) 2023 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-11-11 11:25:52.037 
+
+
+
+                           this is S T A T P T   
+
+
+                     hessian and coordinate update for
+                          stationary point search 
+
+                     by barbara unterreiner, marek sierka,
+                           and reinhart ahlrichs
+
+                          quantum chemistry group
+                          universitaet  karlsruhe
+                                  germany
+
+
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          0.00000000    0.00000000    5.00000000    q      0.000     0
+         -1.82833553    1.32836352   -0.00000000    c      6.000     0
+         -1.82833553   -1.32836352   -0.00000000    c      6.000     0
+          0.69836203   -2.14933732   -0.00000000    c      6.000     0
+          2.25994700    0.00000000   -0.00000000    c      6.000     0
+          0.69836203    2.14933732   -0.00000000    c      6.000     0
+         -3.49044071    2.53595362    0.00000000    h      1.000     0
+         -3.49044071   -2.53595362    0.00000000    h      1.000     0
+          1.33322971   -4.10325914    0.00000000    h      1.000     0
+          4.31442199    0.00000000    0.00000000    h      1.000     0
+          1.33322971    4.10325914    0.00000000    h      1.000     0
+          0.00000000    0.00000000   -0.00000000    q      0.000     0
+ 
+       center of nuclear mass  :   -0.00000000    0.00000000   -0.00000000
+       center of nuclear charge:   -0.00000000    0.00000000   -0.00000000
+  Keyword $statpt not found - using default options
+ 
+        ***************  Stationary point options ******************
+        ************************************************************
+           Maximum allowed trust radius:           3.000000E-01
+           Minimum allowed trust radius:           1.000000E-03
+           Initial trust radius:                   1.500000E-01
+           GDIIS used if gradient norm <           1.000000E-02
+           Number of previous steps for GDIIS:       5
+           Hessian update method:                  BFGS
+                        *** Convergence criteria ***                
+           Threshold for energy change:            1.000000E-06
+           Threshold for max displacement element: 1.000000E-03
+           Threshold for max gradient element :    1.000000E-03
+           Threshold for RMS of displacement:      5.000000E-04
+           Threshold for RMS of gradient:          5.000000E-04
+        ************************************************************
+ 
+
+  Keyword $statp missing in file <control>
+
+  Keyword $statpt not found - using default options
+     Number of symmetry restricted degrees of freedom:     6
+     Constituted by:     1 translational degrees of freedom
+                         0 rotational degrees of freedom
+                         5 internal degrees of freedom
+
+ frozen internal coordinate no.                      5  of type outp
+    involving atoms:                     12                     2
+                     4                     3
+    in cylce                      4  has gradient of  -3.037470314942208E-011
+    and value of   0.000000000000000E+000
+ 
+  *************************************************************************
+   ATOM                      CARTESIAN COORDINATES
+    1 q       0.00000000000000      0.00000000000000      4.99999999985344
+    2 c      -1.82833552599005      1.32836351509482     -0.00000000014660
+    3 c      -1.82833552599005     -1.32836351509482     -0.00000000014660
+    4 c       0.69836202808928     -2.14933731683870     -0.00000000014660
+    5 c       2.25994699580153      0.00000000000000     -0.00000000014660
+    6 c       0.69836202808928      2.14933731683870     -0.00000000014660
+    7 h      -3.49044070819920      2.53595361598787      0.00000000020522
+    8 h      -3.49044070819920     -2.53595361598787      0.00000000020522
+    9 h       1.33322971481584     -4.10325914456157      0.00000000020522
+   10 h       4.31442198676671      0.00000000000000      0.00000000020522
+   11 h       1.33322971481584      4.10325914456157      0.00000000020522
+   12 q       0.00000000000000      0.00000000000000     -0.00000000014656
+  *************************************************************************
+   ATOM                      CARTESIAN GRADIENTS  
+    1 q       0.00000000000000      0.00000000000000      0.00000000000000
+    2 c       0.00000501600479     -0.00000364434080      0.00000000001047
+    3 c       0.00000501600479      0.00000364434080      0.00000000001047
+    4 c      -0.00000191594334      0.00000589666729      0.00000000001047
+    5 c      -0.00000620012290      0.00000000000000      0.00000000001047
+    6 c      -0.00000191594334     -0.00000589666729      0.00000000001047
+    7 h      -0.00000272350316      0.00000197874087     -0.00000000000983
+    8 h      -0.00000272350316     -0.00000197874087     -0.00000000000983
+    9 h       0.00000104028564     -0.00000320166998     -0.00000000000983
+   10 h       0.00000336643504      0.00000000000000     -0.00000000000983
+   11 h       0.00000104028564      0.00000320166998     -0.00000000000983
+   12 q       0.00000000000000      0.00000000000000      0.00000000000000
+  *************************************************************************
+
+  norm of actual CARTESIAN gradient:  1.57757E-05
+  norm of actual INTERNAL  gradient:  9.25832E-06
+
+  ENERGY =    -192.0390864751 a.u.; # of cycle =    4
+
+  Approximate Hessian read from $hessapprox data section
+
+  Number of frozen internal coordinates:    1
+
+  Hessian updated according to BFGS formula
+  Number of zero Hessian eigenvalues:   1
+  FIRST criterion done:    1662348793.03329                          2
+  Number of structures for GDIIS interpolation:    2
+  GDIIS step:     0.000022
+
+  Transforming internal coordinate displacements to Cartesian space
+      Iteration   1 residual norm     2.229107E-05
+      Iteration   2 residual norm     5.794495E-10
+      Transformation converged
+      Residual norm:    5.794495E-10 after    2 iterations
+
+      ****************************************************************** 
+                          CONVERGENCE INFORMATION
+
+                               Converged?     Value      Criterion
+             Energy change         yes      0.0000000   0.0000010
+             RMS of displacement   yes      0.0000100   0.0005000
+             RMS of gradient       yes      0.0000041   0.0005000
+             MAX displacement      yes      0.0000195   0.0010000
+             MAX gradient          yes      0.0000075   0.0010000
+      ****************************************************************** 
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :   0.02 seconds
+         total wall-time :   0.02 seconds
+    ------------------------------------------------------------------------
+
+   ****  statpt : all done  ****
+
+
+    2025-11-11 11:25:52.047 
+
+fine, there is no data group "$actual step"
+next step = dscf
+
+   OpenMP run-time library returned nthreads = 16
+
+ dscf (saturn) : TURBOMOLE rev. V7-7-1 compiled 3 Feb 2023 at 10:13:59
+ Copyright (C) 2023 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-11-11 11:25:52.149 
+
+
+
+                             d s c f - program
+
+                   idea & directorship : reinhart ahlrichs
+                   program development : marco haeser
+                                         michael baer
+                           dft version : oliver treutler
+
+
+                          quantum chemistry group
+                          universitaet  karlsruhe
+                                  germany
+
+
+
+   *-----------------------------------------------------------------------*
+   |                     program will use 16 thread(s)                     |
+   *-----------------------------------------------------------------------*
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          0.00000000    0.00000000    5.00000000    q      0.000     0
+         -1.82833885    1.32836593   -0.00000000    c      6.000     0
+         -1.82833885   -1.32836593   -0.00000000    c      6.000     0
+          0.69836330   -2.14934122   -0.00000000    c      6.000     0
+          2.25995110    0.00000000   -0.00000000    c      6.000     0
+          0.69836330    2.14934122   -0.00000000    c      6.000     0
+         -3.49043698    2.53595090    0.00000000    h      1.000     0
+         -3.49043698   -2.53595090    0.00000000    h      1.000     0
+          1.33322829   -4.10325476    0.00000000    h      1.000     0
+          4.31441737    0.00000000    0.00000000    h      1.000     0
+          1.33322829    4.10325476    0.00000000    h      1.000     0
+          0.00000000    0.00000000   -0.00000000    q      0.000     0
+ 
+       center of nuclear mass  :    0.00000000    0.00000000   -0.00000000
+       center of nuclear charge:    0.00000000    0.00000000   -0.00000000
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    no       2      0      0   ne   [|]
+    c        5     24     14   def2-SV(P)   [3s2p1d|7s4p1d]
+    h        5      4      2   def2-SV(P)   [2s|4s]
+   ---------------------------------------------------------------------------
+   total:   12    140     80
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   16
+   total number of contracted shells         :   40
+   total number of cartesian basis functions :   85
+   total number of SCF-basis functions       :   80
+
+
+ integral neglect threshold       :  0.39E-10
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ symmetry group of the molecule :   c5v
+
+ the group has the following generators :
+   c5(z)
+   mirror plane sigma(xz)
+
+   10 symmetry operations found
+
+ there are 4 real representations :   a1   a2   e1   e2  
+
+ maximum number of shells which are related by symmetry :  5
+
+
+          ------------------------
+          nuclear repulsion energy  :   149.633355112    
+          ------------------------
+
+
+         -----------------
+         -S,T+V- integrals
+         -----------------
+
+ 1e-integrals will be neglected if expon. factor < 0.393172E-11
+ 
+ Difference densities algorithm switched on.
+ The maximal number of linear combinations of
+ difference densities is  20.
+
+ DIIS switched on: error vector is FDS-SDF
+ Max. Iterations for DIIS is     :   5
+ DIIS matrix (see manual) 
+    Scaling factor of diagonals  :  1.200
+    threshold for scaling factor :  0.000
+
+ scf convergence criterion : increment of total energy < .1000000D-06
+                  and increment of one-electron energy < .1000000D-03
+
+ MOs are in ASCII format !
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a1      12        4
+    a2       4        0
+    e1      16        4
+    e2      16        3
+ 
+ number of basis functions   :    80
+ number of occupied orbitals :    18
+ 
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ mo-orthogonalization by Cholesky decomposition
+
+ automatic virtual orbital shift switched on 
+      shift if e(lumo)-e(homo) < 0.10000000    
+
+
+ DSCF restart information will be dumped onto file mos
+
+ 
+                                              current damping :  0.300
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     NORM[dD(SAO)]  TOL
+   1  -192.03908648021    -562.76750390     221.09506231    0.000D+00 0.392D-10
+          max. resid. norm for Fia-block=  2.098D-06 for orbital      4a1        
+          max. resid. fock norm         =  3.882D-06 for orbital     16e1        
+          Delta Eig. =     0.0001296088 eV 
+ 
+                                              current damping :  0.300
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     NORM[dD(SAO)]  TOL
+   2  -192.03908647966    -562.76749923     221.09505764    0.834D-05 0.249D-10
+          Norm of current diis error: 0.83720E-05
+          max. resid. norm for Fia-block=  1.098D-06 for orbital      3e1        
+          max. resid. fock norm         =  1.338D-06 for orbital     10e2        
+          Delta Eig. =     0.0000285217 eV 
+
+ ENERGY CONVERGED !
+
+ 
+                                              current damping :  0.350
+ ITERATION  ENERGY          1e-ENERGY        2e-ENERGY     NORM[dD(SAO)]  TOL
+   3  -192.03908648163    -562.76751248     221.09507089    0.158D-05 0.190D-10
+          max. resid. norm for Fia-block=  3.673D-07 for orbital      4a1        
+          max. resid. fock norm         =  4.401D-07 for orbital      3e2        
+
+ convergence criteria satisfied after     3 iterations
+
+
+                  ------------------------------------------ 
+                 |  total energy      =   -192.03908648163  |
+                  ------------------------------------------ 
+                 :  kinetic energy    =    191.29544521019  :
+                 :  potential energy  =   -383.33453169182  :
+                 :  virial theorem    =      1.99612765669  :
+                 :  wavefunction norm =      1.00000000000  :
+                  .......................................... 
+
+
+ orbitals $scfmo  will be written to file mos
+
+    irrep                  1a1         2a1         3a1         4a1         5a1  
+ eigenvalues H        -10.98343    -0.90428    -0.47088    -0.27230     0.37452
+            eV        -298.8767    -24.6069    -12.8133     -7.4098     10.1912
+ occupation              2.0000      2.0000      2.0000      2.0000
+
+    irrep                  6a1         7a1         8a1         9a1        10a1  
+ eigenvalues H          0.73417     0.90845     0.93971     1.24832     1.86334
+            eV          19.9780     24.7202     25.5710     33.9688     50.7044
+
+    irrep                  1a2         2a2         3a2         4a2  
+ eigenvalues H          0.84097     1.33522     3.10503     3.54170
+            eV          22.8842     36.3336     84.4927     96.3754
+
+    irrep                  1e1         2e1         3e1         4e1         5e1  
+ eigenvalues H        -10.98276    -0.70193    -0.31375    -0.05940     0.41080
+            eV        -298.8586    -19.1006     -8.5377     -1.6163     11.1785
+ occupation          2 * 2.0000  2 * 2.0000  2 * 2.0000  2 * 2.0000
+
+    irrep                  6e1         7e1         8e1         9e1        10e1  
+ eigenvalues H          0.63193     0.82819     0.98600     1.12436     1.20755
+            eV          17.1958     22.5363     26.8305     30.5957     32.8593
+
+    irrep                  1e2         2e2         3e2         4e2         5e2  
+ eigenvalues H        -10.98157    -0.49819    -0.29129     0.42824     0.44914
+            eV        -298.8262    -13.5567     -7.9264     11.6531     12.2218
+ occupation          2 * 2.0000  2 * 2.0000  2 * 2.0000
+
+    irrep                  6e2         7e2         8e2         9e2        10e2  
+ eigenvalues H          0.71335     0.91338     1.08301     1.16198     1.31990
+            eV          19.4115     24.8546     29.4703     31.6192     35.9166
+ 
+ 
+ 
+ 
+ ==============================================================================
+                           electrostatic moments
+ ==============================================================================
+
+ reference point for electrostatic moments:    0.00000   0.00000   0.00000
+
+ 
+              nuc           elec       ->  total
+ ------------------------------------------------------------------------------
+                          charge      
+ ------------------------------------------------------------------------------
+          35.000000     -36.000000      -1.000000
+ 
+ ------------------------------------------------------------------------------
+                       dipole moment  
+ ------------------------------------------------------------------------------
+   x       0.000000      -0.000000      -0.000000
+   y       0.000000       0.000000       0.000000
+   z      -0.000000       0.000000       0.000000
+ 
+   | dipole moment | =     0.0000 a.u. =     0.0000 debye 
+ 
+ ------------------------------------------------------------------------------
+                     quadrupole moment
+ ------------------------------------------------------------------------------
+  xx     123.146178    -150.712546     -27.566368
+  yy     123.146178    -150.712546     -27.566368
+  zz       0.000000     -28.692557     -28.692557
+  xy       0.000000      -0.000000      -0.000000
+  xz       0.000000       0.000000       0.000000
+  yz       0.000000      -0.000000      -0.000000
+ 
+     1/3  trace=     -27.941764
+     anisotropy=       1.126189
+ 
+ ==============================================================================
+ 
+HOMO-LUMO Separation
+ HOMO         :   -0.05939588 H =     -1.61624 eV
+ LUMO         :    0.37451736 H =    +10.19114 eV
+ HOMO-LUMO gap:    0.43391324 H =    +11.80739 eV
+ 
+ ==============================================================================
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :   4.04 seconds
+         total wall-time :   0.29 seconds
+    ------------------------------------------------------------------------
+
+   ****  dscf : all done  ****
+
+
+    2025-11-11 11:25:52.406 
+
+fine, there is no data group "$actual step"
+next step = grad
+ energy change  : actual value =  -0.2860E-07 threshold =   0.1000E-05
+ geom. gradient : actual value =   0.7528E-05 threshold =   0.1000E-02
+
+CONVERGENCY CRITERIA FULFILLED IN CYCLE 4
+

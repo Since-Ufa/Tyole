@@ -1,0 +1,90 @@
+$title
+$symmetry c1
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$atoms
+    basis =def-SV(P)
+    cbas  =def-SV(P)
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-5                                    ( 2 )
+$scfiterlimit       30
+$scfconv        7
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$denconv     0.10000000E-06
+$ricc2
+    cc2
+    geoopt model=cc2  state=(a 1)
+$excitations
+    irrep=a  multiplicity=  1  nexc=  1
+$rundimensions
+   natoms=4
+   nbf(CAO)=21
+   nbf(AO)=20
+$last step     ricc2
+$last SCF energy change = 0.55017752E-05
+$charge from dscf
+          0.000 (not to be modified here)
+$dipole from ricc2
+  x     0.00000430610680    y     0.00000398413533    z    -0.00001393427644    a.u.
+   | dipole | =    0.0000384286  debye
+$cbas file=auxbasis
+$excitation_energies_CCS_____1^a___ file=exstates
+$last CC2 energy change= -.55916867E-05
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.18294659152621E-05
+$excitation_energies_CC2_____1^a___ file=exstates
+$t2_norm_of_re0_CC2_____1^a___ file=exstates
+$t2_norm_of_le0_CC2_____1^a___ file=exstates
+$<le0|re0>-overlap_CC2_____1^a___ file=exstates
+$<le01|re01>-overlap_CC2_____1^a___ file=exstates
+$<le02|re02>-overlap_CC2_____1^a___ file=exstates
+$exstprop_CC2______1^a_____1 file=exstates
+$hessian (projected)  file=hessian
+$dipgrad  file=dipgrad
+$vibrational spectrum    file=vibspectrum
+$vibrational normal modes    file=vib_normal_modes
+$vibrational reduced masses
+   1.0764311471   2.7155125729   1.9821845006   1.0764598338   3.1081257525
+   1.5912416460   1.0175384076   1.0184307496   1.2036340708   1.1948892404
+   1.1937212287   1.0080345002
+$nvibro       12
+$end

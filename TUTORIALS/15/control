@@ -1,0 +1,97 @@
+$symmetry c3
+$redundant    file=coord
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   on
+ redundant  on
+ cartesian  off
+ global     off
+ basis      off
+$atoms
+p  1-3,5-8                                                                     \
+   basis =p def2-SV(P)                                                         \
+   jbas  =p def2-SV(P)
+h  4,9-10                                                                      \
+   basis =h def2-SV(P)                                                         \
+   jbas  =h def2-SV(P)
+$basis    file=basis
+$scfmo   file=mos
+$scfiterlimit       30
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfdump
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$forceapprox    file=forceapprox
+$ricore      500
+$rij
+$jbas    file=auxbasis
+$dft
+    functional   b-p
+    gridsize   m3
+$rundimensions
+   natoms=10
+   nbf(CAO)=139
+   nbf(AO)=132
+$last SCF energy change = -.93169774E-03
+$charge from ridft
+          0.000 (not to be modified here)
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$vibrational reduced masses
+   1.1795734623   1.3046927334   1.3046927334  16.9975699269  17.2960151704
+  18.9619215617  19.0750650016  19.9952950060  12.5949109541   8.3290875372
+   6.2724516950   6.2724516950   9.5270493224   9.5270493223  11.8930004405
+  11.8930004405  17.5417114214   8.4244619290   8.4244619290  16.2593812546
+   9.3553155887  10.7801887419   6.1381700006   6.1381700006   1.3555245882
+   1.3555245882   1.2167915517   1.0415277683   1.0421525071   1.0421525071
+$nvibro       30
+$newcoord
+# cartesian coordinates shifted along normal mode   1 by -.26780
+   -2.48552682102960      0.67002556939701     -2.62605322224363      p
+   -3.30027682023870      0.87347824380757      1.31928024626619      p
+    0.00000000002523     -0.00000000002523      3.70032255457030      p
+   -5.68811889283785      1.68510211460241      2.25341484172353      h
+    0.66250424622676     -2.48754215347873     -2.62605322228663      p
+    1.82302257476807      1.81751658411650     -2.62605322226518      p
+    0.89368406133189     -3.29486268776229      1.31928024620917      p
+    2.40659275891486      2.42138444394667      1.31928024623784      p
+    1.38471820721160     -5.76860651827951      2.25341484162449      h
+    4.30340068567234      4.08350440363101      2.25341484167177      h
+$orbital_max_rnorm 0.28763337372188E-04
+$subenergy  Etot         E1                  Ej                Ex                 Ec                 En
+-2390.781604122    -5207.817730622     2027.584160132    -159.3571666591    -4.738249040209     953.5473820679
+$scfconv   7
+$title
+\
+$closed shells
+ a       1-20                                   ( 2 )
+ e       1-34                                   ( 2 )
+$energy    file=energy
+$grad    file=gradient
+$actual step      statpt
+$end

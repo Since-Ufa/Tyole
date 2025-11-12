@@ -1,0 +1,432 @@
+
+ force (saturn) : TURBOMOLE rev. V7-7-1 compiled 3 Feb 2023 at 10:04:44
+ Copyright (C) 2023 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-11-11 16:06:12.474 
+
+
+
+                             T U R B O M O L E   
+
+                          a o f o r c e - program
+
+                        using direct algorithms for
+
+                       SCF level calculations of
+                         * harmonic force constants
+                         * hyperpolarizabilities
+                         * IR and RAMAN intensities
+                         * VCD intensities
+
+                       DFT level calculations of
+                         * harmonic force constants
+                         * IR intensities
+                                                   
+       Stephan Boecker, Peter Deglmann, Filipp Furche and Marco Haeser
+                          Quantum Chemistry Group
+                          Universitaet  Karlsruhe
+                                   Germany
+
+ 
+ 
+ 
+ 
+     References :
+ 
+       RI-J implementation:
+         Peter Deglmann, Klaus May, Filipp Furche, Reinhart Ahlrichs
+                 Chem. Phys. Lett. 384:103 (2004)
+ 
+       Efficiency, technical details:
+         Peter Deglmann, Filipp Furche, Reinhart Ahlrichs
+                 Chem. Phys. Lett. 362:511 (2002)
+ 
+       Search of lowest eigenvalues by iterative diagonalization:
+         Peter Deglmann, Filipp Furche
+                 J. Chem. Phys. 117:9535 (2002)
+ 
+       Vibrational circular dichroism implementation:
+        Kevin Reiter, Michael Kuehn, Florian Weigend
+                 J. Chem. Phys. 146:054102 (2017)  
+ 
+ 
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+          0.00000000    0.00000000    0.00000000    c      6.000     0
+          1.18845005   -1.18845005    1.18845005    h      1.000     0
+         -1.18845005    1.18845005    1.18845005    h      1.000     0
+         -1.18845005   -1.18845005   -1.18845005    h      1.000     0
+          1.18845005    1.18845005   -1.18845005    h      1.000     0
+ 
+       center of nuclear mass  :    0.00000000    0.00000000    0.00000000
+       center of nuclear charge:    0.00000000    0.00000000    0.00000000
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    c        1     46     31   def2-TZVP   [5s3p2d1f|11s6p2d1f]
+    h        4      8      6   def2-TZVP   [3s1p|5s1p]
+   ---------------------------------------------------------------------------
+   total:    5     78     55
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   26
+   total number of contracted shells         :   27
+   total number of cartesian basis functions :   60
+   total number of SCF-basis functions       :   55
+
+
+ symmetry group of the molecule :   td
+
+ the group has the following generators :
+   s4(z)
+   c3(1,1,1)
+
+   24 symmetry operations found
+
+ there are 5 real representations :   a1   a2   e    t1   t2  
+
+ maximum number of shells which are related by symmetry :  4
+
+
+ determining totally symmetric integral contributions 
+    - equivalent to irreducible tensor elements - 
+ which can be formed within each triple of representations :
+
+             representation triple      contributions
+
+              a1    a1    a1              1
+              a1    a2    a2              1
+              a1    e     e               1
+              a1    t1    t1              1
+              a1    t2    t2              1
+              a2    a1    a2              1
+              a2    a2    a1              1
+              a2    e     e               1
+              a2    t1    t2              1
+              a2    t2    t1              1
+              e     a1    e               1
+              e     a2    e               1
+              e     e     a1              1
+              e     e     a2              1
+              e     e     e               1
+              e     t1    t1              1
+              e     t1    t2              1
+              e     t2    t1              1
+              e     t2    t2              1
+              t1    a1    t1              1
+              t1    a2    t2              1
+              t1    e     t1              1
+              t1    e     t2              1
+              t1    t1    a1              1
+              t1    t1    e               1
+              t1    t1    t1              1
+              t1    t1    t2              1
+              t1    t2    a2              1
+              t1    t2    e               1
+              t1    t2    t1              1
+              t1    t2    t2              1
+              t2    a1    t2              1
+              t2    a2    t1              1
+              t2    e     t1              1
+              t2    e     t2              1
+              t2    t1    a2              1
+              t2    t1    e               1
+              t2    t1    t1              1
+              t2    t1    t2              1
+              t2    t2    a1              1
+              t2    t2    e               1
+              t2    t2    t1              1
+              t2    t2    t2              1
+
+ reading cartesian hessian from $hessian,
+ file=<hessian>
+
+
+ actual cartesian coordinates & gradients will be read from $grad 
+
+            ----------------------------
+            actual cartesian coordinates
+            ----------------------------
+    1 c       0.00000000000000      0.00000000000000      0.00000000000000
+    2 h       1.18845005270705     -1.18845005270705      1.18845005270705
+    3 h      -1.18845005270705      1.18845005270705      1.18845005270705
+    4 h      -1.18845005270705     -1.18845005270705     -1.18845005270705
+    5 h       1.18845005270705      1.18845005270705     -1.18845005270705
+
+              --------------------------
+              actual cartesian gradients
+              --------------------------
+    1 c       0.00000000000000      0.00000000000000      0.00000000000000
+    2 h       0.00265095868491     -0.00265095868491      0.00265095868491
+    3 h      -0.00265095868491      0.00265095868491      0.00265095868491
+    4 h      -0.00265095868491     -0.00265095868491     -0.00265095868491
+    5 h       0.00265095868491      0.00265095868491     -0.00265095868491
+
+ dipole moment read from <control>
+
+                -----------------------
+                permanent dipole moment
+                -----------------------
+             x              y             z
+          0.0000000      0.0000000      0.0000000      (debyes)
+
+ dipole derivatives read from <dipgrad>
+
+        ----------------------------------------------------
+        cartesian dipole derivative matrix (debyes/angstrom)
+        ----------------------------------------------------
+
+  atom       1 c                              2 h 
+            x          y          z          x          y          z
+ 
+  x      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+  y      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+  z      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+
+  atom       3 h                              4 h 
+            x          y          z          x          y          z
+ 
+  x      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+  y      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+  z      0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+
+  atom       5 h 
+            x          y          z
+ 
+  x      0.000000   0.000000   0.000000
+  y      0.000000   0.000000   0.000000
+  z      0.000000   0.000000   0.000000
+ 
+
+             -----------------------------------
+             rotational and vibrational analysis
+             -----------------------------------
+
+
+            ==============================================================
+            ATOMIC WEIGHTS (average over the natural occurance of isotops)
+            ==============================================================
+            ('*' denotes special isotop !)
+              1     c                12.01115
+              2     h                 1.00797
+              3     h                 1.00797
+              4     h                 1.00797
+              5     h                 1.00797
+
+          -------------------------------------------------
+          CARTESIAN FORCE CONSTANT MATRIX (hartree/bohr**2)
+         (translational & rotational space projected out)
+          -------------------------------------------------
+
+   ATOM              1 c                           2 h 
+                  dx        dy        dz        dx        dy        dz
+   1 c     dx  0.0000000
+           dy  0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000
+   2 h     dx  0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+   3 h     dx  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+   4 h     dx  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+   5 h     dx  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+
+   ATOM              3 h                           4 h 
+                  dx        dy        dz        dx        dy        dz
+   3 h     dx  0.0000000
+           dy  0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000
+   4 h     dx  0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+   5 h     dx  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dy  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000
+
+   ATOM              5 h 
+                  dx        dy        dz
+   5 h     dx  0.0000000
+           dy  0.0000000 0.0000000
+           dz  0.0000000 0.0000000 0.0000000
+ 
+
+   *** projected hessian written onto $hessian (projected), file=<hessian> ***
+
+ dipole moment in principle axis system (a.u.) :     0.0000000000     0.0000000000     0.0000000000
+ norm :   0.000000000    
+
+ rotational constants b for rotations around axis of inertia
+ and optical intensities for (1 <-- 0) transition
+
+   b   :     5.2856057666     5.2856057666     5.2856057666   (cm**(-1))
+
+   b   :  ***************  ***************  ***************     (MHz)
+
+   b   :     0.0000000000     0.0000000000     0.0000000000     (a.u.)
+
+   x   :     1.0000000000     0.0000000000     0.0000000000
+   y   :     0.0000000000     1.0000000000     0.0000000000
+   z   :     0.0000000000     0.0000000000     1.0000000000
+
+   ***  normal modes written onto $vibrational normal modes, file=<control>  ***
+
+  Keyword $vibrational reduced masses missing in file <control>
+
+
+   ***  vibrational spectroscopic data written onto$vibrational spectrum   
+        file=<control>  ***
+
+          ---------------------------------------------------
+          NORMAL MODES and VIBRATIONAL FREQUENCIES (cm**(-1))
+          ---------------------------------------------------
+
+ imaginary wave numbers indicate a negative curvature of the energy surface.
+ zero frequency modes have no physical meaning except being generators of
+ translations and rotations. each vibrational normal mode - given in terms of
+ cartesian displacement vectors of all atoms - has been normalized to unity.
+ to obtain mass-weigthed normal coordinates in a.u. divide the tabulated
+ modes by sqrt(reduced mass * 1822.88853).
+ band intensities or cross sections refer to independent non-degenerate normal
+ modes, that is, the intensities of degenerate modes have yet to be added.
+ dDIP/dQ is the normal mode derivative of the dipole moment.
+
+
+       mode               1        2        3        4        5        6
+
+     frequency           0.00     0.00     0.00     0.00     0.00     0.00
+
+     symmetry                                                             
+
+        IR                -        -        -        -        -        - 
+|dDIP/dQ|   (a.u.)     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+intensity (km/mol)       0.00     0.00     0.00     0.00     0.00     0.00
+intensity (  %   )       0.00     0.00     0.00     0.00     0.00     0.00
+ 
+       RAMAN              -        -        -        -        -        - 
+ 
+  1   c           x   1.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  1.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  1.00000  0.00000  0.00000  0.00000
+  2   h           x   0.00000  0.00000  0.00000  1.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  1.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  1.00000
+  3   h           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+  4   h           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+  5   h           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+
+reduced mass(g/mol)    12.011   12.011   12.011    1.008    1.008    1.008
+
+
+       mode               7        8        9       10       11       12
+
+     frequency           0.00     0.00     0.00     0.00     0.00     0.00
+
+     symmetry                                                             
+
+        IR                -        -        -        -        -        - 
+|dDIP/dQ|   (a.u.)     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+intensity (km/mol)       0.00     0.00     0.00     0.00     0.00     0.00
+intensity (  %   )       0.00     0.00     0.00     0.00     0.00     0.00
+ 
+       RAMAN              -        -        -        -        -        - 
+ 
+  1   c           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+  2   h           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+  3   h           x   1.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  1.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  1.00000  0.00000  0.00000  0.00000
+  4   h           x   0.00000  0.00000  0.00000  1.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  1.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  1.00000
+  5   h           x   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000  0.00000  0.00000  0.00000
+
+reduced mass(g/mol)     1.008    1.008    1.008    1.008    1.008    1.008
+
+
+       mode              13       14       15
+
+     frequency           0.00     0.00     0.00
+
+     symmetry                                  
+
+        IR                -        -        - 
+|dDIP/dQ|   (a.u.)     0.0000   0.0000   0.0000
+intensity (km/mol)       0.00     0.00     0.00
+intensity (  %   )       0.00     0.00     0.00
+ 
+       RAMAN              -        -        - 
+ 
+  1   c           x   0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000
+  2   h           x   0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000
+  3   h           x   0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000
+  4   h           x   0.00000  0.00000  0.00000
+                  y   0.00000  0.00000  0.00000
+                  z   0.00000  0.00000  0.00000
+  5   h           x   1.00000  0.00000  0.00000
+                  y   0.00000  1.00000  0.00000
+                  z   0.00000  0.00000  1.00000
+
+reduced mass(g/mol)     1.008    1.008    1.008
+ 
+
+ <geterg> : there is no data group $energy 
+
+
+         **************************************************************
+         *                                                            *
+         *  zero point VIBRATIONAL energy  :      0.0000000  Hartree  *
+         *                                                            *
+         **************************************************************
+
+
+
+
+ time elapsed for vibrational analysis     0.02 sec
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :   0.07 seconds
+         total wall-time :   0.07 seconds
+    ------------------------------------------------------------------------
+
+   ****  force : all done  ****
+
+
+    2025-11-11 16:06:12.511 
+

@@ -1,0 +1,84 @@
+$atoms
+    basis =def-SV(P)
+    cbas  =def-SV(P)
+$denconv 1d-07
+#
+# NumForce insertion:
+#
+$scfconv 7
+$drvopt
+   frequency analysis only nofreeze
+$hessian  file=hessian
+$dipgrad  file=dipgrad
+$grad  file=gradient
+$vibrational normal modes
+$vibrational spectrum
+#
+# end of NumForce insertion.
+#
+$title
+$symmetry c1
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-5                                    ( 2 )
+$scfiterlimit       30
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$forceapprox    file=forceapprox
+$ricc2
+    cc2
+    geoopt model=cc2  state=(a 1)
+$excitations
+    irrep=a  multiplicity=  1  nexc=  1
+$rundimensions
+   natoms=4
+   nbf(CAO)=21
+   nbf(AO)=20
+$last step     ricc2
+$last SCF energy change = -56.093411
+$charge from dscf
+          0.000 (not to be modified here)
+$dipole from ricc2
+  x     0.00000429799206    y     0.00000396481517    z    -0.00001453859115    a.u.
+   | dipole | =    0.0000398306  debye
+$cbas file=auxbasis
+$last CC2 energy change= 0.35745248E-01
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.59876771337846E-06
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_CC2_____1^a___ file=exstates
+$t2_norm_of_re0_CC2_____1^a___ file=exstates
+$t2_norm_of_le0_CC2_____1^a___ file=exstates
+$<le0|re0>-overlap_CC2_____1^a___ file=exstates
+$<le01|re01>-overlap_CC2_____1^a___ file=exstates
+$<le02|re02>-overlap_CC2_____1^a___ file=exstates
+$exstprop_CC2______1^a_____1 file=exstates
+$end

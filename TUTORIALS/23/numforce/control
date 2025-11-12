@@ -1,0 +1,137 @@
+$symmetry c1
+$atoms
+    basis =def-SV(P)
+    cbas  =def-SV(P)
+$denconv 1d-07
+#
+# NumForce insertion:
+#
+$scfconv 7
+$drvopt
+   frequency analysis only nofreeze
+$hessian  file=hessian
+$dipgrad  file=dipgrad
+$grad  file=gradient
+$vibrational normal modes
+ 1  1   0.0011052210   0.0162565213  -0.0018983229   0.0099786198   0.3872908793
+ 1  2   0.1278129537   0.0182532376  -0.0194673759   0.0000778417   0.0047880295
+ 1  3   0.1194562165  -0.0019610364
+ 2  1  -0.0079459417   0.3531169519  -0.0032628378  -0.0718928210   0.0560776525
+ 2  2  -0.1049526260  -0.0175042125  -0.0180470065   0.0058834708  -0.1197936221
+ 2  3   0.0044904661   0.0003535916
+ 3  1  -0.0721276445  -0.0800400249   0.2737382855   0.0009016235   0.0918003159
+ 3  2  -0.1323639998  -0.0098247200  -0.0100039241  -0.1225476707  -0.0025240410
+ 3  3   0.0000111796  -0.0009956657
+ 4  1   0.0010928689   0.0162469583  -0.0019070856   0.0099627655   0.3872929584
+ 4  2   0.1278123232   0.3231600857  -0.3017654345   0.0045097699  -0.0305847866
+ 4  3  -0.7120823597  -0.5641736784
+ 5  1   0.0143011387   0.1513859436  -0.4101374107   0.1294766693   0.3742512024
+ 5  2  -0.6118797438   0.4697738662   0.4884336564  -0.1002188956   0.4135651640
+ 5  3  -0.0074790215  -0.0036264209
+ 6  1   0.4011630462   0.2939624987   0.6241245261   0.6023988576   0.0009915437
+ 6  2  -0.0906172291   0.0455035442   0.0463427383   0.5676385136   0.0116901412
+ 6  3  -0.0000806314   0.0046123872
+ 7  1  -0.0181884772   0.1909580748   0.3504540674  -0.1644180802   0.1117429832
+ 7  2   0.5668281258   0.0482153788   0.6367434172  -0.0659867017  -0.1403583380
+ 7  3  -0.4624011545   0.2939898946
+ 8  1  -0.0190950906   0.4539943605   0.2001696253  -0.1725594378  -0.1030150471
+ 8  2   0.1485174144  -0.4663227012   0.2167973068   0.0151390912   0.6297310725
+ 8  3   0.0899810302  -0.5039963545
+ 9  1   0.2575485094  -0.5340825375   0.1970905746  -0.6964557912   0.2744094390
+ 9  2  -0.3064748408   0.0455137415   0.0463394299   0.5676374513   0.0117169580
+ 9  3  -0.0000382876   0.0046115417
+10  1   0.0203742417  -0.1584646159  -0.3542691431   0.1843440231   0.6628436324
+10  2  -0.3112045881  -0.6250215282  -0.0644603140   0.0603952480   0.1044089093
+10  3  -0.4854740120   0.2974342456
+11  1  -0.0190950080   0.4539945627   0.2001701575  -0.1725597691  -0.1030154214
+11  2   0.1485180235   0.2397864846  -0.4544506768   0.0033233920   0.6213498605
+11  3  -0.1449012973   0.5027092843
+12  1  -0.8750938978   0.0000000000   0.0000000000   0.0967618817   0.0000000000
+12  2   0.0000000000   0.0455065257   0.0463318535   0.5676402522   0.0116668470
+12  3  -0.0000364317   0.0046117907
+$vibrational spectrum
+#  mode     symmetry     wave number   IR intensity    selection rules
+#                         cm**(-1)        km/mol         IR     RAMAN
+     1                       -0.00         0.00000        -       -
+     2                        0.00         0.00000        -       -
+     3                        0.00         0.00000        -       -
+     4                        0.00         0.00000        -       -
+     5                        0.00         0.00000        -       -
+     6                        0.00         0.00000        -       -
+     7        a             580.64      2044.11493       YES     YES
+     8        a             625.53      1881.53814       YES     YES
+     9        a             828.16        41.12553       YES     YES
+    10        a            1869.77      4477.69361       YES     YES
+    11        a            1890.55      4483.28375       YES     YES
+    12        a            2381.35         0.74682       YES     YES
+$title
+$user-defined bonds    file=coord
+$coord    file=coord
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-5                                    ( 2 )
+$scfiterlimit       30
+$thize     0.10000000E-04
+$thime        5
+$scfdamp   start=0.300  step=0.050  min=0.100
+$scfintunit
+ unit=30       size=0        file=twoint
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$forceapprox    file=forceapprox
+$ricc2
+    cc2
+    geoopt model=cc2  state=(a 1)
+$excitations
+    irrep=a  multiplicity=  1  nexc=  1
+$rundimensions
+   natoms=4
+   nbf(CAO)=21
+   nbf(AO)=20
+$last step     force
+$last SCF energy change = -56.093411
+$charge from dscf
+          0.000 (not to be modified here)
+$dipole from ricc2
+  x     0.00000429799206    y     0.00000396481517    z    -0.00001453859115    a.u.
+   | dipole | =    0.0000398306  debye
+$cbas file=auxbasis
+$last CC2 energy change= 0.35745248E-01
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$orbital_max_rnorm 0.59876771337846E-06
+$excitation_energies_CCS_____1^a___ file=exstates
+$excitation_energies_CC2_____1^a___ file=exstates
+$t2_norm_of_re0_CC2_____1^a___ file=exstates
+$t2_norm_of_le0_CC2_____1^a___ file=exstates
+$<le0|re0>-overlap_CC2_____1^a___ file=exstates
+$<le01|re01>-overlap_CC2_____1^a___ file=exstates
+$<le02|re02>-overlap_CC2_____1^a___ file=exstates
+$exstprop_CC2______1^a_____1 file=exstates
+$hessian (projected)    file=hessian
+$vibrational reduced masses
+   1.0764311471   2.7155125729   1.9821845006   1.0764598338   3.1081257525
+   1.5912416460   1.0175384076   1.0184307496   1.2036340708   1.1948892404
+   1.1937212287   1.0080345002
+$nvibro       12
+$end

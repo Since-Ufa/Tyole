@@ -1,0 +1,3232 @@
+
+   OpenMP run-time library returned nthreads = 16
+
+ ricc2 (saturn) : TURBOMOLE rev. V7-7-1 compiled 3 Feb 2023 at 10:13:59
+ Copyright (C) 2023 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-11-14 17:29:18.162 
+
+
+
+                              R I C C 2 - PROGRAM
+
+                          the quantum chemistry groups
+                             at the universities in
+                               Karlsruhe & Bochum
+                                   Germany
+
+
+
+   *-----------------------------------------------------------------------*
+   |                     program will use 16 thread(s)                     |
+   *-----------------------------------------------------------------------*
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+         -1.66105114   -1.98472509   -1.52782110    cu    29.000     0
+          6.08226401   -1.48780300    2.37137488    s     16.000     0
+          4.86919574   -0.12808469    5.30088082    c      6.000     0
+          3.48548376   -1.38036134    6.18939688    h      1.000     0
+          3.91740958    1.67302202    4.95137273    h      1.000     0
+          6.40265926    0.20437568    6.65550010    h      1.000     0
+         -5.44294404   -1.86716842   -3.42228350    s     16.000     0
+         -5.07278539    1.19581880   -4.96614636    c      6.000     0
+         -6.76293874    1.68309139   -6.06295968    h      1.000     0
+         -3.45134410    1.19567764   -6.24803013    h      1.000     0
+         -4.74886575    2.69642897   -3.58221721    h      1.000     0
+          2.38291681   -1.80027196    0.34093257    cu    29.000     0
+ 
+       center of nuclear mass  :    0.28359935   -1.48739139   -0.46625692
+       center of nuclear charge:    0.26651935   -1.39783165   -0.43817441
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    cu       2    174    100   def2-QZVPP   [11s6p5d4f2g|24s18p10d4f2g]
+    s        2    105     70   def2-QZVP   [9s6p4d2f1g|20s14p4d2f1g]
+    c        2     77     57   def2-QZVP   [7s4p3d2f1g|15s8p3d2f1g]
+    h        6      7      5   def2-SVP   [2s1p|4s1p]
+   ---------------------------------------------------------------------------
+   total:   12    754    484
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :  133
+   total number of contracted shells         :  152
+   total number of cartesian basis functions :  604
+   total number of SCF-basis functions       :  484
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+
+   =========================================================================
+
+
+     restricted closed shell calculation for the wavefunction models:
+               ADC(2)     - Algebraic Diagrammatic Construction to 2. Order (strict)
+
+
+     global parameters for ricc2 program:
+
+        hard restart (reuse of interm.) :  disabled
+        soft restart (reuse of vectors) :  enabled 
+        threshold for vector function   :     1.000E-06
+        convergence threshold energy    :     1.000E-07
+        linear dependence threshold     :     1.000E-14
+        global print level              :      1
+        maximum number of iterations    :    30
+        maximum number DIIS vectors     :    10
+        max. dim. of reduced space      :   100
+        core memory limit (MB)          :  8000
+                ... per thread (MB)     :   500
+ 
+
+     Scratch Directory : 
+
+
+   =========================================================================
+
+    der. integral neglect threshold  :  0.10E-07
+    integral neglect threshold       :  0.55E-11
+    integral storage threshold THIZE :  0.10E-04
+    integral storage threshold THIME :         5
+
+
+                  +------------------------------------------+
+                  |     Auxiliary basis set information      |
+                  +------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    cu       2    316    316   def2-QZVPP   [15s13p11d9f7g5h2i|15s13p11d9f7g5h2i]
+    s        2    167    167   def2-QZVP   [12s10p9d6f3g1h|12s10p9d6f3g1h]
+    c        2    141    141   def2-QZVP   [9s8p7d5f3g1h|9s8p7d5f3g1h]
+    h        6     23     14   def2-SVP   [3s2p1d|4s3p2d]
+   ---------------------------------------------------------------------------
+   total:   12   1386   1332
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :  145
+   total number of contracted shells         :  308
+   total number of cartesian basis functions : 1868
+   total number of SCF-basis functions       : 1332
+
+
+ maximum number of shells which are related by symmetry :  1
+
+
+ The symmetry information takes   1 MB
+
+*---------------------------------------------------------------------*
+|               simplified C1 algorithm will be applied               |
+*---------------------------------------------------------------------*
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=7
+ time elapsed for calculating density matrices :   0.598 sec
+ all orbitals will be active in the correlation treatment
+
+
+   Molecular Orbital Statistic:
+   ============================
+
+   -----------------------------
+   orbitals in total:
+   -----------------------------
+    frozen occupied :      0
+    active occupied :     55
+    active virtual  :    429
+    frozen virtual  :      0
+    all together    :    484
+   -----------------------------
+
+
+     time in riccmos       cpu:  3.67 sec    wall:  0.45 sec    ratio:  8.2
+
+     total memory allocated for calculation of (Q|P)**(-1/2) : 21 MiB
+
+
+     calculation of (P|Q) ...
+     time in lp2sym        cpu:  0.77 sec    wall:  0.05 sec    ratio: 16.0
+
+
+     calculation of the Cholesky decomposition of (P|Q)**(-1) ...
+     time in invmetri      cpu:  3.29 sec    wall:  0.36 sec    ratio:  9.1
+
+   threshold for RMS(d[D]) in SCF was     :  0.10E-06
+   integral neglect threshold             :  0.55E-11
+   derivative integral neglect threshold  :  0.10E-07
+
+
+ setting up bound for integral derivative estimation
+
+ increment for numerical differentiation : 0.00050000
+
+   =========================================================================
+
+     Energy of reference wave function is -4152.2729871550000
+     Maximum orbital residual is           0.1041567638615E-05
+
+
+     Number of symmetry-nonredundant auxiliary basis functions:     1332
+
+     Block lengths for integral files:
+        frozen occupied (BOI):        0 MiB
+        active occupied (BJI):        1 MiB
+        active virtual  (BAI):        5 MiB
+        frozen virtual  (BGI):        0 MiB
+               general  (BTI):        5 MiB
+
+   =========================================================================
+
+
+
+
+   **************************************************************************
+   *                                                                        *
+   *          OPTIMIZATION OF THE GROUND STATE CLUSTER AMPLITUDES           *
+   *                                                                        *
+   **************************************************************************
+
+
+   Iter.   MP2 energy       Norm(Omega)   Norm(t1)  Norm(t2)     cpu    wall
+   ...........................................................................
+    1  -4155.4761061713    0.2634572945     0.00000   0.46406    4.23    0.30
+   ...........................................................................
+
+
+     time in total         cpu:  4 min 14 s  wall: 18.14 sec    ratio: 14.0
+
+
+     **********************************************************************
+     *                                                                    *
+     *   RHF  energy                             :  -4152.2729871550      *
+     *   MP2 correlation energy                  :     -3.2031190163      *
+     *                                                                    *
+     *   Final MP2 energy                        :  -4155.4761061713      *
+     *                                                                    *
+     *   Norm of MP1 T2 amplitudes               :      0.4640559727      *
+     *                                                                    *
+     *   D1 diagnostic                           :      0.1045            *
+     *                                                                    *
+     **********************************************************************
+
+
+
+ **************************************************************
+ *                                                            *
+ *    OPTIMIZATION OF THE EXCITED STATE CLUSTER AMPLITUDES    *
+ *                                                            *
+ **************************************************************
+
+
+  preoptimize excitation energies/vectors using CCS:
+  ==================================================
+
+
+ ======== LINEAR CC RESPONSE SOLVER ========
+
+    threshold for convergence: 1.00E-03
+    maximum number of simultaneous Jacobi matrix transformations: 10
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- guessed as rhs/(e_a-e_i) :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+      1      10         0.24     0.85E-01  (  6)
+      2      10         0.24     0.38E-01  (  5)
+      3      10         0.24     0.34E-01  ( 10)
+      4      10         0.25     0.31E-01  ( 10)
+      5      10         0.24     0.22E-01  ( 10)
+      6       9         0.22     0.15E-01  ( 10)
+      7       2         0.07     0.10E-01  ( 10)
+      8       2         0.07     0.12E-01  ( 10)
+      9       2         0.07     0.21E-01  ( 10)
+     10       2         0.07     0.30E-01  ( 10)
+     11       2         0.06     0.35E-01  ( 10)
+     12       2         0.06     0.19E-01  ( 10)
+     13       2         0.06     0.15E-01  ( 10)
+     14       2         0.06     0.32E-01  (  9)
+     15       2         0.06     0.49E-01  (  9)
+     16       2         0.07     0.33E-01  ( 10)
+     17       2         0.07     0.15E-01  (  9)
+     18       2         0.07     0.75E-02  (  9)
+     19       2         0.07     0.33E-02  (  9)
+     20       2         0.07     0.12E-02  (  9)
+     21       1         0.04     0.94E-03  ( 10)
+    --------------------------------------------
+    converged in 21 iterations
+
+         Total time          2.40 minutes
+
+
+ ===========================================
+
+
+
+
+ ======== LINEAR CC RESPONSE SOLVER ========
+
+    threshold for convergence: 1.00E-03
+    maximum number of simultaneous Jacobi matrix transformations: 10
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- guessed as rhs/(e_a-e_i) :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+      1      10         0.24     0.48E-01  (  3)
+      2      10         0.24     0.53E-01  ( 10)
+      3      10         0.24     0.20E-01  ( 10)
+      4      10         0.23     0.78E-02  ( 10)
+      5      10         0.23     0.47E-02  ( 10)
+      6       3         0.08     0.32E-02  ( 10)
+      7       2         0.06     0.20E-02  ( 10)
+      8       2         0.06     0.12E-02  ( 10)
+      9       1         0.04     0.79E-03  (  9)
+    --------------------------------------------
+    converged in  9 iterations
+
+         Total time          1.43 minutes
+
+
+ ===========================================
+
+
+
+
+ Note that this is the intermediate result of a preoptimization!
+ The convergence threshold was  0.1E-02 only!
+
+
+ +==================================================================+
+ | sym | multi | state |          CCS excitation energies           |
+ |     |       |       +--------------------------------------------+
+ |     |       |       |   Hartree    |     eV       |     cm-1     |
+ +==================================================================+
+ | a   |   1   |   1   |    0.0704875 |      1.91806 |    15470.221 |
+ | a   |   1   |   2   |    0.0710862 |      1.93435 |    15601.623 |
+ | a   |   1   |   3   |    0.0982424 |      2.67331 |    21561.715 |
+ | a   |   1   |   4   |    0.1047659 |      2.85082 |    22993.450 |
+ | a   |   1   |   5   |    0.1071289 |      2.91513 |    23512.079 |
+ | a   |   1   |   6   |    0.1079724 |      2.93808 |    23697.198 |
+ | a   |   1   |   7   |    0.1317878 |      3.58613 |    28924.073 |
+ | a   |   1   |   8   |    0.1366671 |      3.71890 |    29994.950 |
+ | a   |   1   |   9   |    0.1697100 |      4.61804 |    37247.032 |
+ | a   |   1   |  10   |    0.1698323 |      4.62137 |    37273.877 |
+ +-----+-------+-------+--------------+--------------+--------------+
+ | a   |   3   |   1   |    0.0303955 |      0.82710 |     6671.039 |
+ | a   |   3   |   2   |    0.0309613 |      0.84250 |     6795.227 |
+ | a   |   3   |   3   |    0.0620633 |      1.68883 |    13621.312 |
+ | a   |   3   |   4   |    0.0879509 |      2.39326 |    19302.982 |
+ | a   |   3   |   5   |    0.1008576 |      2.74448 |    22135.685 |
+ | a   |   3   |   6   |    0.1029504 |      2.80142 |    22595.005 |
+ | a   |   3   |   7   |    0.1267568 |      3.44923 |    27819.896 |
+ | a   |   3   |   8   |    0.1301036 |      3.54030 |    28554.440 |
+ | a   |   3   |   9   |    0.1434577 |      3.90368 |    31485.326 |
+ | a   |   3   |  10   |    0.1442186 |      3.92439 |    31652.326 |
+ +==================================================================+
+
+
+
+
+  preoptimize ADC(2) excitation energies/vectors using a quasi linear algorithm:
+  ==============================================================================
+
+
+ ======== LINEAR CC RESPONSE SOLVER ========
+
+    threshold for convergence: 1.00E-03
+    maximum number of simultaneous Jacobi matrix transformations: 10
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- restarted from file      :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+ threshold for this macro iteration:  3.346333725428446E-002
+      1      10         4.07     0.86E-01  (  7)
+ ...adapted threshold to:  0.118632286559886     
+      2       5         1.99     0.20E+00  ( 10)
+ ...adapted threshold to:  0.118751500586664     
+      3       4         1.63     0.15E+00  (  5)
+ ...adapted threshold to:  0.118751500673994     
+      4       1         0.50     0.97E-01  (  2)
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- restarted from file      :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+ threshold for this macro iteration:  4.369652272751978E-002
+      5      10         3.80     0.94E-01  (  1)
+      6       5         2.01     0.70E-01  (  5)
+      7       4         1.60     0.26E+00  ( 10)
+ ...adapted threshold to:  6.722171738178731E-002
+      8       8         3.10     0.15E+00  (  7)
+ ...adapted threshold to:  7.769214263006675E-002
+      9       6         2.34     0.11E+00  (  2)
+ ...adapted threshold to:  9.065011329388227E-002
+     10       5         1.97     0.99E-01  (  5)
+ ...adapted threshold to:  9.409814975459375E-002
+     11       2         0.86     0.75E-01  (  9)
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- restarted from file      :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+ threshold for this macro iteration:  1.315711593727314E-002
+     12      10         3.78     0.12E+00  (  9)
+     13      10         3.78     0.13E+00  (  9)
+     14      10         3.91     0.14E+00  ( 10)
+ ...adapted threshold to:  3.025121284056347E-002
+     15      10         4.03     0.92E-01  (  7)
+ dabs(Rj-Ri):                     2                     1
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     2                     1
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     1
+  2.021923999750222E-004
+ dabs(Ij+Ii):                     3                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     4                     1
+  1.678386406657524E-003
+ dabs(Ij+Ii):                     4                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     5                     1
+  4.447869562814000E-003
+ dabs(Ij+Ii):                     5                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     6                     1
+  9.107102598200110E-003
+ dabs(Ij+Ii):                     6                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     7                     1
+  1.585802364196587E-002
+ dabs(Ij+Ii):                     7                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     8                     1
+  2.179894534660936E-002
+ dabs(Ij+Ii):                     8                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     9                     1
+  2.674987635641248E-002
+ dabs(Ij+Ii):                     9                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    10                     1
+  3.298764006760735E-002
+ dabs(Ij+Ii):                    10                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    11                     1
+  3.363014069914070E-002
+ dabs(Ij+Ii):                    11                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    12                     1
+  4.039402932226144E-002
+ dabs(Ij+Ii):                    12                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    13                     1
+  4.799662322192844E-002
+ dabs(Ij+Ii):                    13                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    14                     1
+  5.267497785274225E-002
+ dabs(Ij+Ii):                    14                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    15                     1
+  6.584595422418280E-002
+ dabs(Ij+Ii):                    15                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    16                     1
+  7.082649875847497E-002
+ dabs(Ij+Ii):                    16                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    17                     1
+  7.566129689206880E-002
+ dabs(Ij+Ii):                    17                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    18                     1
+  7.650313806488464E-002
+ dabs(Ij+Ii):                    18                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    19                     1
+  9.886987287842774E-002
+ dabs(Ij+Ii):                    19                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    20                     1
+  0.114945424443649     
+ dabs(Ij+Ii):                    20                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    21                     1
+  0.140995407568457     
+ dabs(Ij+Ii):                    21                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    22                     1
+  0.149911797248313     
+ dabs(Ij+Ii):                    22                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    23                     1
+  0.157839951877564     
+ dabs(Ij+Ii):                    23                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    24                     1
+  0.196249938543771     
+ dabs(Ij+Ii):                    24                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    25                     1
+  0.223723015029675     
+ dabs(Ij+Ii):                    25                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    26                     1
+  0.227937100649135     
+ dabs(Ij+Ii):                    26                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    27                     1
+  0.258344377092349     
+ dabs(Ij+Ii):                    27                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    28                     1
+  0.281914200282551     
+ dabs(Ij+Ii):                    28                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    29                     1
+  0.335863599532321     
+ dabs(Ij+Ii):                    29                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    30                     1
+  0.344396178327620     
+ dabs(Ij+Ii):                    30                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    31                     1
+  0.375490734687051     
+ dabs(Ij+Ii):                    31                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    32                     1
+  0.382287937448329     
+ dabs(Ij+Ii):                    32                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    33                     1
+  0.433034963051519     
+ dabs(Ij+Ii):                    33                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    34                     1
+  0.486680280739219     
+ dabs(Ij+Ii):                    34                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    35                     1
+  0.542680924163066     
+ dabs(Ij+Ii):                    35                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    36                     1
+  0.786069576842743     
+ dabs(Ij+Ii):                    36                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    37                     1
+  0.820636994733095     
+ dabs(Ij+Ii):                    37                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    38                     1
+   1.68454032194516     
+ dabs(Ij+Ii):                    38                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    39                     1
+   2.62125286167213     
+ dabs(Ij+Ii):                    39                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    40                     1
+   2.71010328213825     
+ dabs(Ij+Ii):                    40                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    41                     1
+   3.03184616850088     
+ dabs(Ij+Ii):                    41                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    42                     1
+   3.28639602329766     
+ dabs(Ij+Ii):                    42                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    43                     1
+   3.29965616323228     
+ dabs(Ij+Ii):                    43                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    44                     1
+   3.54082653069817     
+ dabs(Ij+Ii):                    44                     1
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    45                     1
+   4.50770309808632     
+ dabs(Ij+Ii):                    45                     1
+  6.369360219964978E-005
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     0.76420719   -0.19212916
+    2    -0.19212916    0.09277562
+ real eigenvalues of metric:
+
+              1
+ 
+    1     0.81529717
+    2     0.04168564
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.96641561    0.25698419
+    2    -0.25698419    0.96641561
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.35781492    0.94135146
+    2     0.94135146    4.64754511
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     2
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     1                     2
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     2
+  2.021923999750222E-004
+ dabs(Ij+Ii):                     3                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     4                     2
+  1.678386406657524E-003
+ dabs(Ij+Ii):                     4                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     5                     2
+  4.447869562814000E-003
+ dabs(Ij+Ii):                     5                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     6                     2
+  9.107102598200110E-003
+ dabs(Ij+Ii):                     6                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     7                     2
+  1.585802364196587E-002
+ dabs(Ij+Ii):                     7                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     8                     2
+  2.179894534660936E-002
+ dabs(Ij+Ii):                     8                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                     9                     2
+  2.674987635641248E-002
+ dabs(Ij+Ii):                     9                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    10                     2
+  3.298764006760735E-002
+ dabs(Ij+Ii):                    10                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    11                     2
+  3.363014069914070E-002
+ dabs(Ij+Ii):                    11                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    12                     2
+  4.039402932226144E-002
+ dabs(Ij+Ii):                    12                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    13                     2
+  4.799662322192844E-002
+ dabs(Ij+Ii):                    13                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    14                     2
+  5.267497785274225E-002
+ dabs(Ij+Ii):                    14                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    15                     2
+  6.584595422418280E-002
+ dabs(Ij+Ii):                    15                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    16                     2
+  7.082649875847497E-002
+ dabs(Ij+Ii):                    16                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    17                     2
+  7.566129689206880E-002
+ dabs(Ij+Ii):                    17                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    18                     2
+  7.650313806488464E-002
+ dabs(Ij+Ii):                    18                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    19                     2
+  9.886987287842774E-002
+ dabs(Ij+Ii):                    19                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    20                     2
+  0.114945424443649     
+ dabs(Ij+Ii):                    20                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    21                     2
+  0.140995407568457     
+ dabs(Ij+Ii):                    21                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    22                     2
+  0.149911797248313     
+ dabs(Ij+Ii):                    22                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    23                     2
+  0.157839951877564     
+ dabs(Ij+Ii):                    23                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    24                     2
+  0.196249938543771     
+ dabs(Ij+Ii):                    24                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    25                     2
+  0.223723015029675     
+ dabs(Ij+Ii):                    25                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    26                     2
+  0.227937100649135     
+ dabs(Ij+Ii):                    26                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    27                     2
+  0.258344377092349     
+ dabs(Ij+Ii):                    27                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    28                     2
+  0.281914200282551     
+ dabs(Ij+Ii):                    28                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    29                     2
+  0.335863599532321     
+ dabs(Ij+Ii):                    29                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    30                     2
+  0.344396178327620     
+ dabs(Ij+Ii):                    30                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    31                     2
+  0.375490734687051     
+ dabs(Ij+Ii):                    31                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    32                     2
+  0.382287937448329     
+ dabs(Ij+Ii):                    32                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    33                     2
+  0.433034963051519     
+ dabs(Ij+Ii):                    33                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    34                     2
+  0.486680280739219     
+ dabs(Ij+Ii):                    34                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    35                     2
+  0.542680924163066     
+ dabs(Ij+Ii):                    35                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    36                     2
+  0.786069576842743     
+ dabs(Ij+Ii):                    36                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    37                     2
+  0.820636994733095     
+ dabs(Ij+Ii):                    37                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    38                     2
+   1.68454032194516     
+ dabs(Ij+Ii):                    38                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    39                     2
+   2.62125286167213     
+ dabs(Ij+Ii):                    39                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    40                     2
+   2.71010328213825     
+ dabs(Ij+Ii):                    40                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    41                     2
+   3.03184616850088     
+ dabs(Ij+Ii):                    41                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    42                     2
+   3.28639602329766     
+ dabs(Ij+Ii):                    42                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    43                     2
+   3.29965616323228     
+ dabs(Ij+Ii):                    43                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    44                     2
+   3.54082653069817     
+ dabs(Ij+Ii):                    44                     2
+  6.369360219964978E-005
+ dabs(Rj-Ri):                    45                     2
+   4.50770309808632     
+ dabs(Ij+Ii):                    45                     2
+  6.369360219964978E-005
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ real eigenvalues of metric:
+
+              1
+ 
+    1     1.00000000
+    2     1.00000000
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.99914747    0.04128350
+    2    -0.04128350    0.99914747
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2    -0.00000000    1.00000000
+ warning> found low lying complex root...
+ eigenvalues (imaginary parts) in redeig:
+
+              1
+ 
+    1  -6.369360E-05
+    2   6.369360E-05
+    3   0.000000E+00
+    4   0.000000E+00
+    5   0.000000E+00
+    6   0.000000E+00
+    7   0.000000E+00
+    8   0.000000E+00
+    9   0.000000E+00
+   10   0.000000E+00
+   11   0.000000E+00
+   12   0.000000E+00
+   13   0.000000E+00
+   14   0.000000E+00
+   15   0.000000E+00
+   16   0.000000E+00
+   17   0.000000E+00
+   18   0.000000E+00
+   19   0.000000E+00
+   20   0.000000E+00
+   21   0.000000E+00
+   22   0.000000E+00
+   23   0.000000E+00
+   24   0.000000E+00
+   25   0.000000E+00
+   26   0.000000E+00
+   27   0.000000E+00
+   28   0.000000E+00
+   29   0.000000E+00
+   30   0.000000E+00
+   31   0.000000E+00
+   32   0.000000E+00
+   33   0.000000E+00
+   34   0.000000E+00
+   35   0.000000E+00
+   36   0.000000E+00
+   37   0.000000E+00
+   38   0.000000E+00
+   39   0.000000E+00
+   40   0.000000E+00
+   41   0.000000E+00
+   42   0.000000E+00
+   43   0.000000E+00
+   44   0.000000E+00
+   45   0.000000E+00
+ eigenvalues (real parts) in redeig:
+
+              1
+ 
+    1    -0.02801035
+    2    -0.02801035
+    3    -0.02780816
+    4    -0.02633196
+    5    -0.02356248
+    6    -0.01890324
+    7    -0.01215232
+    8    -0.00621140
+    9    -0.00126047
+   10     0.00497729
+   11     0.00561979
+   12     0.01238368
+   13     0.01998628
+   14     0.02466463
+   15     0.03783561
+   16     0.04281615
+   17     0.04765095
+   18     0.04849279
+   19     0.07085953
+   20     0.08693508
+   21     0.11298506
+   22     0.12190145
+   23     0.12982960
+   24     0.16823959
+   25     0.19571267
+   26     0.19992675
+   27     0.23033403
+   28     0.25390385
+   29     0.30785325
+   30     0.31638583
+   31     0.34748039
+   32     0.35427759
+   33     0.40502462
+   34     0.45866993
+   35     0.51467058
+   36     0.75805923
+   37     0.79262665
+   38     1.65652997
+   39     2.59324251
+   40     2.68209293
+   41     3.00383582
+   42     3.25838568
+   43     3.27164582
+   44     3.51281618
+   45     4.47969275
+ ...adapted threshold to:  3.081875999048685E-002
+Warning, there is a complex eigenvalue   -0.0280103475 +i   -0.0000636936
+Warning, there is a complex eigenvalue   -0.0280103475 +i    0.0000636936
+     16       5         2.07     0.63E-01  (  8)
+ dabs(Rj-Ri):                     2                     1
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     2                     1
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     1
+  9.324947221365093E-004
+ dabs(Ij+Ii):                     3                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     4                     1
+  2.067764497508989E-003
+ dabs(Ij+Ii):                     4                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     5                     1
+  3.292202073940691E-003
+ dabs(Ij+Ii):                     5                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     6                     1
+  9.874920716696517E-003
+ dabs(Ij+Ii):                     6                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     7                     1
+  1.457622181205789E-002
+ dabs(Ij+Ii):                     7                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     8                     1
+  1.713978782298934E-002
+ dabs(Ij+Ii):                     8                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     9                     1
+  2.135033331324885E-002
+ dabs(Ij+Ii):                     9                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    10                     1
+  3.271693481077360E-002
+ dabs(Ij+Ii):                    10                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    11                     1
+  3.352192833746395E-002
+ dabs(Ij+Ii):                    11                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    12                     1
+  3.764368940649035E-002
+ dabs(Ij+Ii):                    12                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    13                     1
+  4.803010215981141E-002
+ dabs(Ij+Ii):                    13                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    14                     1
+  5.222623568677415E-002
+ dabs(Ij+Ii):                    14                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    15                     1
+  6.353975182856840E-002
+ dabs(Ij+Ii):                    15                     1
+  2.665978956146762E-003
+ dabs(Rj-Ri):                    16                     1
+  6.353975182856840E-002
+ dabs(Ij+Ii):                    16                     1
+  1.270437308499789E-003
+ dabs(Rj-Ri):                    17                     1
+  6.407541955547880E-002
+ dabs(Ij+Ii):                    17                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    18                     1
+  7.252105248724244E-002
+ dabs(Ij+Ii):                    18                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    19                     1
+  9.175374881114215E-002
+ dabs(Ij+Ii):                    19                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    20                     1
+  0.114469182598800     
+ dabs(Ij+Ii):                    20                     1
+  1.017389801498017E-003
+ dabs(Rj-Ri):                    21                     1
+  0.114469182598800     
+ dabs(Ij+Ii):                    21                     1
+  3.781518461489566E-004
+ dabs(Rj-Ri):                    22                     1
+  0.125703974222189     
+ dabs(Ij+Ii):                    22                     1
+  2.751396762070462E-003
+ dabs(Rj-Ri):                    23                     1
+  0.125703974222189     
+ dabs(Ij+Ii):                    23                     1
+  1.355855114423488E-003
+ dabs(Rj-Ri):                    24                     1
+  0.138518824266528     
+ dabs(Ij+Ii):                    24                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    25                     1
+  0.161199914795398     
+ dabs(Ij+Ii):                    25                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    26                     1
+  0.169072013643668     
+ dabs(Ij+Ii):                    26                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    27                     1
+  0.171135560375890     
+ dabs(Ij+Ii):                    27                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    28                     1
+  0.240242358269360     
+ dabs(Ij+Ii):                    28                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    29                     1
+  0.261211652376650     
+ dabs(Ij+Ii):                    29                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    30                     1
+  0.279886758172154     
+ dabs(Ij+Ii):                    30                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    31                     1
+  0.289046827642625     
+ dabs(Ij+Ii):                    31                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    32                     1
+  0.314621079791668     
+ dabs(Ij+Ii):                    32                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    33                     1
+  0.343216740825453     
+ dabs(Ij+Ii):                    33                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    34                     1
+  0.358983226383032     
+ dabs(Ij+Ii):                    34                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    35                     1
+  0.451983235475187     
+ dabs(Ij+Ii):                    35                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    36                     1
+  0.500522035012020     
+ dabs(Ij+Ii):                    36                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    37                     1
+  0.525079130727124     
+ dabs(Ij+Ii):                    37                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    38                     1
+  0.562734584411628     
+ dabs(Ij+Ii):                    38                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    39                     1
+  0.957528821053191     
+ dabs(Ij+Ii):                    39                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    40                     1
+   1.00572796950165     
+ dabs(Ij+Ii):                    40                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    41                     1
+   1.03995159277243     
+ dabs(Ij+Ii):                    41                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    42                     1
+   1.52839268418171     
+ dabs(Ij+Ii):                    42                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    43                     1
+   1.75668051999626     
+ dabs(Ij+Ii):                    43                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    44                     1
+   2.84630825212640     
+ dabs(Ij+Ii):                    44                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    45                     1
+   3.11757006102629     
+ dabs(Ij+Ii):                    45                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    46                     1
+   3.25412264109574     
+ dabs(Ij+Ii):                    46                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    47                     1
+   3.45295411115376     
+ dabs(Ij+Ii):                    47                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    48                     1
+   3.64672050172787     
+ dabs(Ij+Ii):                    48                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    49                     1
+   3.82412019331315     
+ dabs(Ij+Ii):                    49                     1
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    50                     1
+   5.31402115445305     
+ dabs(Ij+Ii):                    50                     1
+  6.977708238234869E-004
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     0.08819710   -0.00972974
+    2    -0.00972974    0.03814395
+ real eigenvalues of metric:
+
+              1
+ 
+    1     0.09002192
+    2     0.03631914
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.98286320    0.18433647
+    2    -0.18433647    0.98286320
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     3.39797628    0.34683330
+    2     0.34683330    5.18220713
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     2
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     1                     2
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     2
+  9.324947221365093E-004
+ dabs(Ij+Ii):                     3                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     4                     2
+  2.067764497508989E-003
+ dabs(Ij+Ii):                     4                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     5                     2
+  3.292202073940691E-003
+ dabs(Ij+Ii):                     5                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     6                     2
+  9.874920716696517E-003
+ dabs(Ij+Ii):                     6                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     7                     2
+  1.457622181205789E-002
+ dabs(Ij+Ii):                     7                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     8                     2
+  1.713978782298934E-002
+ dabs(Ij+Ii):                     8                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                     9                     2
+  2.135033331324885E-002
+ dabs(Ij+Ii):                     9                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    10                     2
+  3.271693481077360E-002
+ dabs(Ij+Ii):                    10                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    11                     2
+  3.352192833746395E-002
+ dabs(Ij+Ii):                    11                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    12                     2
+  3.764368940649035E-002
+ dabs(Ij+Ii):                    12                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    13                     2
+  4.803010215981141E-002
+ dabs(Ij+Ii):                    13                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    14                     2
+  5.222623568677415E-002
+ dabs(Ij+Ii):                    14                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    15                     2
+  6.353975182856840E-002
+ dabs(Ij+Ii):                    15                     2
+  1.270437308499789E-003
+ dabs(Rj-Ri):                    16                     2
+  6.353975182856840E-002
+ dabs(Ij+Ii):                    16                     2
+  2.665978956146762E-003
+ dabs(Rj-Ri):                    17                     2
+  6.407541955547880E-002
+ dabs(Ij+Ii):                    17                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    18                     2
+  7.252105248724244E-002
+ dabs(Ij+Ii):                    18                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    19                     2
+  9.175374881114215E-002
+ dabs(Ij+Ii):                    19                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    20                     2
+  0.114469182598800     
+ dabs(Ij+Ii):                    20                     2
+  3.781518461489566E-004
+ dabs(Rj-Ri):                    21                     2
+  0.114469182598800     
+ dabs(Ij+Ii):                    21                     2
+  1.017389801498017E-003
+ dabs(Rj-Ri):                    22                     2
+  0.125703974222189     
+ dabs(Ij+Ii):                    22                     2
+  1.355855114423488E-003
+ dabs(Rj-Ri):                    23                     2
+  0.125703974222189     
+ dabs(Ij+Ii):                    23                     2
+  2.751396762070462E-003
+ dabs(Rj-Ri):                    24                     2
+  0.138518824266528     
+ dabs(Ij+Ii):                    24                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    25                     2
+  0.161199914795398     
+ dabs(Ij+Ii):                    25                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    26                     2
+  0.169072013643668     
+ dabs(Ij+Ii):                    26                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    27                     2
+  0.171135560375890     
+ dabs(Ij+Ii):                    27                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    28                     2
+  0.240242358269360     
+ dabs(Ij+Ii):                    28                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    29                     2
+  0.261211652376650     
+ dabs(Ij+Ii):                    29                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    30                     2
+  0.279886758172154     
+ dabs(Ij+Ii):                    30                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    31                     2
+  0.289046827642625     
+ dabs(Ij+Ii):                    31                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    32                     2
+  0.314621079791668     
+ dabs(Ij+Ii):                    32                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    33                     2
+  0.343216740825453     
+ dabs(Ij+Ii):                    33                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    34                     2
+  0.358983226383032     
+ dabs(Ij+Ii):                    34                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    35                     2
+  0.451983235475187     
+ dabs(Ij+Ii):                    35                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    36                     2
+  0.500522035012020     
+ dabs(Ij+Ii):                    36                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    37                     2
+  0.525079130727124     
+ dabs(Ij+Ii):                    37                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    38                     2
+  0.562734584411628     
+ dabs(Ij+Ii):                    38                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    39                     2
+  0.957528821053191     
+ dabs(Ij+Ii):                    39                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    40                     2
+   1.00572796950165     
+ dabs(Ij+Ii):                    40                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    41                     2
+   1.03995159277243     
+ dabs(Ij+Ii):                    41                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    42                     2
+   1.52839268418171     
+ dabs(Ij+Ii):                    42                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    43                     2
+   1.75668051999626     
+ dabs(Ij+Ii):                    43                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    44                     2
+   2.84630825212640     
+ dabs(Ij+Ii):                    44                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    45                     2
+   3.11757006102629     
+ dabs(Ij+Ii):                    45                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    46                     2
+   3.25412264109574     
+ dabs(Ij+Ii):                    46                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    47                     2
+   3.45295411115376     
+ dabs(Ij+Ii):                    47                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    48                     2
+   3.64672050172787     
+ dabs(Ij+Ii):                    48                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    49                     2
+   3.82412019331315     
+ dabs(Ij+Ii):                    49                     2
+  6.977708238234869E-004
+ dabs(Rj-Ri):                    50                     2
+   5.31402115445305     
+ dabs(Ij+Ii):                    50                     2
+  6.977708238234869E-004
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ real eigenvalues of metric:
+
+              1
+ 
+    1     1.00000000
+    2     1.00000000
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.77067380   -0.63722986
+    2     0.63722986    0.77067380
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ warning> found low lying complex root...
+ eigenvalues (imaginary parts) in redeig:
+
+              1
+ 
+    1    -0.00069777
+    2     0.00069777
+    3     0.00000000
+    4     0.00000000
+    5     0.00000000
+    6     0.00000000
+    7     0.00000000
+    8     0.00000000
+    9     0.00000000
+   10     0.00000000
+   11     0.00000000
+   12     0.00000000
+   13     0.00000000
+   14     0.00000000
+   15    -0.00196821
+   16     0.00196821
+   17     0.00000000
+   18     0.00000000
+   19     0.00000000
+   20    -0.00031962
+   21     0.00031962
+   22    -0.00205363
+   23     0.00205363
+   24     0.00000000
+   25     0.00000000
+   26     0.00000000
+   27     0.00000000
+   28     0.00000000
+   29     0.00000000
+   30     0.00000000
+   31     0.00000000
+   32     0.00000000
+   33     0.00000000
+   34     0.00000000
+   35     0.00000000
+   36     0.00000000
+   37     0.00000000
+   38     0.00000000
+   39     0.00000000
+   40     0.00000000
+   41     0.00000000
+   42     0.00000000
+   43     0.00000000
+   44     0.00000000
+   45     0.00000000
+   46     0.00000000
+   47     0.00000000
+   48     0.00000000
+   49     0.00000000
+   50     0.00000000
+ eigenvalues (real parts) in redeig:
+
+              1
+ 
+    1    -0.02880783
+    2    -0.02880783
+    3    -0.02787534
+    4    -0.02674007
+    5    -0.02551563
+    6    -0.01893291
+    7    -0.01423161
+    8    -0.01166804
+    9    -0.00745750
+   10     0.00390910
+   11     0.00471410
+   12     0.00883586
+   13     0.01922227
+   14     0.02341840
+   15     0.03473192
+   16     0.03473192
+   17     0.03526759
+   18     0.04371322
+   19     0.06294592
+   20     0.08566135
+   21     0.08566135
+   22     0.09689614
+   23     0.09689614
+   24     0.10971099
+   25     0.13239208
+   26     0.14026418
+   27     0.14232773
+   28     0.21143453
+   29     0.23240382
+   30     0.25107893
+   31     0.26023900
+   32     0.28581325
+   33     0.31440891
+   34     0.33017539
+   35     0.42317540
+   36     0.47171420
+   37     0.49627130
+   38     0.53392675
+   39     0.92872099
+   40     0.97692014
+   41     1.01114376
+   42     1.49958485
+   43     1.72787269
+   44     2.81750042
+   45     3.08876223
+   46     3.22531481
+   47     3.42414628
+   48     3.61791267
+   49     3.79531236
+   50     5.28521332
+ ...adapted threshold to:  3.188694978901982E-002
+Warning, there is a complex eigenvalue   -0.0288078321 +i   -0.0006977708
+Warning, there is a complex eigenvalue   -0.0288078321 +i    0.0006977708
+     17       5         2.04     0.58E-01  (  9)
+ dabs(Rj-Ri):                     2                     1
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     2                     1
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     1
+  7.631082975015670E-004
+ dabs(Ij+Ii):                     3                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     4                     1
+  1.826480524192757E-003
+ dabs(Ij+Ii):                     4                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     5                     1
+  1.873544919961809E-003
+ dabs(Ij+Ii):                     5                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     6                     1
+  9.531739774410564E-003
+ dabs(Ij+Ii):                     6                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     7                     1
+  1.352583299266993E-002
+ dabs(Ij+Ii):                     7                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     8                     1
+  1.518480699437337E-002
+ dabs(Ij+Ii):                     8                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     9                     1
+  1.719656969194133E-002
+ dabs(Ij+Ii):                     9                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    10                     1
+  3.229442776704468E-002
+ dabs(Ij+Ii):                    10                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    11                     1
+  3.338228748512967E-002
+ dabs(Ij+Ii):                    11                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    12                     1
+  3.584826758823920E-002
+ dabs(Ij+Ii):                    12                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    13                     1
+  4.777076492163512E-002
+ dabs(Ij+Ii):                    13                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    14                     1
+  5.191895529763454E-002
+ dabs(Ij+Ii):                    14                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    15                     1
+  5.360640113577211E-002
+ dabs(Ij+Ii):                    15                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    16                     1
+  6.248085366119601E-002
+ dabs(Ij+Ii):                    16                     1
+  2.717383696601999E-003
+ dabs(Rj-Ri):                    17                     1
+  6.248085366119601E-002
+ dabs(Ij+Ii):                    17                     1
+  6.970225938406074E-004
+ dabs(Rj-Ri):                    18                     1
+  6.926493360944075E-002
+ dabs(Ij+Ii):                    18                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    19                     1
+  9.051028964665120E-002
+ dabs(Ij+Ii):                    19                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    20                     1
+  9.467995983472069E-002
+ dabs(Ij+Ii):                    20                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    21                     1
+  0.112017989137209     
+ dabs(Ij+Ii):                    21                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    22                     1
+  0.114218552832807     
+ dabs(Ij+Ii):                    22                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    23                     1
+  0.132106151527742     
+ dabs(Ij+Ii):                    23                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    24                     1
+  0.137239132696293     
+ dabs(Ij+Ii):                    24                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    25                     1
+  0.141636598837892     
+ dabs(Ij+Ii):                    25                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    26                     1
+  0.160751338769707     
+ dabs(Ij+Ii):                    26                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    27                     1
+  0.164188543086566     
+ dabs(Ij+Ii):                    27                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    28                     1
+  0.235716176926275     
+ dabs(Ij+Ii):                    28                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    29                     1
+  0.238223572247904     
+ dabs(Ij+Ii):                    29                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    30                     1
+  0.260165362007138     
+ dabs(Ij+Ii):                    30                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    31                     1
+  0.285907607521662     
+ dabs(Ij+Ii):                    31                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    32                     1
+  0.298385691526455     
+ dabs(Ij+Ii):                    32                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    33                     1
+  0.314237673343832     
+ dabs(Ij+Ii):                    33                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    34                     1
+  0.317521494598318     
+ dabs(Ij+Ii):                    34                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    35                     1
+  0.356090580891279     
+ dabs(Ij+Ii):                    35                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    36                     1
+  0.360534794457964     
+ dabs(Ij+Ii):                    36                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    37                     1
+  0.501409264134512     
+ dabs(Ij+Ii):                    37                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    38                     1
+  0.517116346532058     
+ dabs(Ij+Ii):                    38                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    39                     1
+  0.599298935035488     
+ dabs(Ij+Ii):                    39                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    40                     1
+  0.671410193453625     
+ dabs(Ij+Ii):                    40                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    41                     1
+  0.989761346019459     
+ dabs(Ij+Ii):                    41                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    42                     1
+   1.06667812821491     
+ dabs(Ij+Ii):                    42                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    43                     1
+   1.35630776747099     
+ dabs(Ij+Ii):                    43                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    44                     1
+   1.73727969189941     
+ dabs(Ij+Ii):                    44                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    45                     1
+   1.82307415254839     
+ dabs(Ij+Ii):                    45                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    46                     1
+   2.85766384391912     
+ dabs(Ij+Ii):                    46                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    47                     1
+   3.19526342903184     
+ dabs(Ij+Ii):                    47                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    48                     1
+   3.27628508803284     
+ dabs(Ij+Ii):                    48                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    49                     1
+   3.59396945491772     
+ dabs(Ij+Ii):                    49                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    50                     1
+   4.17668784984117     
+ dabs(Ij+Ii):                    50                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    51                     1
+   4.23567806909317     
+ dabs(Ij+Ii):                    51                     1
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    52                     1
+   5.31551295514824     
+ dabs(Ij+Ii):                    52                     1
+  1.010180551380696E-003
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     0.10872669   -0.01441038
+    2    -0.01441038    0.02662765
+ real eigenvalues of metric:
+
+              1
+ 
+    1     0.11118259
+    2     0.02417174
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.98578633    0.16800389
+    2    -0.16800389    0.98578633
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     3.09593193    0.56855369
+    2     0.56855369    6.33510383
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     2
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     1                     2
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     2
+  7.631082975015670E-004
+ dabs(Ij+Ii):                     3                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     4                     2
+  1.826480524192757E-003
+ dabs(Ij+Ii):                     4                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     5                     2
+  1.873544919961809E-003
+ dabs(Ij+Ii):                     5                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     6                     2
+  9.531739774410564E-003
+ dabs(Ij+Ii):                     6                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     7                     2
+  1.352583299266993E-002
+ dabs(Ij+Ii):                     7                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     8                     2
+  1.518480699437337E-002
+ dabs(Ij+Ii):                     8                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                     9                     2
+  1.719656969194133E-002
+ dabs(Ij+Ii):                     9                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    10                     2
+  3.229442776704468E-002
+ dabs(Ij+Ii):                    10                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    11                     2
+  3.338228748512967E-002
+ dabs(Ij+Ii):                    11                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    12                     2
+  3.584826758823920E-002
+ dabs(Ij+Ii):                    12                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    13                     2
+  4.777076492163512E-002
+ dabs(Ij+Ii):                    13                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    14                     2
+  5.191895529763454E-002
+ dabs(Ij+Ii):                    14                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    15                     2
+  5.360640113577211E-002
+ dabs(Ij+Ii):                    15                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    16                     2
+  6.248085366119601E-002
+ dabs(Ij+Ii):                    16                     2
+  6.970225938406074E-004
+ dabs(Rj-Ri):                    17                     2
+  6.248085366119601E-002
+ dabs(Ij+Ii):                    17                     2
+  2.717383696601999E-003
+ dabs(Rj-Ri):                    18                     2
+  6.926493360944075E-002
+ dabs(Ij+Ii):                    18                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    19                     2
+  9.051028964665120E-002
+ dabs(Ij+Ii):                    19                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    20                     2
+  9.467995983472069E-002
+ dabs(Ij+Ii):                    20                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    21                     2
+  0.112017989137209     
+ dabs(Ij+Ii):                    21                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    22                     2
+  0.114218552832807     
+ dabs(Ij+Ii):                    22                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    23                     2
+  0.132106151527742     
+ dabs(Ij+Ii):                    23                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    24                     2
+  0.137239132696293     
+ dabs(Ij+Ii):                    24                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    25                     2
+  0.141636598837892     
+ dabs(Ij+Ii):                    25                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    26                     2
+  0.160751338769707     
+ dabs(Ij+Ii):                    26                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    27                     2
+  0.164188543086566     
+ dabs(Ij+Ii):                    27                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    28                     2
+  0.235716176926275     
+ dabs(Ij+Ii):                    28                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    29                     2
+  0.238223572247904     
+ dabs(Ij+Ii):                    29                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    30                     2
+  0.260165362007138     
+ dabs(Ij+Ii):                    30                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    31                     2
+  0.285907607521662     
+ dabs(Ij+Ii):                    31                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    32                     2
+  0.298385691526455     
+ dabs(Ij+Ii):                    32                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    33                     2
+  0.314237673343832     
+ dabs(Ij+Ii):                    33                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    34                     2
+  0.317521494598318     
+ dabs(Ij+Ii):                    34                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    35                     2
+  0.356090580891279     
+ dabs(Ij+Ii):                    35                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    36                     2
+  0.360534794457964     
+ dabs(Ij+Ii):                    36                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    37                     2
+  0.501409264134512     
+ dabs(Ij+Ii):                    37                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    38                     2
+  0.517116346532058     
+ dabs(Ij+Ii):                    38                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    39                     2
+  0.599298935035488     
+ dabs(Ij+Ii):                    39                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    40                     2
+  0.671410193453625     
+ dabs(Ij+Ii):                    40                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    41                     2
+  0.989761346019459     
+ dabs(Ij+Ii):                    41                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    42                     2
+   1.06667812821491     
+ dabs(Ij+Ii):                    42                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    43                     2
+   1.35630776747099     
+ dabs(Ij+Ii):                    43                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    44                     2
+   1.73727969189941     
+ dabs(Ij+Ii):                    44                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    45                     2
+   1.82307415254839     
+ dabs(Ij+Ii):                    45                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    46                     2
+   2.85766384391912     
+ dabs(Ij+Ii):                    46                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    47                     2
+   3.19526342903184     
+ dabs(Ij+Ii):                    47                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    48                     2
+   3.27628508803284     
+ dabs(Ij+Ii):                    48                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    49                     2
+   3.59396945491772     
+ dabs(Ij+Ii):                    49                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    50                     2
+   4.17668784984117     
+ dabs(Ij+Ii):                    50                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    51                     2
+   4.23567806909317     
+ dabs(Ij+Ii):                    51                     2
+  1.010180551380696E-003
+ dabs(Rj-Ri):                    52                     2
+   5.31551295514824     
+ dabs(Ij+Ii):                    52                     2
+  1.010180551380696E-003
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ real eigenvalues of metric:
+
+              1
+ 
+    1     1.00000000
+    2     1.00000000
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.89970105    0.43650661
+    2    -0.43650661    0.89970105
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ warning> found low lying complex root...
+ eigenvalues (imaginary parts) in redeig:
+
+              1
+ 
+    1    -0.00101018
+    2     0.00101018
+    3     0.00000000
+    4     0.00000000
+    5     0.00000000
+    6     0.00000000
+    7     0.00000000
+    8     0.00000000
+    9     0.00000000
+   10     0.00000000
+   11     0.00000000
+   12     0.00000000
+   13     0.00000000
+   14     0.00000000
+   15     0.00000000
+   16    -0.00170720
+   17     0.00170720
+   18     0.00000000
+   19     0.00000000
+   20     0.00000000
+   21     0.00000000
+   22     0.00000000
+   23     0.00000000
+   24     0.00000000
+   25     0.00000000
+   26     0.00000000
+   27     0.00000000
+   28     0.00000000
+   29     0.00000000
+   30     0.00000000
+   31     0.00000000
+   32     0.00000000
+   33     0.00000000
+   34     0.00000000
+   35     0.00000000
+   36     0.00000000
+   37     0.00000000
+   38     0.00000000
+   39     0.00000000
+   40     0.00000000
+   41     0.00000000
+   42     0.00000000
+   43     0.00000000
+   44     0.00000000
+   45     0.00000000
+   46     0.00000000
+   47     0.00000000
+   48     0.00000000
+   49     0.00000000
+   50     0.00000000
+   51     0.00000000
+   52     0.00000000
+ eigenvalues (real parts) in redeig:
+
+              1
+ 
+    1    -0.02865479
+    2    -0.02865479
+    3    -0.02789168
+    4    -0.02682831
+    5    -0.02678125
+    6    -0.01912305
+    7    -0.01512896
+    8    -0.01346999
+    9    -0.01145822
+   10     0.00363964
+   11     0.00472750
+   12     0.00719348
+   13     0.01911597
+   14     0.02326416
+   15     0.02495161
+   16     0.03382606
+   17     0.03382606
+   18     0.04061014
+   19     0.06185550
+   20     0.06602517
+   21     0.08336320
+   22     0.08556376
+   23     0.10345136
+   24     0.10858434
+   25     0.11298181
+   26     0.13209655
+   27     0.13553375
+   28     0.20706138
+   29     0.20956878
+   30     0.23151057
+   31     0.25725282
+   32     0.26973090
+   33     0.28558288
+   34     0.28886670
+   35     0.32743579
+   36     0.33188000
+   37     0.47275447
+   38     0.48846155
+   39     0.57064414
+   40     0.64275540
+   41     0.96110655
+   42     1.03802334
+   43     1.32765298
+   44     1.70862490
+   45     1.79441936
+   46     2.82900905
+   47     3.16660864
+   48     3.24763030
+   49     3.56531466
+   50     4.14803306
+   51     4.20702328
+   52     5.28685816
+ ...adapted threshold to:  3.215641689050656E-002
+Warning, there is a complex eigenvalue   -0.0286547921 +i   -0.0010101806
+Warning, there is a complex eigenvalue   -0.0286547921 +i    0.0010101806
+     18       2         0.92     0.41E-01  (  9)
+ dabs(Rj-Ri):                     2                     1
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     2                     1
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     1
+  7.522095985188666E-004
+ dabs(Ij+Ii):                     3                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     4                     1
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     4                     1
+  1.023578367830657E-003
+ dabs(Rj-Ri):                     5                     1
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     5                     1
+  9.968552031361486E-004
+ dabs(Rj-Ri):                     6                     1
+  9.003705393483361E-003
+ dabs(Ij+Ii):                     6                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     7                     1
+  1.188133655582580E-002
+ dabs(Ij+Ii):                     7                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     8                     1
+  1.518478814948624E-002
+ dabs(Ij+Ii):                     8                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     9                     1
+  1.582986683335168E-002
+ dabs(Ij+Ii):                     9                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    10                     1
+  3.229439551883181E-002
+ dabs(Ij+Ii):                    10                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    11                     1
+  3.361561018650901E-002
+ dabs(Ij+Ii):                    11                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    12                     1
+  3.396538546883068E-002
+ dabs(Ij+Ii):                    12                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    13                     1
+  4.580657846762810E-002
+ dabs(Ij+Ii):                    13                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    14                     1
+  4.775710216126662E-002
+ dabs(Ij+Ii):                    14                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    15                     1
+  5.191615134511114E-002
+ dabs(Ij+Ii):                    15                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    16                     1
+  6.247196360788503E-002
+ dabs(Ij+Ii):                    16                     1
+  2.720520817400443E-003
+ dabs(Rj-Ri):                    17                     1
+  6.247196360788503E-002
+ dabs(Ij+Ii):                    17                     1
+  7.000872464336377E-004
+ dabs(Rj-Ri):                    18                     1
+  6.863676207208608E-002
+ dabs(Ij+Ii):                    18                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    19                     1
+  9.056159180977558E-002
+ dabs(Ij+Ii):                    19                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    20                     1
+  9.468064371159399E-002
+ dabs(Ij+Ii):                    20                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    21                     1
+  0.109095272434524     
+ dabs(Ij+Ii):                    21                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    22                     1
+  0.114062164861104     
+ dabs(Ij+Ii):                    22                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    23                     1
+  0.132106024179914     
+ dabs(Ij+Ii):                    23                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    24                     1
+  0.137599873626544     
+ dabs(Ij+Ii):                    24                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    25                     1
+  0.138231825671977     
+ dabs(Ij+Ii):                    25                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    26                     1
+  0.158714151074666     
+ dabs(Ij+Ii):                    26                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    27                     1
+  0.164185629579701     
+ dabs(Ij+Ii):                    27                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    28                     1
+  0.207099331177393     
+ dabs(Ij+Ii):                    28                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    29                     1
+  0.235720224091457     
+ dabs(Ij+Ii):                    29                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    30                     1
+  0.239374516505876     
+ dabs(Ij+Ii):                    30                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    31                     1
+  0.260203747513549     
+ dabs(Ij+Ii):                    31                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    32                     1
+  0.285907667820797     
+ dabs(Ij+Ii):                    32                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    33                     1
+  0.312628060434029     
+ dabs(Ij+Ii):                    33                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    34                     1
+  0.314441735171921     
+ dabs(Ij+Ii):                    34                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    35                     1
+  0.343985860196699     
+ dabs(Ij+Ii):                    35                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    36                     1
+  0.358787760254979     
+ dabs(Ij+Ii):                    36                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    37                     1
+  0.395255470633407     
+ dabs(Ij+Ii):                    37                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    38                     1
+  0.503201115292157     
+ dabs(Ij+Ii):                    38                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    39                     1
+  0.518682328959872     
+ dabs(Ij+Ii):                    39                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    40                     1
+  0.601330055387032     
+ dabs(Ij+Ii):                    40                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    41                     1
+  0.711407452790874     
+ dabs(Ij+Ii):                    41                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    42                     1
+   1.00436877106889     
+ dabs(Ij+Ii):                    42                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    43                     1
+   1.06805516743645     
+ dabs(Ij+Ii):                    43                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    44                     1
+   1.65757297884863     
+ dabs(Ij+Ii):                    44                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    45                     1
+   1.75440937958961     
+ dabs(Ij+Ii):                    45                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    46                     1
+   1.83497447377534     
+ dabs(Ij+Ii):                    46                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    47                     1
+   2.85833841240891     
+ dabs(Ij+Ii):                    47                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    48                     1
+   3.19526819253541     
+ dabs(Ij+Ii):                    48                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    49                     1
+   3.27758993534698     
+ dabs(Ij+Ii):                    49                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    50                     1
+   3.59398542012195     
+ dabs(Ij+Ii):                    50                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    51                     1
+   4.23410344345883     
+ dabs(Ij+Ii):                    51                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    52                     1
+   4.49441705778431     
+ dabs(Ij+Ii):                    52                     1
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    53                     1
+   5.37717158159126     
+ dabs(Ij+Ii):                    53                     1
+  1.010216785483403E-003
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     0.02695872    0.01470706
+    2     0.01470706    0.08941425
+ real eigenvalues of metric:
+
+              1
+ 
+    1     0.02366879
+    2     0.09270417
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.97588131    0.21830177
+    2    -0.21830177    0.97588131
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     6.34673642   -0.68504525
+    2    -0.68504525    3.43759962
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     2
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     1                     2
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     3                     2
+  7.522095985188666E-004
+ dabs(Ij+Ii):                     3                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     4                     2
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     4                     2
+  9.968552031361486E-004
+ dabs(Rj-Ri):                     5                     2
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     5                     2
+  1.023578367830657E-003
+ dabs(Rj-Ri):                     6                     2
+  9.003705393483361E-003
+ dabs(Ij+Ii):                     6                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     7                     2
+  1.188133655582580E-002
+ dabs(Ij+Ii):                     7                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     8                     2
+  1.518478814948624E-002
+ dabs(Ij+Ii):                     8                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                     9                     2
+  1.582986683335168E-002
+ dabs(Ij+Ii):                     9                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    10                     2
+  3.229439551883181E-002
+ dabs(Ij+Ii):                    10                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    11                     2
+  3.361561018650901E-002
+ dabs(Ij+Ii):                    11                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    12                     2
+  3.396538546883068E-002
+ dabs(Ij+Ii):                    12                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    13                     2
+  4.580657846762810E-002
+ dabs(Ij+Ii):                    13                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    14                     2
+  4.775710216126662E-002
+ dabs(Ij+Ii):                    14                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    15                     2
+  5.191615134511114E-002
+ dabs(Ij+Ii):                    15                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    16                     2
+  6.247196360788503E-002
+ dabs(Ij+Ii):                    16                     2
+  7.000872464336377E-004
+ dabs(Rj-Ri):                    17                     2
+  6.247196360788503E-002
+ dabs(Ij+Ii):                    17                     2
+  2.720520817400443E-003
+ dabs(Rj-Ri):                    18                     2
+  6.863676207208608E-002
+ dabs(Ij+Ii):                    18                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    19                     2
+  9.056159180977558E-002
+ dabs(Ij+Ii):                    19                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    20                     2
+  9.468064371159399E-002
+ dabs(Ij+Ii):                    20                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    21                     2
+  0.109095272434524     
+ dabs(Ij+Ii):                    21                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    22                     2
+  0.114062164861104     
+ dabs(Ij+Ii):                    22                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    23                     2
+  0.132106024179914     
+ dabs(Ij+Ii):                    23                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    24                     2
+  0.137599873626544     
+ dabs(Ij+Ii):                    24                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    25                     2
+  0.138231825671977     
+ dabs(Ij+Ii):                    25                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    26                     2
+  0.158714151074666     
+ dabs(Ij+Ii):                    26                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    27                     2
+  0.164185629579701     
+ dabs(Ij+Ii):                    27                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    28                     2
+  0.207099331177393     
+ dabs(Ij+Ii):                    28                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    29                     2
+  0.235720224091457     
+ dabs(Ij+Ii):                    29                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    30                     2
+  0.239374516505876     
+ dabs(Ij+Ii):                    30                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    31                     2
+  0.260203747513549     
+ dabs(Ij+Ii):                    31                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    32                     2
+  0.285907667820797     
+ dabs(Ij+Ii):                    32                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    33                     2
+  0.312628060434029     
+ dabs(Ij+Ii):                    33                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    34                     2
+  0.314441735171921     
+ dabs(Ij+Ii):                    34                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    35                     2
+  0.343985860196699     
+ dabs(Ij+Ii):                    35                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    36                     2
+  0.358787760254979     
+ dabs(Ij+Ii):                    36                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    37                     2
+  0.395255470633407     
+ dabs(Ij+Ii):                    37                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    38                     2
+  0.503201115292157     
+ dabs(Ij+Ii):                    38                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    39                     2
+  0.518682328959872     
+ dabs(Ij+Ii):                    39                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    40                     2
+  0.601330055387032     
+ dabs(Ij+Ii):                    40                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    41                     2
+  0.711407452790874     
+ dabs(Ij+Ii):                    41                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    42                     2
+   1.00436877106889     
+ dabs(Ij+Ii):                    42                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    43                     2
+   1.06805516743645     
+ dabs(Ij+Ii):                    43                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    44                     2
+   1.65757297884863     
+ dabs(Ij+Ii):                    44                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    45                     2
+   1.75440937958961     
+ dabs(Ij+Ii):                    45                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    46                     2
+   1.83497447377534     
+ dabs(Ij+Ii):                    46                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    47                     2
+   2.85833841240891     
+ dabs(Ij+Ii):                    47                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    48                     2
+   3.19526819253541     
+ dabs(Ij+Ii):                    48                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    49                     2
+   3.27758993534698     
+ dabs(Ij+Ii):                    49                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    50                     2
+   3.59398542012195     
+ dabs(Ij+Ii):                    50                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    51                     2
+   4.23410344345883     
+ dabs(Ij+Ii):                    51                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    52                     2
+   4.49441705778431     
+ dabs(Ij+Ii):                    52                     2
+  1.010216785483403E-003
+ dabs(Rj-Ri):                    53                     2
+   5.37717158159126     
+ dabs(Ij+Ii):                    53                     2
+  1.010216785483403E-003
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ real eigenvalues of metric:
+
+              1
+ 
+    1     1.00000000
+    2     1.00000000
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.79553772   -0.60590406
+    2     0.60590406    0.79553772
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     4
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     1                     4
+  1.023578367830657E-003
+ dabs(Rj-Ri):                     2                     4
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     2                     4
+  9.968552031361486E-004
+ dabs(Rj-Ri):                     3                     4
+  1.062146620469155E-003
+ dabs(Ij+Ii):                     3                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     5                     4
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     5                     4
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     6                     4
+  7.189349174495339E-003
+ dabs(Ij+Ii):                     6                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     7                     4
+  1.006698033683778E-002
+ dabs(Ij+Ii):                     7                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     8                     4
+  1.337043193049822E-002
+ dabs(Ij+Ii):                     8                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     9                     4
+  1.401551061436366E-002
+ dabs(Ij+Ii):                     9                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    10                     4
+  3.048003929984379E-002
+ dabs(Ij+Ii):                    10                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    11                     4
+  3.180125396752098E-002
+ dabs(Ij+Ii):                    11                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    12                     4
+  3.215102924984266E-002
+ dabs(Ij+Ii):                    12                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    13                     4
+  4.399222224864008E-002
+ dabs(Ij+Ii):                    13                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    14                     4
+  4.594274594227860E-002
+ dabs(Ij+Ii):                    14                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    15                     4
+  5.010179512612312E-002
+ dabs(Ij+Ii):                    15                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    16                     4
+  6.065760738889701E-002
+ dabs(Ij+Ii):                    16                     4
+  1.723665614264295E-003
+ dabs(Rj-Ri):                    17                     4
+  6.065760738889701E-002
+ dabs(Ij+Ii):                    17                     4
+  1.696942449569786E-003
+ dabs(Rj-Ri):                    18                     4
+  6.682240585309807E-002
+ dabs(Ij+Ii):                    18                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    19                     4
+  8.874723559078755E-002
+ dabs(Ij+Ii):                    19                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    20                     4
+  9.286628749260598E-002
+ dabs(Ij+Ii):                    20                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    21                     4
+  0.107280916215536     
+ dabs(Ij+Ii):                    21                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    22                     4
+  0.112247808642116     
+ dabs(Ij+Ii):                    22                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    23                     4
+  0.130291667960926     
+ dabs(Ij+Ii):                    23                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    24                     4
+  0.135785517407556     
+ dabs(Ij+Ii):                    24                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    25                     4
+  0.136417469452989     
+ dabs(Ij+Ii):                    25                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    26                     4
+  0.156899794855678     
+ dabs(Ij+Ii):                    26                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    27                     4
+  0.162371273360713     
+ dabs(Ij+Ii):                    27                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    28                     4
+  0.205284974958405     
+ dabs(Ij+Ii):                    28                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    29                     4
+  0.233905867872469     
+ dabs(Ij+Ii):                    29                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    30                     4
+  0.237560160286888     
+ dabs(Ij+Ii):                    30                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    31                     4
+  0.258389391294561     
+ dabs(Ij+Ii):                    31                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    32                     4
+  0.284093311601809     
+ dabs(Ij+Ii):                    32                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    33                     4
+  0.310813704215041     
+ dabs(Ij+Ii):                    33                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    34                     4
+  0.312627378952933     
+ dabs(Ij+Ii):                    34                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    35                     4
+  0.342171503977711     
+ dabs(Ij+Ii):                    35                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    36                     4
+  0.356973404035991     
+ dabs(Ij+Ii):                    36                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    37                     4
+  0.393441114414419     
+ dabs(Ij+Ii):                    37                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    38                     4
+  0.501386759073169     
+ dabs(Ij+Ii):                    38                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    39                     4
+  0.516867972740884     
+ dabs(Ij+Ii):                    39                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    40                     4
+  0.599515699168044     
+ dabs(Ij+Ii):                    40                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    41                     4
+  0.709593096571886     
+ dabs(Ij+Ii):                    41                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    42                     4
+   1.00255441484990     
+ dabs(Ij+Ii):                    42                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    43                     4
+   1.06624081121747     
+ dabs(Ij+Ii):                    43                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    44                     4
+   1.65575862262964     
+ dabs(Ij+Ii):                    44                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    45                     4
+   1.75259502337063     
+ dabs(Ij+Ii):                    45                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    46                     4
+   1.83316011755635     
+ dabs(Ij+Ii):                    46                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    47                     4
+   2.85652405618993     
+ dabs(Ij+Ii):                    47                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    48                     4
+   3.19345383631643     
+ dabs(Ij+Ii):                    48                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    49                     4
+   3.27577557912799     
+ dabs(Ij+Ii):                    49                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    50                     4
+   3.59217106390297     
+ dabs(Ij+Ii):                    50                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    51                     4
+   4.23228908723984     
+ dabs(Ij+Ii):                    51                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    52                     4
+   4.49260270156532     
+ dabs(Ij+Ii):                    52                     4
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    53                     4
+   5.37535722537227     
+ dabs(Ij+Ii):                    53                     4
+  1.336158234725431E-005
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     0.03021617    0.02448372
+    2     0.02448372    0.04509184
+ real eigenvalues of metric:
+
+              1
+ 
+    1     0.01206545
+    2     0.06324256
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.80332759    0.59553738
+    2    -0.59553738    0.80332759
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     7.28538438   -2.45304091
+    2    -2.45304091    5.79498056
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ dabs(Rj-Ri):                     1                     5
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     1                     5
+  9.968552031361486E-004
+ dabs(Rj-Ri):                     2                     5
+  1.814356218988022E-003
+ dabs(Ij+Ii):                     2                     5
+  1.023578367830657E-003
+ dabs(Rj-Ri):                     3                     5
+  1.062146620469155E-003
+ dabs(Ij+Ii):                     3                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     4                     5
+  0.000000000000000E+000
+ dabs(Ij+Ii):                     4                     5
+  0.000000000000000E+000
+ dabs(Rj-Ri):                     6                     5
+  7.189349174495339E-003
+ dabs(Ij+Ii):                     6                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     7                     5
+  1.006698033683778E-002
+ dabs(Ij+Ii):                     7                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     8                     5
+  1.337043193049822E-002
+ dabs(Ij+Ii):                     8                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                     9                     5
+  1.401551061436366E-002
+ dabs(Ij+Ii):                     9                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    10                     5
+  3.048003929984379E-002
+ dabs(Ij+Ii):                    10                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    11                     5
+  3.180125396752098E-002
+ dabs(Ij+Ii):                    11                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    12                     5
+  3.215102924984266E-002
+ dabs(Ij+Ii):                    12                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    13                     5
+  4.399222224864008E-002
+ dabs(Ij+Ii):                    13                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    14                     5
+  4.594274594227860E-002
+ dabs(Ij+Ii):                    14                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    15                     5
+  5.010179512612312E-002
+ dabs(Ij+Ii):                    15                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    16                     5
+  6.065760738889701E-002
+ dabs(Ij+Ii):                    16                     5
+  1.696942449569786E-003
+ dabs(Rj-Ri):                    17                     5
+  6.065760738889701E-002
+ dabs(Ij+Ii):                    17                     5
+  1.723665614264295E-003
+ dabs(Rj-Ri):                    18                     5
+  6.682240585309807E-002
+ dabs(Ij+Ii):                    18                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    19                     5
+  8.874723559078755E-002
+ dabs(Ij+Ii):                    19                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    20                     5
+  9.286628749260598E-002
+ dabs(Ij+Ii):                    20                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    21                     5
+  0.107280916215536     
+ dabs(Ij+Ii):                    21                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    22                     5
+  0.112247808642116     
+ dabs(Ij+Ii):                    22                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    23                     5
+  0.130291667960926     
+ dabs(Ij+Ii):                    23                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    24                     5
+  0.135785517407556     
+ dabs(Ij+Ii):                    24                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    25                     5
+  0.136417469452989     
+ dabs(Ij+Ii):                    25                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    26                     5
+  0.156899794855678     
+ dabs(Ij+Ii):                    26                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    27                     5
+  0.162371273360713     
+ dabs(Ij+Ii):                    27                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    28                     5
+  0.205284974958405     
+ dabs(Ij+Ii):                    28                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    29                     5
+  0.233905867872469     
+ dabs(Ij+Ii):                    29                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    30                     5
+  0.237560160286888     
+ dabs(Ij+Ii):                    30                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    31                     5
+  0.258389391294561     
+ dabs(Ij+Ii):                    31                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    32                     5
+  0.284093311601809     
+ dabs(Ij+Ii):                    32                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    33                     5
+  0.310813704215041     
+ dabs(Ij+Ii):                    33                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    34                     5
+  0.312627378952933     
+ dabs(Ij+Ii):                    34                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    35                     5
+  0.342171503977711     
+ dabs(Ij+Ii):                    35                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    36                     5
+  0.356973404035991     
+ dabs(Ij+Ii):                    36                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    37                     5
+  0.393441114414419     
+ dabs(Ij+Ii):                    37                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    38                     5
+  0.501386759073169     
+ dabs(Ij+Ii):                    38                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    39                     5
+  0.516867972740884     
+ dabs(Ij+Ii):                    39                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    40                     5
+  0.599515699168044     
+ dabs(Ij+Ii):                    40                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    41                     5
+  0.709593096571886     
+ dabs(Ij+Ii):                    41                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    42                     5
+   1.00255441484990     
+ dabs(Ij+Ii):                    42                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    43                     5
+   1.06624081121747     
+ dabs(Ij+Ii):                    43                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    44                     5
+   1.65575862262964     
+ dabs(Ij+Ii):                    44                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    45                     5
+   1.75259502337063     
+ dabs(Ij+Ii):                    45                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    46                     5
+   1.83316011755635     
+ dabs(Ij+Ii):                    46                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    47                     5
+   2.85652405618993     
+ dabs(Ij+Ii):                    47                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    48                     5
+   3.19345383631643     
+ dabs(Ij+Ii):                    48                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    49                     5
+   3.27577557912799     
+ dabs(Ij+Ii):                    49                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    50                     5
+   3.59217106390297     
+ dabs(Ij+Ii):                    50                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    51                     5
+   4.23228908723984     
+ dabs(Ij+Ii):                    51                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    52                     5
+   4.49260270156532     
+ dabs(Ij+Ii):                    52                     5
+  1.336158234725431E-005
+ dabs(Rj-Ri):                    53                     5
+   5.37535722537227     
+ dabs(Ij+Ii):                    53                     5
+  1.336158234725431E-005
+ overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2     0.00000000    1.00000000
+ real eigenvalues of metric:
+
+              1
+ 
+    1     1.00000000
+    2     1.00000000
+ eigenvectors of metric:
+
+              1             2
+ 
+    1     0.90672890    0.42171401
+    2    -0.42171401    0.90672890
+ inverse square root of overlap matrix:
+
+              1             2
+ 
+    1     1.00000000   -0.00000000
+    2    -0.00000000    1.00000000
+ recalculated overlap matrix for complex pair:
+
+              1             2
+ 
+    1     1.00000000    0.00000000
+    2    -0.00000000    1.00000000
+ warning> found low lying complex root...
+ eigenvalues (imaginary parts) in redeig:
+
+              1
+ 
+    1    -0.00101022
+    2     0.00101022
+    3     0.00000000
+    4    -0.00001336
+    5     0.00001336
+    6     0.00000000
+    7     0.00000000
+    8     0.00000000
+    9     0.00000000
+   10     0.00000000
+   11     0.00000000
+   12     0.00000000
+   13     0.00000000
+   14     0.00000000
+   15     0.00000000
+   16    -0.00171030
+   17     0.00171030
+   18     0.00000000
+   19     0.00000000
+   20     0.00000000
+   21     0.00000000
+   22     0.00000000
+   23     0.00000000
+   24     0.00000000
+   25     0.00000000
+   26     0.00000000
+   27     0.00000000
+   28     0.00000000
+   29     0.00000000
+   30     0.00000000
+   31     0.00000000
+   32     0.00000000
+   33     0.00000000
+   34     0.00000000
+   35     0.00000000
+   36     0.00000000
+   37     0.00000000
+   38     0.00000000
+   39     0.00000000
+   40     0.00000000
+   41     0.00000000
+   42     0.00000000
+   43     0.00000000
+   44     0.00000000
+   45     0.00000000
+   46     0.00000000
+   47     0.00000000
+   48     0.00000000
+   49     0.00000000
+   50     0.00000000
+   51     0.00000000
+   52     0.00000000
+   53     0.00000000
+ eigenvalues (real parts) in redeig:
+
+              1
+ 
+    1    -0.02865473
+    2    -0.02865473
+    3    -0.02790252
+    4    -0.02684037
+    5    -0.02684037
+    6    -0.01965102
+    7    -0.01677339
+    8    -0.01346994
+    9    -0.01282486
+   10     0.00363967
+   11     0.00496088
+   12     0.00531066
+   13     0.01715185
+   14     0.01910237
+   15     0.02326142
+   16     0.03381723
+   17     0.03381723
+   18     0.03998203
+   19     0.06190686
+   20     0.06602591
+   21     0.08044054
+   22     0.08540743
+   23     0.10345129
+   24     0.10894514
+   25     0.10957710
+   26     0.13005942
+   27     0.13553090
+   28     0.17844460
+   29     0.20706549
+   30     0.21071979
+   31     0.23154902
+   32     0.25725294
+   33     0.28397333
+   34     0.28578700
+   35     0.31533113
+   36     0.33013303
+   37     0.36660074
+   38     0.47454639
+   39     0.49002760
+   40     0.57267533
+   41     0.68275272
+   42     0.97571404
+   43     1.03940044
+   44     1.62891825
+   45     1.72575465
+   46     1.80631974
+   47     2.82968368
+   48     3.16661346
+   49     3.24893521
+   50     3.56533069
+   51     4.20544871
+   52     4.46576233
+   53     5.34851685
+Warning, there is a complex eigenvalue   -0.0286547302 +i   -0.0010102168
+Warning, there is a complex eigenvalue   -0.0286547302 +i    0.0010102168
+Warning, there is a complex eigenvalue   -0.0268403740 +i   -0.0000133616
+Warning, there is a complex eigenvalue   -0.0268403740 +i    0.0000133616
+     19       1         0.54     0.31E-01  (  9)
+                                                
+     summary of start vectors generation:
+     -------------------------------------------
+     type of solution vectors      : RE0
+     symmetry                      : a  
+     number of vectors requested   :    10
+     number of vectors generated   :    10
+       -- restarted from file      :    10
+     -------------------------------------------
+                                                
+
+    Iter  #Vectors  time (min)    max. residual 
+    --------------------------------------------
+ threshold for this macro iteration:  1.050485686376899E-002
+     20      10         4.04     0.36E-01  (  7)
+     21       9         3.96     0.55E-01  (  8)
+     22       9         3.68     0.58E-01  ( 10)
+     23       6         2.74     0.49E-01  ( 10)
+     24       4         1.83     0.48E-01  (  9)
+     25       4         1.77     0.35E-01  (  9)
+     26       4         1.76     0.23E-01  (  8)
+     27       3         1.39     0.34E-01  ( 10)
+ ...adapted threshold to:  1.157447082767941E-002
+     28       3         1.26     0.36E-01  ( 10)
+ ...adapted threshold to:  1.367231741437807E-002
+     29       2         0.90     0.41E-01  ( 10)
+ ...adapted threshold to:  1.473956035849970E-002
+     30       1         0.51     0.27E-01  (  9)
+    --------------------------------------------
+    NOT converged in 30 iterations
+
+
+    Warning: the following eigenvalues are not converged:
+
+   index  eigenvalue   residual
+       9   -0.011463    0.27E-01
+
+
+   iterations stopped, because the maximum number of iterations was exceeded...
+
+========================
+ internal module stack: 
+------------------------
+    ricc2
+    cc_exci
+    cc_linsol
+========================
+
+ NO CONVERGENCE!
+ ricc2 ended abnormally
+ ricc2 ended abnormally
+program stopped.

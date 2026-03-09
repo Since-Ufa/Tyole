@@ -1,0 +1,106 @@
+# opt in mp2/def2tzvp
+
+! PBE0 TightSCF def2-TZVP slowconv PModel cpcm(water) 
+
+%maxcore 1500
+
+%tddft
+ nroots 20
+ maxdim 60
+ triplets false
+end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
+%pal nprocs=16 end
+%base "0_CuC2H6S2"
+*xyz -1 1
+
+*
+
+$new_job
+
+! PBE0 TightSCF def2-TZVP slowconv PModel cpcm(water)
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
+end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
+%pal nprocs=16 end
+%base "1_Cu2C2H6S2"
+*xyz -2 1
+
+*
+
+$new_job 
+
+! PBE0 TightSCF def2-TZVP slowconv PModel cpcm(water)
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
+end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
+%pal nprocs=16 end
+%base "2_Cu3C2H6S2"
+*xyz -1 1
+
+*
+
+$new_job
+
+! PBE0 TightSCF def2-TZVP slowconv PModel cpcm(water)
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
+end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
+%pal nprocs=16 end
+%base "3_Cu4C3H9S3"
+*xyz -1 1
+
+* 
+
+$new_job
+
+! PBE0 TightSCF def2-TZVP slowconv PModel cpcm(water)
+
+%tddft
+ nroots 12
+ maxdim 60
+ triplets false
+end
+
+%output
+Print[ P_Basis ] 2
+Print[ P_MOs ] 1
+end
+
+%pal nprocs=16 end
+%base "4_Cu5C4H12S4"
+*xyz -1 1
+
+*

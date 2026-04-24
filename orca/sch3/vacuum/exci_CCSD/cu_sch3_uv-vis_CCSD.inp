@@ -1,92 +1,116 @@
-! UHF STEOM-CCSD def2-TZVP AutoAux PModel TightSCF
+#! STEOM-DLPNO-CCSD def2-SVP def2-SVP/C def2/J TightSCF TightPNO PModel
+#
+#%mdci
+#  NRoots 6
+#  DoRootWise true
+#  OThresh 0.005
+#  VThresh 0.005
+#  TCutPNOSingles 1e-11
+#  NDAV 400
+#  DoStoreSTEOM true
+#  DoSimpleDens false
+#  AddL2Term True
+#  DTol 1e-5
+#end
+# 
+# %maxcore 1500
+# 
+# %scf 
+# MaxIter 500
+# end
+# 
+# %output
+# Print[ P_Basis ] 2
+# Print[ P_MOs ] 1
+# end
+# 
+# %pal nprocs=16 end
+# %base "0_CuC2H6S2"
+# *xyz -1 1
+#   Cu         -5.49623046944774      6.97647823238940      4.69542899028029
+#   S          -3.67805304673684      6.95606308577638      5.80818068485450
+#   C          -4.11489049387983      7.76231834856337      7.38894158335722
+#   H          -4.90398599673519      7.22220306974645      7.91399930435079
+#   H          -4.44706734257084      8.79087726015952      7.23949591182577
+#   H          -3.23059407965213      7.78166120263839      8.03152679415960
+#   S          -7.30347198819873      6.99231145043667      3.56333263648814
+#   C          -7.31608763064018      8.64507335085630      2.78270140614062
+#   H          -8.22685796893227      8.74782325893970      2.18664115290491
+#   H          -6.46002999239179      8.78567277182269      2.12114587401456
+#   H          -7.30676054081441      9.44349907367110      3.52627388162355
+# *
+# 
+# $new_job
+#
+#! STEOM-DLPNO-CCSD def2-SVP def2-SVP/C def2/J TightSCF TightPNO PModel
+#
+#%mdci
+#  NRoots 6
+#  DoRootWise true
+#  OThresh 0.005
+#  VThresh 0.005
+#  TCutPNOSingles 1e-11
+#  NDAV 400
+#  DoStoreSTEOM true
+#  DoSimpleDens false
+#  AddL2Term True
+#  DTol 1e-5
+#end 
+# 
+# %maxcore 1500
+# 
+# %scf 
+# MaxIter 500
+# end
+# 
+# %output
+# Print[ P_Basis ] 2
+# Print[ P_MOs ] 1
+# end
+# 
+# %pal nprocs=16 end
+# %base "1_Cu2C2H6S2"
+# *xyz -2 1
+#   Cu         -5.30125110954236      7.16974058330854      4.88161141859907
+#   S          -1.13192052882084      7.38773238236636      6.92804394474870
+#   C          -1.64029170217636      7.91183594330414      8.60261233269225
+#   H          -2.35549372597027      7.21022378885312      9.04169363463194
+#   H          -2.11905077579055      8.89543360758875      8.58733577768034
+#   H          -0.77269337276135      7.97085029395035      9.27120749574446
+#   S          -7.31251346268655      7.14133268920601      3.85779074219998
+#   C          -7.17793333264408      8.65566895759062      2.84450247661005
+#   H          -8.09523285395990      8.81930038657989      2.26574042871599
+#   H          -6.34326966122183      8.59267812647274      2.14010963426163
+#   H          -7.01073215127981      9.54019586663473      3.46603085999138
+#   Cu         -3.13935732314602      7.27213837414458      5.90465825412414
+# *
+# 
+# $new_job 
+
+! STEOM-DLPNO-CCSD def2-SVP def2-SVP/C def2/J TightSCF TightPNO PModel
 
 %mdci
-  nroots 10
-  DoDbfilter true  # Removes likely unphysical double excitations
+  NRoots 6
+  DoRootWise true
+  OThresh 0.005
+  VThresh 0.005
+  TCutPNOSingles 1e-11
+  NDAV 400
+  DoStoreSTEOM true
+  DoSimpleDens false
+  AddL2Term True
+  DTol 1e-5
 end
 
-%maxcore 1500
+%maxcore 1000
 
-%scf 
-MaxIter 500
+%scf
+  MaxIter 300
 end
 
 %output
-Print[ P_Basis ] 2
-Print[ P_MOs ] 1
-end
-
-%pal nprocs=16 end
-%base "0_CuC2H6S2"
-*xyz -1 1
-  Cu         -5.49623046944774      6.97647823238940      4.69542899028029
-  S          -3.67805304673684      6.95606308577638      5.80818068485450
-  C          -4.11489049387983      7.76231834856337      7.38894158335722
-  H          -4.90398599673519      7.22220306974645      7.91399930435079
-  H          -4.44706734257084      8.79087726015952      7.23949591182577
-  H          -3.23059407965213      7.78166120263839      8.03152679415960
-  S          -7.30347198819873      6.99231145043667      3.56333263648814
-  C          -7.31608763064018      8.64507335085630      2.78270140614062
-  H          -8.22685796893227      8.74782325893970      2.18664115290491
-  H          -6.46002999239179      8.78567277182269      2.12114587401456
-  H          -7.30676054081441      9.44349907367110      3.52627388162355
-*
-
-$new_job
-
-! UHF STEOM-CCSD def2-TZVP AutoAux PModel TightSCF
-
-%mdci
-  nroots 10
-  DoDbfilter true  # Removes likely unphysical double excitations
-end
-
-%maxcore 1500
-
-%scf 
-MaxIter 500
-end
-
-%output
-Print[ P_Basis ] 2
-Print[ P_MOs ] 1
-end
-
-%pal nprocs=16 end
-%base "1_Cu2C2H6S2"
-*xyz -2 1
-  Cu         -5.30125110954236      7.16974058330854      4.88161141859907
-  S          -1.13192052882084      7.38773238236636      6.92804394474870
-  C          -1.64029170217636      7.91183594330414      8.60261233269225
-  H          -2.35549372597027      7.21022378885312      9.04169363463194
-  H          -2.11905077579055      8.89543360758875      8.58733577768034
-  H          -0.77269337276135      7.97085029395035      9.27120749574446
-  S          -7.31251346268655      7.14133268920601      3.85779074219998
-  C          -7.17793333264408      8.65566895759062      2.84450247661005
-  H          -8.09523285395990      8.81930038657989      2.26574042871599
-  H          -6.34326966122183      8.59267812647274      2.14010963426163
-  H          -7.01073215127981      9.54019586663473      3.46603085999138
-  Cu         -3.13935732314602      7.27213837414458      5.90465825412414
-*
-
-$new_job 
-
-! UHF STEOM-CCSD def2-TZVP AutoAux PModel TightSCF
-
-%mdci
-  nroots 10
-  DoDbfilter true  # Removes likely unphysical double excitations
-end
-
-%maxcore 1500
-
-%scf 
-MaxIter 500
-end
-
-%output
-Print[ P_Basis ] 2
-Print[ P_MOs ] 1
+  Print[ P_Basis ] 2
+  Print[ P_MOs ] 1
 end
 
 %pal nprocs=16 end
@@ -109,22 +133,30 @@ end
 
 $new_job
 
-! UHF STEOM-CCSD def2-TZVP AutoAux PModel TightSCF
+! STEOM-DLPNO-CCSD def2-SVP def2-SVP/C def2/J TightSCF TightPNO PModel
 
 %mdci
-  nroots 10
-  DoDbfilter true  # Removes likely unphysical double excitations
+  NRoots 6
+  DoRootWise true
+  OThresh 0.005
+  VThresh 0.005
+  TCutPNOSingles 1e-11
+  NDAV 400
+  DoStoreSTEOM true
+  DoSimpleDens false
+  AddL2Term True
+  DTol 1e-5
 end
 
-%maxcore 1500
+%maxcore 1000
 
-%scf 
-MaxIter 500
+%scf
+  MaxIter 300
 end
 
 %output
-Print[ P_Basis ] 2
-Print[ P_MOs ] 1
+  Print[ P_Basis ] 2
+  Print[ P_MOs ] 1
 end
 
 %pal nprocs=16 end
@@ -153,22 +185,30 @@ end
 
 $new_job
 
-! UHF STEOM-CCSD def2-TZVP AutoAux PModel TightSCF
+! STEOM-DLPNO-CCSD def2-SVP def2-SVP/C def2/J TightSCF TightPNO PModel
 
 %mdci
-  nroots 10
-  DoDbfilter true  # Removes likely unphysical double excitations
+  NRoots 6
+  DoRootWise true
+  OThresh 0.005
+  VThresh 0.005
+  TCutPNOSingles 1e-11
+  NDAV 400
+  DoStoreSTEOM true
+  DoSimpleDens false
+  AddL2Term True
+  DTol 1e-5
 end
 
-%maxcore 1500
+%maxcore 1000
 
-%scf 
-MaxIter 500
+%scf
+  MaxIter 300
 end
 
 %output
-Print[ P_Basis ] 2
-Print[ P_MOs ] 1
+  Print[ P_Basis ] 2
+  Print[ P_MOs ] 1
 end
 
 %pal nprocs=16 end

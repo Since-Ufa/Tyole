@@ -1,146 +1,116 @@
-# Tyole project structure
+# Tyole
 
-This repository contains a computational chemistry data set focused on copper-containing coordination complexes and their electronic-structure calculations. The project is organized around molecular systems and calculation types rather than a software package source tree: most folders hold ORCA or Turbomole input decks, optimized geometries, and property/output summaries.
+This repository is a computational chemistry dataset for copper-containing coordination complexes and related electronic-structure studies. It is organized as a collection of ORCA and Turbomole inputs, optimized structures, property summaries, and supporting benchmark/reference materials rather than as a software package.
 
-The workflow is driven mainly by:
+The project is centered on Cu–ligand cluster models, especially Cu–cysteine, Cu–glutathione (GSH), and Cu–SCH3 systems, with calculations in both vacuum and aqueous environments.
 
-- ORCA input files (`*.inp`)
-- XYZ molecular geometry files (`*.xyz`)
-- property and result text files (`*_property.txt`, `results.txt`, `output.txt`, `notes.txt`)
-- Turbomole input and job directories
-- spreadsheet files for benchmark/geometry data
+## Repository structure
 
-## Root overview
-
-The project root includes:
-
-- `Articles/` — literature references and papers used for the project context.
-- `orca/` — ORCA quantum chemistry jobs for copper complexes with different ligands and environments.
-- `turbomole/` — Turbomole setup notes and tutorial/job directories for benchmarking and learning workflows.
+- `Articles/` — literature and reference documents relevant to the chemistry and spectroscopy work.
+- `orca/` — ORCA jobs for geometry optimization, excited-state calculations, and NBO analysis.
+- `turbomole/` — Turbomole setup files, tutorial materials, and example job directories.
 - `benchmark.xlsx` — benchmark/analysis spreadsheet.
-- `geometry.xlsx` — structural/geometry dataset spreadsheet.
-- `servers.txt` — machine/server configuration or environment notes.
+- `geometry.xlsx` — structural and geometry dataset spreadsheet.
+- `servers.txt` — environment or server notes used during the calculations.
 
-## Articles
+## Main folders
 
-This folder holds literature PDFs and documents relevant to the project topic.
+### `Articles/`
 
-- `Buglak_Prediciting_absorption_spectra_of_silver_ligand_complexes.pdf` — paper on absorption spectra predictions for silver-ligand complexes.
-- `chen2012.pdf`, `gell2013.pdf`, `jia2013_Cu-GSH+others.pdf`, `jia2014_Cu-DPA-ESI.pdf`, `jia2014_Cu-DPA.pdf` — literature sources on copper complexes and related spectroscopy/chemistry.
-- `Cu-AAs_18032026_colorless.docx` — project or study notes in Word format.
-- `._Buglak_Prediciting_absorption_spectra_of_silver_ligand_complexes.pdf` — macOS Finder metadata copy of the PDF.
+Reference materials used throughout the project, including papers on copper complexes, ligand systems, and spectroscopy methods.
 
-## orca
+Examples:
+- `Buglak_Prediciting_absorption_spectra_of_silver_ligand_complexes.pdf`
+- `chen2012.pdf`
+- `gell2013.pdf`
+- `jia2013_Cu-GSH+others.pdf`
+- `jia2014_Cu-DPA-ESI.pdf`
+- `jia2014_Cu-DPA.pdf`
+- `Cu-AAs_18032026_colorless.docx`
 
-The `orca/` folder contains the main computational chemistry data. It is organized by ligand type and by environment (`vacuum` vs `water`), with calculations for geometry optimization and excited-state/property analysis.
+### `orca/`
 
-### orca/cys
+The main data archive. The structure is grouped by ligand family and by solvent phase (`vacuum`/`water`).
 
-This directory stores copper-cysteine structures and corresponding ORCA jobs.
+#### `orca/cys/`
 
-- `Cu_Cys2.xyz`, `Cu2_Cys2.xyz`, `Cu3_Cys2.xyz`, `Cu4_Cys3.xyz`, `Cu5_Cys4.xyz` — XYZ geometries for Cu–cysteine cluster models of different sizes.
-- `cys.xyz` — standalone cysteine geometry used as a reference/fragment.
+Cu–cysteine models and related ORCA calculations.
 
-#### orca/cys/vacuum
+- `Cu_Cys2.xyz`, `Cu2_Cys2.xyz`, `Cu3_Cys2.xyz`, `Cu4_Cys3.xyz`, `Cu5_Cys4.xyz`
+- `cys.xyz`
+- `vacuum/` — gas-phase geometry optimizations and excited-state jobs
+- `water/` — solvated analogues of the same workflow
 
-Gas-phase calculations for the cysteine series.
+Typical subfolders:
+- `geoopt/` — optimization runs and optimized geometries
+- `exci_CAM-B3LYP/` — TD-DFT CAM-B3LYP excitation calculations
+- `exci_M06-2X/` — alternative excited-state calculations using M06-2X
 
-- `geoopt/` — geometry optimization runs. Each subfolder entry such as `0_Cu_Cys2.xyz`, `1_Cu2_Cys2.xyz`, `2_Cu3_Cys2.xyz`, etc., stores optimized coordinates and trajectory files (`*_trj.xyz`), plus `.property.txt` summaries and the ORCA input file `cu_cys_opt_mp2_vac.inp`.
-- `exci_CAM-B3LYP/` — TD-DFT excited-state calculations using CAM-B3LYP. The `*.inp` files define UV-vis excitation jobs, and the `*_property.txt` files store computed properties for each cluster size.
-- `exci_M06-2X/` — alternative excitation calculations using M06-2X, with the same pattern of inputs and property files.
+#### `orca/gsh_ToDoLater/`
 
-#### orca/cys/water
+GSH-related Cu cluster models kept as a secondary or planned dataset.
 
-Solvated calculations for the same Cu–cysteine system.
+- `Cu_Gsh2.xyz`, `Cu2_Gsh2.xyz`, `Cu3_Gsh2.xyz`, `Cu4_Gsh3.xyz`, `Cu5_Gsh4.xyz`, `gsh.xyz`
+- `vacuum/` and `water/` branches
+- `geoopt/` plus multiple functional-specific excited-state folders such as:
+  - `exci_BHandHLYP/`
+  - `exci_CAM-B3LYP/`
+  - `exci_M06-2X/`
+  - `exci_PBE0/`
+  - `exci_r2SCAN50/`
+  - `exci_wB97X/`
 
-- `geoopt/` — optimized geometries in water, with trajectory and property files analogous to the vacuum case.
-- `exci_CAM-B3LYP/` — water-phase UV-vis/CAM-B3LYP calculations.
-- `exci_M06-2X/` — water-phase M06-2X excitation calculations.
+#### `orca/sch3/`
 
-### orca/gsh_ToDoLater
+The most extensive ORCA dataset in this repository: Cu–SCH3 systems across multiple cluster sizes.
 
-This folder contains a second ligand family, related to glutathione (GSH) or Cu–GSH type models. It appears to be kept as a future/secondary set of calculations.
+- `vacuum/` — gas-phase calculations
+- `water/` — solvated calculations
 
-- `Cu_Gsh2.xyz`, `Cu2_Gsh2.xyz`, `Cu3_Gsh2.xyz`, `Cu4_Gsh3.xyz`, `Cu5_Gsh4.xyz`, `gsh.xyz` — structural geometries for the GSH-based cluster models.
+Common subfolders:
+- `geoopt/` — optimization jobs and optimized coordinate files
+- `NBO/` — natural bond orbital analysis
+- `exci_BHandHLYP/`, `exci_CAM-B3LYP/`, `exci_CCSD/`, `exci_M06-2X/`, `exci_PBE0/`, `exci_wB97X/`, `exci_wB97X-D3/` — excited-state or correlated calculations by method
 
-#### orca/gsh_ToDoLater/vacuum
+### `turbomole/`
 
-Vacuum-phase GSH calculations.
+Turbomole setup, reference texts, and calculation examples.
 
-- `geoopt/` — geometry-optimization input `cu_gsh_opt_mp2_vac.inp` with associated optimized structures and outputs.
-- `exci_BHandHLYP/`, `exci_CAM-B3LYP/`, `exci_M06-2X/`, `exci_PBE0/`, `exci_r2SCAN50/`, `exci_wB97X/` — excited-state calculation folders for multiple functionals, each containing ORCA input decks for UV-vis-type calculations.
+- `SettingTurbomole_README.txt` — environment setup notes for Turbomole
+- `Turbomole_Manual_7-9.pdf` — local reference manual
+- `Tutorial_7-7.pdf` — tutorial PDF
+- `tm_sch3/` — Cu–SCH3 Turbomole calculations
+- `tm_tutorials/` — numbered tutorial examples from 1 to 24 plus screenshot assets in `!screenshots/`
 
-#### orca/gsh_ToDoLater/water
+#### `turbomole/tm_sch3/`
 
-Water-phase GSH calculations using the same set of functionals as in the vacuum branch.
+Cu–SCH3 Turbomole job directories, including files such as:
+- `input/`
+- `exci_adc2/`
+- `jobex_cc2/`
+- cluster folders like `1_Cu2C2H6S2/`, `2_Cu3C2H6S2/`, etc.
 
-- `geoopt/` — solvated geometry optimization input `cu_gsh_opt_mp2_water.inp`.
-- Functional folders similar to the vacuum version: each contains ORCA input files for excited-state property calculations.
+#### `turbomole/tm_tutorials/`
 
-### orca/sch3
+Tutorial benchmark and learning workspace. The folders are grouped numerically and include input decks, job control files, geometry files, and result logs.
 
-This section contains Cu–SCH3 model systems and is the most extensive ORCA dataset in the repository.
+Examples:
+- `2/`, `10/`, `12/`, `17/`, `23/`, `24/`
+- `!screenshots/` — visuals and examples from the tutorial collection
 
-- `vacuum/` — gas-phase calculations.
-- `water/` — solvent-phase calculations.
+## File conventions
 
-#### orca/sch3/vacuum
+The repository consistently uses quantum-chemistry file patterns such as:
 
-The vacuum directory includes several kinds of jobs:
+- `*.inp` — ORCA/Turbomole input decks
+- `*.xyz` — molecular geometry files
+- `*.out` — calculation output logs
+- `*_property.txt` — extracted property summaries
+- `*_trj.xyz` — optimization trajectories
+- `results.txt`, `output.txt`, `notes.txt` — narrative or summary files
 
-- `geoopt/` — geometry optimization runs. Files such as `0_CuC2H6S2.xyz`, `1_Cu2C2H6S2.xyz`, `2_Cu3C2H6S2.xyz`, etc., are molecular geometries for the optimized structures, with corresponding `*_trj.xyz` trajectory files and `.property.txt` outputs. The optimization input file is `cu_sch3_opt_mp2_vac.inp`.
-- `NBO/` — natural bond orbital analysis. `cu_sch3_NBO.inp` runs NBO calculations and the `*.property.txt` files hold NBO-related property summaries.
-- `exci_BHandHLYP/`, `exci_CAM-B3LYP/`, `exci_CCSD/`, `exci_M06-2X/`, `exci_PBE0/`, `exci_wB97X/`, `exci_wB97X-D3/` — excited-state or correlated-property study directories. Each contains ORCA `.inp` input decks and property text files for different functionals and methods.
+## Notes
 
-#### orca/sch3/water
-
-The water-phase equivalent of the vacuum workflow.
-
-- `geoopt/` — solvated geometry optimizations and trajectories for Cu–SCH3 systems.
-- `exci_BHandHLYP/`, `exci_CAM-B3LYP/`, `exci_M06-2X/`, `exci_PBE0/`, `exci_wB97X/` — solvent-phase excited-state inputs and property outputs.
-
-## turbmole
-
-This directory is dedicated to Turbomole setup and calculations. It contains configuration notes, job folders, and tutorial material.
-
-- `SettingTurbomole_README.txt` — shell setup instructions for Turbomole environment variables and path exports.
-- `tm_sch3/` — Turbomole calculations for Cu–SCH3 complexes.
-- `tm_tutorials/` — Turbomole tutorial exercise directories used to practice or reproduce workflows.
-
-### turbmole/tm_sch3
-
-This subfolder contains a small set of Cu–SCH3 calculation directories.
-
-- `1_Cu2C2H6S2/` — first system in the series, with subfolders such as `input/`, `exci_adc2/`, and `jobex_cc2/` for input, ADC(2) excited states, and CC2 job execution files.
-- `2_Cu3C2H6S2/`, `3_Cu4C3H9S3/`, `4_Cu5C4H12S4/` — larger cluster directories for the same line of calculations.
-
-Each case stores a complete job workspace, including input decks, outputs, and staging directories for Turbomole calculations.
-
-### turbmole/tm_tutorials
-
-This is the tutorial library of the Turbomole installation. It is divided into numbered directories from `1` to `24`, plus a `!screenshots` folder.
-
-- `1`, `2`, `3`, ..., `24` — each tutorial folder contains examples or training problems for different Turbomole tasks.
-- Several folders contain `input/` directories with input decks, and some have result logs such as `output.txt`, `results.txt`, `notes.txt`, or a final geometry `final_structure.xyz`.
-- `!screenshots/` — screenshot or visual reference material for the tutorial set.
-
-Examples of tutorial content include:
-
-- `2/` — includes `final_structure.xyz` as a final optimized geometry.
-- `7/SVP/` — contains `results.txt` from an SVP calculation.
-- `10/` — includes job setup folders such as `JOBEX`, `JOBEX_RI-DFT`, `JOBEX_RI-MP2`, and `MAN`.
-- `12/` — has `FF_PREOPT` and `NO_PREOPT` directories.
-- `17/` — includes `input/` and `numforce/` directories with force-related calculation materials.
-- `23/` and `24/` — contain additional numforce and input-based examples.
-
-## File-level notes and conventions
-
-The repository uses a consistent convention for quantum-chemistry studies:
-
-- `*.inp` files: ORCA or Turbomole input decks defining the method, basis set, solvent model, and job type.
-- `*.xyz` files: molecular coordinate files for structures and optimized geometries.
-- `*_property.txt`: property summaries from ORCA calculations (energies, excited-state data, etc.).
-- `*_trj.xyz`: trajectory files from geometry optimization.
-- `results.txt`, `output.txt`, `notes.txt`: textual notes or run summaries.
-
-These patterns are repeated throughout the `orca` and `turbomole` folders, indicating that this repository is a collection of computational chemistry calculation archives rather than a code project.
+- This is a data repository, not a codebase in the traditional software sense.
+- The main workflow combines geometry optimization, solvent-vs-vacuum comparisons, and excited-state property calculations.
+- The current structure reflects the active Cu–ligand datasets and the Turbomole tutorial/job archive used for benchmarking and method practice.
